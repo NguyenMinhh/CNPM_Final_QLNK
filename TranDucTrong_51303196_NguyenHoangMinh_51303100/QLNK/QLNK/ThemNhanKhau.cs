@@ -11,7 +11,7 @@ namespace QLNK
         {
             InitializeComponent();
         }
-        private void clear()
+        private void btnClear_Click(object sender, EventArgs e)
         {
             cbDanToc.SelectedIndex = -1;
             cbNam.SelectedIndex = -1;
@@ -26,10 +26,6 @@ namespace QLNK
             txtMaHoKhau.Text = "";
             txtMaNhanKhau.Text = "";
             txtNgheNghiep.Text = "";
-        }
-        private void btnClear_Click(object sender, EventArgs e)
-        {
-            clear();
         }
         private void btnThemNhanKhau_Click(object sender, EventArgs e)
         {
@@ -47,21 +43,21 @@ namespace QLNK
             string maHoKhau = txtMaHoKhau.Text;
             string ngheNghiep = txtNgheNghiep.Text;
 
-            if (!(maNhanKhau.Equals("") || hoTen.Equals("") || (!rdNam.Checked && !rdNu.Checked) ||
-                  ngay.Equals("") || thang.Equals("") || nam.Equals("") || danToc.Equals("") ||
-                  queQuan.Equals("") || tonGiao.Equals("") || cmnd.Equals("") ||
-                  maHoKhau.Equals("") || ngheNghiep.Equals("")))
+            if (!(maNhanKhau.Equals("") || hoTen.Equals("")     || (!rdNam.Checked && !rdNu.Checked)    ||
+                  ngay.Equals("")       || thang.Equals("")     || nam.Equals("")   || danToc.Equals("")||
+                  queQuan.Equals("")    || tonGiao.Equals("")   || cmnd.Equals("")  ||
+                  maHoKhau.Equals("")   || ngheNghiep.Equals("")))
             {
                 if (sc.addNhanKhau(maNhanKhau, hoTen, ngaySinh, gioiTinh, queQuan, 
                                    tonGiao, danToc, cmnd, maHoKhau, ngheNghiep))
                 {
-                    MessageBox.Show("Thêm thành công");
+                    MessageBox.Show(sc.SUCCESS_ADD);
                     this.Close();
                 }
             }
             else
             {
-                MessageBox.Show("Điền đầy đủ rồi hẵng thêm");
+                MessageBox.Show(sc.ERROR_BLANK);
             }
         }
 

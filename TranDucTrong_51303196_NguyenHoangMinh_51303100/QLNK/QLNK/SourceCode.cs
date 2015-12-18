@@ -6,6 +6,14 @@ namespace QLNK
 {
     class SourceCode
     {
+        public string ERROR_BLANK = "Vui lòng điền đầy đủ thông tin!";
+        public string SUCCESS_ADD = "Thêm thành công!";
+        public string SUCCESS_UPDATE = "Cập nhật thành công!";
+        public string SUCCESS_DELETE = "Xóa thành công!";
+        public string MSGBOX_UPDATE = "Lưu thông tin đã chỉnh sửa ?";
+        public string MSGBOX_CAP_UPDATE = "Xác nhận chỉnh sửa";
+        public string MSGBOX_CAP_EXIT = "Xác nhận thoát";
+        
         private static string DATASOURCE = "localhost";
         private static string PORT = "3306";
         private static string USERNAME = "root";
@@ -379,7 +387,7 @@ namespace QLNK
                             case "TIENANTIENSU": displayTienAnTienSu(lstView); break;
                             case "CANBO": displayTaiKhoan(lstView); break;
                         }
-                        MessageBox.Show("Xóa thành công");
+                        MessageBox.Show(SUCCESS_DELETE);
                     }
                 }
             }
@@ -396,7 +404,7 @@ namespace QLNK
                     case "TIENANTIENSU": doiTuong = "tiền án tiền sự"; break;
                     case "CANBO": doiTuong = "tài khoản"; break;
                 }
-                MessageBox.Show("Vui lòng chọn " + doiTuong + " cần xóa");
+                MessageBox.Show("Vui lòng chọn " + doiTuong + " cần xóa!");
             }
         }
 

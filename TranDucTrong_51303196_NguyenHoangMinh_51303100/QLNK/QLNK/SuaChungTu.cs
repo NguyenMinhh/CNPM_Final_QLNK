@@ -621,15 +621,15 @@ namespace QLNK
             string thoiGianQuaDoi = gioMat + ":" + phutMat;
             string ngayDangKy = ngayDK + "/" + thangDK + "/" + namDK;
             string khuVucDangKy = cbQueQuan.Text;
-            if (!(maChungTu.Equals("") || tenNguoiKhai.Equals("") || thuongTamTru.Equals("") ||
-                  qhVoiNguoiMat.Equals("") || tenNguoiMat.Equals("") || ngaySinh.Equals("") ||
-                  thangSinh.Equals("") || namSinh.Equals("") || danToc.Equals("") ||
-                  quocTich.Equals("") || cmnd.Equals("") || ngayMat.Equals("") ||
-                  thangMat.Equals("") || namMat.Equals("") || gioMat.Equals("") ||
-                  phutMat.Equals("") || cbQueQuan.Equals("") || ngayDK.Equals("") ||
-                  thangDK.Equals("") || namDK.Equals("")))
+            if (!(maChungTu.Equals("")      || tenNguoiKhai.Equals("")  || thuongTamTru.Equals("")  ||
+                  qhVoiNguoiMat.Equals("")  || tenNguoiMat.Equals("")   || ngaySinh.Equals("")      ||
+                  thangSinh.Equals("")      || namSinh.Equals("")       || danToc.Equals("")        ||
+                  quocTich.Equals("")       || cmnd.Equals("")          || ngayMat.Equals("")       ||
+                  thangMat.Equals("")       || namMat.Equals("")        || gioMat.Equals("")        ||
+                  phutMat.Equals("")        || cbQueQuan.Equals("")     || ngayDK.Equals("")        ||
+                  thangDK.Equals("")        || namDK.Equals("")))
             {
-                DialogResult dialogResult = MessageBox.Show("Có chắc muốn cập nhập thông tin không", "Xác nhận sửa thông tin", MessageBoxButtons.YesNo);
+                DialogResult dialogResult = MessageBox.Show(sc.MSGBOX_UPDATE, sc.MSGBOX_CAP_UPDATE, MessageBoxButtons.YesNo);
                 if (dialogResult == DialogResult.Yes)
                 {
                     flagSave = true;
@@ -638,13 +638,13 @@ namespace QLNK
                                          ngayQuaDoi, thoiGianQuaDoi, khuVucDangKy, ngayDangKy))
                     {
                         this.Close();
-                        MessageBox.Show("Cập nhật thành công");
+                        MessageBox.Show(sc.SUCCESS_UPDATE);
                     }
                 }
             }
             else
             {
-                MessageBox.Show("Điền đầy đủ rồi hẵng cập nhật");
+                MessageBox.Show(sc.ERROR_BLANK);
             }
         }
 
@@ -678,23 +678,38 @@ namespace QLNK
                 string ngayDangKy = ngayDK + "/" + thangDK + "/" + namDK;
                 string khuVucDangKy = cbQueQuan.Text;
 
-                if ((!maChungTu.Equals(itemChungTu[0]) || !tenNguoiKhai.Equals(itemChungTu[1]) ||
-                     !thuongTamTru.Equals(itemChungTu[2]) || !qhVoiNguoiMat.Equals(itemChungTu[3]) ||
-                     !tenNguoiMat.Equals(itemChungTu[4]) || !ngaySinhNguoiMat.Equals(itemChungTu[5]) ||
-                     !danToc.Equals(itemChungTu[6]) || !quocTich.Equals(itemChungTu[7]) ||
-                     !cmnd.Equals(itemChungTu[8]) || !ngayQuaDoi.Equals(itemChungTu[9]) ||
-                     !thoiGianQuaDoi.Equals(itemChungTu[10]) || !khuVucDangKy.Equals(itemChungTu[11]) ||
+                if ((!maChungTu.Equals(itemChungTu[0])      || !tenNguoiKhai.Equals(itemChungTu[1])     ||
+                     !thuongTamTru.Equals(itemChungTu[2])   || !qhVoiNguoiMat.Equals(itemChungTu[3])    ||
+                     !tenNguoiMat.Equals(itemChungTu[4])    || !ngaySinhNguoiMat.Equals(itemChungTu[5]) ||
+                     !danToc.Equals(itemChungTu[6])         || !quocTich.Equals(itemChungTu[7])         ||
+                     !cmnd.Equals(itemChungTu[8])           || !ngayQuaDoi.Equals(itemChungTu[9])       ||
+                     !thoiGianQuaDoi.Equals(itemChungTu[10])|| !khuVucDangKy.Equals(itemChungTu[11])    ||
                      !ngayDangKy.Equals(itemChungTu[12])))
                 {
-                    DialogResult dialogResult = MessageBox.Show("Có muốn lưu thông tin đã sửa ?",
-                                                                "Xác nhận thoát", MessageBoxButtons.YesNoCancel);
+                    DialogResult dialogResult = MessageBox.Show(sc.MSGBOX_UPDATE,
+                                                                sc.MSGBOX_CAP_EXIT,
+                                                                MessageBoxButtons.YesNoCancel);
                     if (dialogResult == DialogResult.Yes)
                     {
-                        if (sc.updateChungTu(maChungTu, tenNguoiKhai, thuongTamTru, qhVoiNguoiMat,
-                                             tenNguoiMat, ngaySinhNguoiMat, danToc, quocTich, cmnd,
-                                             ngayQuaDoi, thoiGianQuaDoi, khuVucDangKy, ngayDangKy))
+                        if (!(maChungTu.Equals("")      || tenNguoiKhai.Equals("")  || thuongTamTru.Equals("")  ||
+                              qhVoiNguoiMat.Equals("")  || tenNguoiMat.Equals("")   || ngaySinh.Equals("")      ||
+                              thangSinh.Equals("")      || namSinh.Equals("")       || danToc.Equals("")        ||
+                              quocTich.Equals("")       || cmnd.Equals("")          || ngayMat.Equals("")       ||
+                              thangMat.Equals("")       || namMat.Equals("")        || gioMat.Equals("")        ||
+                              phutMat.Equals("")        || cbQueQuan.Equals("")     || ngayDK.Equals("")        ||
+                              thangDK.Equals("")        || namDK.Equals("")))
                         {
-                            MessageBox.Show("Cập nhật thành công");
+                            if (sc.updateChungTu(maChungTu, tenNguoiKhai, thuongTamTru, qhVoiNguoiMat,
+                                                 tenNguoiMat, ngaySinhNguoiMat, danToc, quocTich, cmnd,
+                                                 ngayQuaDoi, thoiGianQuaDoi, khuVucDangKy, ngayDangKy))
+                            {
+                                MessageBox.Show(sc.SUCCESS_UPDATE);
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show(sc.ERROR_BLANK);
+                            e.Cancel = true;
                         }
                     }
                     else if (dialogResult == DialogResult.Cancel)

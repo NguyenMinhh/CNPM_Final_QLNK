@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using MaterialSkin.Controls;
 
@@ -140,7 +133,8 @@ namespace QLNK
                   noiXetXu.Equals("")       || ngay.Equals("")       || thang.Equals("")           ||
                   nam.Equals("")))
             {
-                DialogResult dialogResult = MessageBox.Show("Có chắc muốn cập nhập thông tin không", "Xác nhận sửa thông tin", MessageBoxButtons.YesNo);
+                DialogResult dialogResult = MessageBox.Show(sc.MSGBOX_UPDATE,
+                                                            sc.MSGBOX_CAP_UPDATE,MessageBoxButtons.YesNo);
                 if (dialogResult == DialogResult.Yes)
                 {
                     flagSave = true;
@@ -148,13 +142,13 @@ namespace QLNK
                                               noiXetXu, ngayThucThi))
                     {
                         this.Close();
-                        MessageBox.Show("Cập nhật thành công");
+                        MessageBox.Show(sc.SUCCESS_UPDATE);
                     }
                 }
             }
             else
             {
-                MessageBox.Show("Điền đầy đủ rồi hẵng cập nhật");
+                MessageBox.Show(sc.ERROR_BLANK);
             }
         }
 
@@ -175,14 +169,25 @@ namespace QLNK
                      !tenTienAnTienSu.Equals(itemTienAnTienSu[2])|| !noiXetXu.Equals(itemTienAnTienSu[3])   ||
                      !ngayThucThi.Equals(itemTienAnTienSu[4])))
                 {
-                    DialogResult dialogResult = MessageBox.Show("Có muốn lưu thông tin đã sửa ?",
-                                                                "Xác nhận thoát", MessageBoxButtons.YesNoCancel);
+                    DialogResult dialogResult = MessageBox.Show(sc.MSGBOX_UPDATE,
+                                                                sc.MSGBOX_CAP_EXIT,
+                                                                MessageBoxButtons.YesNoCancel);
                     if (dialogResult == DialogResult.Yes)
                     {
-                        if (sc.updateTienAnTienSu(maTienAnTienSu, maNhanKhau, tenTienAnTienSu,
-                                                  noiXetXu, ngayThucThi))
+                        if (!(maTienAnTienSu.Equals("") || maNhanKhau.Equals("")||
+                              tenTienAnTienSu.Equals("")|| noiXetXu.Equals("")  ||
+                              ngay.Equals("")           || thang.Equals("")     || nam.Equals("")))
                         {
-                            MessageBox.Show("Cập nhật thành công");
+                            if (sc.updateTienAnTienSu(maTienAnTienSu, maNhanKhau, tenTienAnTienSu,
+                                                      noiXetXu, ngayThucThi))
+                            {
+                                MessageBox.Show(sc.SUCCESS_UPDATE);
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show(sc.ERROR_BLANK);
+                            e.Cancel = true;
                         }
                     }
                     else if (dialogResult == DialogResult.Cancel)

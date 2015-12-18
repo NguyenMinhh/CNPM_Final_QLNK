@@ -12,30 +12,6 @@ namespace QLNK
             InitializeComponent();
         }
 
-        private void clearChong()
-        {
-            txtHoTenChong.Text = "";
-            cbNgaySinhChong.SelectedIndex = -1;
-            cbThangSinhChong.SelectedIndex = -1;
-            cbNamSinhChong.SelectedIndex = -1;
-            cbDanTocChong.SelectedIndex = -1;
-            cbQuocTichChong.SelectedIndex = -1;
-            txtCMNDChong.Text = "";
-            txtThuongTamTruChong.Text = "";
-        }
-
-        private void clearVo()
-        {
-            txtHoTenVo.Text = "";
-            cbNgaySinhVo.SelectedIndex = -1;
-            cbThangSinhVo.SelectedIndex = -1;
-            cbNamSinhVo.SelectedIndex = -1;
-            cbDanTocVo.SelectedIndex = -1;
-            cbQuocTichVo.SelectedIndex = -1;
-            txtCMNDVo.Text = "";
-            txtThuongTamTruVo.Text = "";
-        }
-
         private void btnThemKetHon_Click(object sender, EventArgs e)
         {
             string ngayChong = cbNgaySinhChong.Text;
@@ -76,24 +52,38 @@ namespace QLNK
                                  thuongTamTruChong, cmndChong, hoTenVo, ngaySinhVo, danTocVo,
                                  quocTichVo, thuongTamTruVo, cmndVo, khuVucDangKy, ngayDangKy))
                 {
-                    MessageBox.Show("Thêm thành công");
+                    MessageBox.Show(sc.SUCCESS_ADD);
                     this.Close();
                 }
             }
             else
             {
-                MessageBox.Show("Điền đầy đủ rồi hẵng thêm");
+                MessageBox.Show(sc.ERROR_BLANK);
             }
         }
 
         private void btnClearChong_Click(object sender, EventArgs e)
         {
-            clearChong();
+            txtHoTenChong.Text = "";
+            cbNgaySinhChong.SelectedIndex = -1;
+            cbThangSinhChong.SelectedIndex = -1;
+            cbNamSinhChong.SelectedIndex = -1;
+            cbDanTocChong.SelectedIndex = -1;
+            cbQuocTichChong.SelectedIndex = -1;
+            txtCMNDChong.Text = "";
+            txtThuongTamTruChong.Text = "";
         }
 
         private void btnClearVo_Click(object sender, EventArgs e)
         {
-            clearVo();
+            txtHoTenVo.Text = "";
+            cbNgaySinhVo.SelectedIndex = -1;
+            cbThangSinhVo.SelectedIndex = -1;
+            cbNamSinhVo.SelectedIndex = -1;
+            cbDanTocVo.SelectedIndex = -1;
+            cbQuocTichVo.SelectedIndex = -1;
+            txtCMNDVo.Text = "";
+            txtThuongTamTruVo.Text = "";
         }
 
         //---------------------------------------------------------Prevent form from moving

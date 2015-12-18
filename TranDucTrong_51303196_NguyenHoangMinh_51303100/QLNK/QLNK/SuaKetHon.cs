@@ -710,7 +710,7 @@ namespace QLNK
                   txtCMNDVo.Equals("")      || txtThuongTamTruVo.Equals("") || cbQueQuan.Equals("")         ||
                   ngayDK.Equals("")         || thangDK.Equals("")           || namDK.Equals("")))
             {
-                DialogResult dialogResult = MessageBox.Show("Có chắc muốn cập nhập thông tin không", "Xác nhận sửa thông tin", MessageBoxButtons.YesNo);
+                DialogResult dialogResult = MessageBox.Show(sc.MSGBOX_UPDATE, sc.MSGBOX_CAP_UPDATE, MessageBoxButtons.YesNo);
                 if (dialogResult == DialogResult.Yes)
                 {
                     flagSave = true;
@@ -720,13 +720,13 @@ namespace QLNK
                                         cmndVo, khuVucDangKy, ngayDangKy))
                     {
                         this.Close();
-                        MessageBox.Show("Cập nhật thành công");
+                        MessageBox.Show(sc.SUCCESS_UPDATE);
                     }
                 }
             }
             else
             {
-                MessageBox.Show("Điền đầy đủ rồi hẵng cập nhật");
+                MessageBox.Show(sc.ERROR_BLANK);
             }
         }
 
@@ -769,16 +769,31 @@ namespace QLNK
                      !cmndVo.Equals(itemKetHon[12])         || !khuVucDangKy.Equals(itemKetHon[13])     ||
                      !ngayDangKy.Equals(itemKetHon[14])))
                 {
-                    DialogResult dialogResult = MessageBox.Show("Có muốn lưu thông tin đã sửa ?",
-                                                                "Xác nhận thoát", MessageBoxButtons.YesNoCancel);
+                    DialogResult dialogResult = MessageBox.Show(sc.MSGBOX_UPDATE,
+                                                                sc.MSGBOX_CAP_EXIT,
+                                                                MessageBoxButtons.YesNoCancel);
                     if (dialogResult == DialogResult.Yes)
                     {
-                        if (sc.updateKetHon(maKetHon, hoTenChong, ngaySinhChong, danTocChong,
-                                            quocTichChong, thuongTamTruChong, cmndChong, hoTenVo,
-                                            ngaySinhVo, danTocVo, quocTichVo, thuongTamTruVo,
-                                            cmndVo, khuVucDangKy, ngayDangKy))
+                        if (!(maKetHon.Equals("")       || hoTenChong.Equals("")        || ngayChong.Equals("")         ||
+                              thangChong.Equals("")     || namChong.Equals("")          || danTocChong.Equals("")       ||
+                              quocTichChong.Equals("")  || cmndChong.Equals("")         || thuongTamTruChong.Equals("") ||
+                              hoTenVo.Equals("")        || ngayVo.Equals("")            || thangVo.Equals("")           ||
+                              namVo.Equals("")          || cbDanTocVo.Equals("")        || cbQuocTichVo.Equals("")      ||
+                              txtCMNDVo.Equals("")      || txtThuongTamTruVo.Equals("") || cbQueQuan.Equals("")         ||
+                              ngayDK.Equals("")         || thangDK.Equals("")           || namDK.Equals("")))
                         {
-                            MessageBox.Show("Cập nhật thành công");
+                            if (sc.updateKetHon(maKetHon, hoTenChong, ngaySinhChong, danTocChong,
+                                                quocTichChong, thuongTamTruChong, cmndChong, hoTenVo,
+                                                ngaySinhVo, danTocVo, quocTichVo, thuongTamTruVo,
+                                                cmndVo, khuVucDangKy, ngayDangKy))
+                            {
+                                MessageBox.Show(sc.SUCCESS_UPDATE);
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show(sc.ERROR_BLANK);
+                            e.Cancel = true;
                         }
                     }
                     else if (dialogResult == DialogResult.Cancel)

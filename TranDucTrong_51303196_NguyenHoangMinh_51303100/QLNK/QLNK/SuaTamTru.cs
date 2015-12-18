@@ -146,9 +146,10 @@ namespace QLNK
         private void btnSuaTamTru_Click(object sender, EventArgs e)
         {
             int viTriTamTru = cbTamTru.SelectedIndex;
-            int viTriNgayDangChon = cbNgay.SelectedIndex;
-            int viTriThangDangChon = cbThang.SelectedIndex;
-            int viTriNamDangChon = cbNam.SelectedIndex;
+            string tamTru = cbTamTru.Text;
+            string ngay = cbNgay.Text;
+            string thang = cbThang.Text;
+            string nam = cbNam.Text;
             string maTamTru = txtMaTamTru.Text;
             string maNhanKhau = txtMaNhanKhau.Text;
             string tenNoiTamTru = "";
@@ -164,15 +165,15 @@ namespace QLNK
             string soDienThoai = txtSoDienThoai.Text;
             string thoiHan = cbNgay.Text + "/" + cbThang.Text + "/" + cbNam.Text;
 
-            if (!(maTamTru.Equals("") || maNhanKhau.Equals("") || viTriNgayDangChon == -1 ||
-               viTriThangDangChon == -1 || viTriNamDangChon == -1 ||
-               viTriTamTru == -1 || diaChi.Equals("") || soDienThoai.Equals("")))
+            if (!(maTamTru.Equals("")   || maNhanKhau.Equals("")|| ngay.Equals("")  ||
+                  thang.Equals("")      || nam.Equals("")       || tamTru.Equals("")||
+                  diaChi.Equals("")     || soDienThoai.Equals("")))
             {
                 if (viTriTamTru == 1 || viTriTamTru == 3)
                 {
                     if (!txtTenNoiTamTru.Text.Equals(""))
                     {
-                        DialogResult dialogResult = MessageBox.Show("Có chắc muốn cập nhập thông tin không", "Xác nhận sửa thông tin", MessageBoxButtons.YesNo);
+                        DialogResult dialogResult = MessageBox.Show(sc.MSGBOX_UPDATE, sc.MSGBOX_CAP_UPDATE, MessageBoxButtons.YesNo);
                         if (dialogResult == DialogResult.Yes)
                         {
                             flagSave = true;
@@ -180,18 +181,18 @@ namespace QLNK
                                              diaChi, soDienThoai, thoiHan))
                             {
                                 this.Close();
-                                MessageBox.Show("Cập nhật thành công");
+                                MessageBox.Show(sc.SUCCESS_UPDATE);
                             }
                         }
                     }
                     else
                     {
-                        MessageBox.Show("Điền đầy đủ rồi hẵng cập nhật");
+                        MessageBox.Show(sc.ERROR_BLANK);
                     }
                 }
                 else
                 {
-                    DialogResult dialogResult = MessageBox.Show("Có chắc muốn cập nhập thông tin không", "Xác nhận sửa thông tin", MessageBoxButtons.YesNo);
+                    DialogResult dialogResult = MessageBox.Show(sc.MSGBOX_UPDATE, sc.MSGBOX_CAP_UPDATE, MessageBoxButtons.YesNo);
                     if (dialogResult == DialogResult.Yes)
                     {
                         flagSave = true;
@@ -199,18 +200,18 @@ namespace QLNK
                                          diaChi, soDienThoai, thoiHan))
                         {
                             this.Close();
-                            MessageBox.Show("Cập nhật thành công");
+                            MessageBox.Show(sc.SUCCESS_UPDATE);
                         }
                         else
                         {
-                            MessageBox.Show("Điền đầy đủ rồi hẵng cập nhật");
+                            MessageBox.Show(sc.ERROR_BLANK);
                         }
                     }
                 }
             }
             else
             {
-                MessageBox.Show("Điền đầy đủ rồi hẵng cập nhật");
+                MessageBox.Show(sc.ERROR_BLANK);
             }
         }
 
@@ -232,6 +233,10 @@ namespace QLNK
             if (flagSave == false)
             {
                 int viTriTamTru = cbTamTru.SelectedIndex;
+                string tamTru = cbTamTru.Text;
+                string ngay = cbNgay.Text;
+                string thang = cbThang.Text;
+                string nam = cbNam.Text;
                 string maTamTru = txtMaTamTru.Text;
                 string maNhanKhau = txtMaNhanKhau.Text;
                 string tenNoiTamTru = "";
@@ -247,18 +252,29 @@ namespace QLNK
                 string soDienThoai = txtSoDienThoai.Text;
                 string thoiHan = cbNgay.Text + "/" + cbThang.Text + "/" + cbNam.Text;
 
-                if ((!maTamTru.Equals(itemTamTru[0]) || !maNhanKhau.Equals(itemTamTru[1]) ||
-                    !tenNoiTamTru.Equals(itemTamTru[2]) || !diaChi.Equals(itemTamTru[3]) ||
-                    !soDienThoai.Equals(itemTamTru[4]) || !thoiHan.Equals(itemTamTru[5])))
+                if ((!maTamTru.Equals(itemTamTru[0])    || !maNhanKhau.Equals(itemTamTru[1])||
+                    !tenNoiTamTru.Equals(itemTamTru[2]) || !diaChi.Equals(itemTamTru[3])    ||
+                    !soDienThoai.Equals(itemTamTru[4])  || !thoiHan.Equals(itemTamTru[5])))
                 {
-                    DialogResult dialogResult = MessageBox.Show("Có muốn lưu thông tin đã sửa ?",
-                                                                "Xác nhận thoát", MessageBoxButtons.YesNoCancel);
+                    DialogResult dialogResult = MessageBox.Show(sc.MSGBOX_UPDATE,
+                                            sc.MSGBOX_CAP_EXIT,
+                                            MessageBoxButtons.YesNoCancel);
                     if (dialogResult == DialogResult.Yes)
                     {
-                        if (sc.updateTamTru(maTamTru, maNhanKhau, tenNoiTamTru,
-                                             diaChi, soDienThoai, thoiHan))
+                        if (!(maTamTru.Equals("")   || maNhanKhau.Equals("")|| ngay.Equals("")  ||
+                              thang.Equals("")      || nam.Equals("")       || tamTru.Equals("")||
+                              diaChi.Equals("")     || soDienThoai.Equals("")))
                         {
-                            MessageBox.Show("Cập nhật thành công");
+                            if (sc.updateTamTru(maTamTru, maNhanKhau, tenNoiTamTru,
+                                                diaChi, soDienThoai, thoiHan))
+                            {
+                                MessageBox.Show(sc.SUCCESS_UPDATE);
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show(sc.ERROR_BLANK);
+                            e.Cancel = true;
                         }
                     }
                     else if (dialogResult == DialogResult.Cancel)

@@ -11,7 +11,8 @@ namespace QLNK
         {
             InitializeComponent();
         }
-        private void clear()
+
+        private void btnClear_Click(object sender, EventArgs e)
         {
             txtMaTamTru.Text = "";
             txtMaNhanKhau.Text = "";
@@ -22,10 +23,7 @@ namespace QLNK
             cbThang.SelectedIndex = -1;
             cbNam.SelectedIndex = -1;
         }
-        private void btnClear_Click(object sender, EventArgs e)
-        {
-            clear();
-        }
+
         private void btnThemTamTru_Click(object sender, EventArgs e)
         {
             int viTriTamTru = cbTamTru.SelectedIndex;
@@ -48,9 +46,9 @@ namespace QLNK
             string soDienThoai = txtSoDienThoai.Text;
             string thoiHan = cbNgay.Text + "/" + cbThang.Text + "/" + cbNam.Text;
 
-            if (!(maTamTru.Equals("") || maNhanKhau.Equals("") || ngay.Equals("") ||
-                thang.Equals("") || nam.Equals("") || tamTru.Equals("") ||
-                diaChi.Equals("") || soDienThoai.Equals("")))
+            if (!(maTamTru.Equals("")   || maNhanKhau.Equals("")|| ngay.Equals("")  ||
+                thang.Equals("")        || nam.Equals("")       || tamTru.Equals("")||
+                diaChi.Equals("")       || soDienThoai.Equals("")))
             {
                 if (viTriTamTru == 1 || viTriTamTru == 3)
                 {
@@ -59,13 +57,13 @@ namespace QLNK
                         if (sc.addTamTru(maTamTru, maNhanKhau, tenNoiTamTru,
                                          diaChi, soDienThoai, thoiHan))
                         {
-                            MessageBox.Show("Thêm thành công");
+                            MessageBox.Show(sc.SUCCESS_ADD);
                             this.Close();
                         }
                     }
                     else
                     {
-                        MessageBox.Show("Điền đầy đủ rồi hẵng thêm");
+                        MessageBox.Show(sc.ERROR_BLANK);
                     }
                 }
                 else
@@ -73,16 +71,17 @@ namespace QLNK
                     if (sc.addTamTru(maTamTru, maNhanKhau, tenNoiTamTru,
                                      diaChi, soDienThoai, thoiHan))
                     {
-                        MessageBox.Show("Thêm thành công");
+                        MessageBox.Show(sc.SUCCESS_ADD);
                         this.Close();
                     }
                 }
             }
             else
             {
-                MessageBox.Show("Điền đầy đủ rồi hẵng thêm");
+                MessageBox.Show(sc.ERROR_BLANK);
             }
         }
+
         private void cbTamTru_SelectedIndexChanged(object sender, EventArgs e)
         {
             int index = cbTamTru.SelectedIndex;

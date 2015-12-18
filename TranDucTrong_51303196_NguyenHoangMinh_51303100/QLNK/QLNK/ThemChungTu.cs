@@ -52,13 +52,13 @@ namespace QLNK
                                   tenNguoiMat, ngaySinhNguoiMat, danToc, quocTich, cmnd,
                                   ngayQuaDoi, thoiGianQuaDoi, khuVucDangKy, ngayDangKy))
                 {
-                    MessageBox.Show("Thêm thành công");
+                    MessageBox.Show(sc.SUCCESS_ADD);
                     this.Close();
                 }
             }
             else
             {
-                MessageBox.Show("Điền đầy đủ rồi hẵng thêm");
+                MessageBox.Show(sc.ERROR_BLANK);
             }
         }
 

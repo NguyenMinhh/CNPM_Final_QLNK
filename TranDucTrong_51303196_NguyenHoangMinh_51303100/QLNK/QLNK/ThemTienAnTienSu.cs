@@ -34,18 +34,19 @@ namespace QLNK
             string tenTienAnTienSu = txtTenTienAnTienSu.Text;
             string noiXetXu = cbQueQuan.Text;
             string ngayThucThi = ngay + "/" + thang + "/" + nam;
-            if (!(maTienAnTienSu.Equals("") || maNhanKhau.Equals("") || tenTienAnTienSu.Equals("") ||
-                  noiXetXu.Equals("") || ngay.Equals("") || thang.Equals("") || nam.Equals("")))
+            if (!(maTienAnTienSu.Equals("") || maNhanKhau.Equals("")|| tenTienAnTienSu.Equals("") ||
+                  noiXetXu.Equals("")       || ngay.Equals("")      || thang.Equals("")           ||
+                  nam.Equals("")))
             {
                 if (sc.addTienAnTienSu(maTienAnTienSu, maNhanKhau, tenTienAnTienSu, noiXetXu, ngayThucThi))
                 {
-                    MessageBox.Show("Thêm thành công");
+                    MessageBox.Show(sc.SUCCESS_ADD);
                     this.Close();
                 }
             }
             else
             {
-                MessageBox.Show("Điền đầy đủ rồi hẵng thêm");
+                MessageBox.Show(sc.ERROR_BLANK);
             }
         }
 

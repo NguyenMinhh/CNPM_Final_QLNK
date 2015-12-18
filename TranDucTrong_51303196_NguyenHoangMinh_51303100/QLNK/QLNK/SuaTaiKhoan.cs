@@ -1,11 +1,5 @@
-﻿using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using System.Windows.Forms;
 using MaterialSkin.Controls;
-using MaterialSkin;
 using System;
 
 namespace QLNK
@@ -36,24 +30,24 @@ namespace QLNK
             {
                 if (matKhauMoi1 == matKhauMoi2)
                 {
-                    DialogResult dialogResult = MessageBox.Show("Có chắc muốn cập nhập thông tin không", "Xác nhận sửa thông tin", MessageBoxButtons.YesNo);
+                    DialogResult dialogResult = MessageBox.Show("Lưu mật khẩu mới ?", sc.MSGBOX_CAP_UPDATE, MessageBoxButtons.YesNo);
                     if (dialogResult == DialogResult.Yes)
                     {
                         if (sc.updateMatKhau(tenTaiKhoan, matKhauMoi1, ngayCapNhat))
                         {
                             this.Close();
-                            MessageBox.Show("Cập nhật thành công");
+                            MessageBox.Show(sc.SUCCESS_UPDATE);
                         }
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Xác nhận mật khẩu mới thất bại");
+                    MessageBox.Show("Xác nhận mật khẩu mới thất bại!");
                 }
             }
             else
             {
-                MessageBox.Show("Điền đầy đủ rồi hẵng cập nhật");
+                MessageBox.Show(sc.ERROR_BLANK);
             }
         }
 
@@ -91,7 +85,21 @@ namespace QLNK
         private void txtMatKhauMoi2_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && char.IsWhiteSpace(e.KeyChar))
+            {
                 e.Handled = true;
+            }
+        }
+
+        private void txtMatKhauMoi2_TextChanged(object sender, EventArgs e)
+        {
+            if (!txtMatKhauMoi1.Text.Equals(txtMatKhauMoi2.Text))
+            {
+                lblErrorPassword.Visible = true;
+            }
+            if (txtMatKhauMoi2.Text.Equals(txtMatKhauMoi1.Text))
+            {
+                lblErrorPassword.Visible = false;
+            }
         }
     }
 }

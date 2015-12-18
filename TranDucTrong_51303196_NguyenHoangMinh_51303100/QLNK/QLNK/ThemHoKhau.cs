@@ -11,7 +11,8 @@ namespace QLNK
         {
             InitializeComponent();
         }
-        private void clear()
+
+        private void btnClear_Click(object sender, EventArgs e)
         {
             cbNam.SelectedIndex = -1;
             cbNgay.SelectedIndex = -1;
@@ -21,10 +22,6 @@ namespace QLNK
             cbQueQuan.Text = "";
             txtDiaChi.Text = "";
             txtCMNDChuHo.Text = "";
-        }
-        private void btnClear_Click(object sender, EventArgs e)
-        {
-            clear();
         }
         private void btnThemHoKhau_Click(object sender, EventArgs e)
         {
@@ -38,20 +35,20 @@ namespace QLNK
             string thang = cbNgay.Text;
             string nam = cbNam.Text;
 
-            if (!(maHoKhau.Equals("") || tenChuHo.Equals("") || cmndChuHo.Equals("") ||
-                  ngay.Equals("") || thang.Equals("") || nam.Equals("") ||
-                  diaChi.Equals("") || khuVuc.Equals("")))
+            if (!(maHoKhau.Equals("")   || tenChuHo.Equals("")  || cmndChuHo.Equals("") ||
+                  ngay.Equals("")       || thang.Equals("")     || nam.Equals("")       ||
+                  diaChi.Equals("")     || khuVuc.Equals("")))
             {
 
                 if (sc.addHoKhau(maHoKhau, tenChuHo, cmndChuHo, khuVuc, diaChi, ngayLap))
                 {
-                    MessageBox.Show("Thêm thành công");
+                    MessageBox.Show(sc.SUCCESS_ADD);
                     this.Close();
                 }
             }
             else
             {
-                MessageBox.Show("Điền đầy đủ rồi hẵng thêm");
+                MessageBox.Show(sc.ERROR_BLANK);
             }
         }
 

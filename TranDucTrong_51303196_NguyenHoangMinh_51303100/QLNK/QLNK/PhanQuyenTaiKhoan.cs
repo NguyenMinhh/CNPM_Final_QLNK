@@ -46,14 +46,14 @@ namespace QLNK
                 case "Quản Lý Chứng Nhận Kết Hôn": phanQuyen = 6; break;
                 case "Quản Lý Tiền Án Tiền Sự": phanQuyen = 7; break;
             }
-            DialogResult dialogResult = MessageBox.Show("Có chắc muốn cập nhập thông tin không", "Xác nhận sửa thông tin", MessageBoxButtons.YesNo);
+            DialogResult dialogResult = MessageBox.Show(sc.MSGBOX_UPDATE, sc.MSGBOX_CAP_UPDATE, MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
             {
                 flagSave = true;
                 if (sc.updatePhanQuyen(tenDangNhap, phanQuyen, ngayCapNhat))
                 {
                     this.Close();
-                    MessageBox.Show("Cập nhật thành công");
+                    MessageBox.Show(sc.SUCCESS_UPDATE);
                 }
             }
         }
@@ -78,13 +78,13 @@ namespace QLNK
                 string ngayCapNhat = DateTime.Now.ToString("dd/MM/yyyy") + " " + DateTime.Now.ToString("HH:mm:ss");
                 if ((!tenDangNhap.Equals(itemTaiKhoan[0]) || !quyenHanh.Equals(itemTaiKhoan[3])))
                 {
-                    DialogResult dialogResult = MessageBox.Show("Có muốn lưu thông tin đã sửa ?",
-                                                                "Xác nhận thoát", MessageBoxButtons.YesNoCancel);
+                    DialogResult dialogResult = MessageBox.Show(sc.MSGBOX_UPDATE,
+                                                                sc.MSGBOX_CAP_EXIT, MessageBoxButtons.YesNoCancel);
                     if (dialogResult == DialogResult.Yes)
                     {
                         if (sc.updatePhanQuyen(tenDangNhap, phanQuyen, ngayCapNhat))
                         {
-                            MessageBox.Show("Cập nhật thành công");
+                            MessageBox.Show(sc.SUCCESS_UPDATE);
                         }
                     }
                     else if (dialogResult == DialogResult.Cancel)

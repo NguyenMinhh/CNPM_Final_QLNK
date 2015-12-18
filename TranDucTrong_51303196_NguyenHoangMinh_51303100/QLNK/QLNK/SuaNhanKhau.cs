@@ -280,7 +280,7 @@ namespace QLNK
                   queQuan.Equals("") || tonGiao.Equals("") || cmnd.Equals("") ||
                   maHoKhau.Equals("") || ngheNghiep.Equals("")))
             {
-                DialogResult dialogResult = MessageBox.Show("Có chắc muốn cập nhập thông tin không", "Xác nhận sửa thông tin", MessageBoxButtons.YesNo);
+                DialogResult dialogResult = MessageBox.Show(sc.MSGBOX_UPDATE, sc.MSGBOX_CAP_UPDATE, MessageBoxButtons.YesNo);
                 if (dialogResult == DialogResult.Yes)
                 {
                     flagSave = true;
@@ -288,13 +288,13 @@ namespace QLNK
                                           tonGiao, danToc, cmnd, maHoKhau, ngheNghiep))
                     {
                         this.Close();
-                        MessageBox.Show("Cập nhật thành công");
+                        MessageBox.Show(sc.SUCCESS_UPDATE);
                     }
                 }
             }
             else
             {
-                MessageBox.Show("Điền đầy đủ rồi hẵng cập nhật");
+                MessageBox.Show(sc.ERROR_BLANK);
             }
         }
 
@@ -302,9 +302,12 @@ namespace QLNK
         {
             if (flagSave == false)
             {
+                string ngay = cbNgay.Text;
+                string thang = cbThang.Text;
+                string nam = cbNam.Text;
                 string maNhanKhau = txtMaNhanKhau.Text;
                 string hoTen = txtHoTen.Text;
-                string ngaySinh = cbNgay.Text + "/" + cbThang.Text + "/" + cbNam.Text;
+                string ngaySinh = ngay + "/" + thang + "/" + nam;
                 string gioiTinh = (rdNam.Checked && !rdNu.Checked) ? "Nam" : "Nữ";
                 string danToc = cbDanToc.Text;
                 string queQuan = cbQueQuan.Text;
@@ -313,20 +316,32 @@ namespace QLNK
                 string maHoKhau = txtMaHoKhau.Text;
                 string ngheNghiep = txtNgheNghiep.Text;
 
-                if ((!maNhanKhau.Equals(itemNhanKhau[0]) || !hoTen.Equals(itemNhanKhau[1]) ||
-                     !ngaySinh.Equals(itemNhanKhau[2]) || !gioiTinh.Equals(itemNhanKhau[3]) ||
-                     !queQuan.Equals(itemNhanKhau[4]) || !tonGiao.Equals(itemNhanKhau[5]) ||
-                     !danToc.Equals(itemNhanKhau[6]) || !cmnd.Equals(itemNhanKhau[7]) ||
-                     !maHoKhau.Equals(itemNhanKhau[8]) || !ngheNghiep.Equals(itemNhanKhau[9])))
+                if ((!maNhanKhau.Equals(itemNhanKhau[0])|| !hoTen.Equals(itemNhanKhau[1])   ||
+                     !ngaySinh.Equals(itemNhanKhau[2])  || !gioiTinh.Equals(itemNhanKhau[3])||
+                     !queQuan.Equals(itemNhanKhau[4])   || !tonGiao.Equals(itemNhanKhau[5]) ||
+                     !danToc.Equals(itemNhanKhau[6])    || !cmnd.Equals(itemNhanKhau[7])    ||
+                     !maHoKhau.Equals(itemNhanKhau[8])  || !ngheNghiep.Equals(itemNhanKhau[9])))
                 {
-                    DialogResult dialogResult = MessageBox.Show("Có muốn lưu thông tin đã sửa ?",
-                                                                "Xác nhận thoát", MessageBoxButtons.YesNoCancel);
+                    DialogResult dialogResult = MessageBox.Show(sc.MSGBOX_UPDATE,
+                                                                sc.MSGBOX_CAP_EXIT,
+                                                                MessageBoxButtons.YesNoCancel);
                     if (dialogResult == DialogResult.Yes)
                     {
-                        if (sc.updateNhanKhau(maNhanKhau, hoTen, ngaySinh, gioiTinh, queQuan,
-                                              tonGiao, danToc, cmnd, maHoKhau, ngheNghiep))
+                        if (!(maNhanKhau.Equals("") || hoTen.Equals("")     || (!rdNam.Checked && !rdNu.Checked)    ||
+                              ngay.Equals("")       || thang.Equals("")     || nam.Equals("")   || danToc.Equals("")||
+                              queQuan.Equals("")    || tonGiao.Equals("")   || cmnd.Equals("")  ||
+                              maHoKhau.Equals("")   || ngheNghiep.Equals("")))
                         {
-                            MessageBox.Show("Cập nhật thành công");
+                            if (sc.updateNhanKhau(maNhanKhau, hoTen, ngaySinh, gioiTinh, queQuan,
+                                                  tonGiao, danToc, cmnd, maHoKhau, ngheNghiep))
+                            {
+                                MessageBox.Show(sc.SUCCESS_UPDATE);
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show(sc.ERROR_BLANK);
+                            e.Cancel = true;
                         }
                     }
                     else if (dialogResult == DialogResult.Cancel)

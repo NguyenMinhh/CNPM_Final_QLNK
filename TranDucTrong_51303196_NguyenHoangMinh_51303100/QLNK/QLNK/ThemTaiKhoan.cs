@@ -1,11 +1,5 @@
-﻿using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using System.Windows.Forms;
 using MaterialSkin.Controls;
-using MaterialSkin;
 using System;
 
 namespace QLNK
@@ -40,13 +34,13 @@ namespace QLNK
             {
                 if (sc.addTaiKhoan(tenDangNhap, matKhau, ngayCapNhat, phanQuyen, nguoiSuDung))
                 {
-                    MessageBox.Show("Thêm thành công");
+                    MessageBox.Show(sc.SUCCESS_ADD);
                     this.Close();
                 }
             }
             else
             {
-                MessageBox.Show("Điền đầy đủ rồi hẵng thêm");
+                MessageBox.Show(sc.ERROR_BLANK);
             }
         }
 
@@ -57,6 +51,7 @@ namespace QLNK
             cbQuyenHanh.SelectedIndex = -1;
             txtNguoiSuDung.Text = "";
         }
+
         //---------------------------------------------------------Prevent form from moving
 
         protected override void WndProc(ref Message message)

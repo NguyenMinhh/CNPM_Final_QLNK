@@ -40,7 +40,7 @@ namespace QLNK
         //----------------------------------------------------------------------BTN CHÍNH
         private void btnLogOut_Click(object sender, EventArgs e)
         {
-            DialogResult dialogResult = MessageBox.Show("Có chắc muốn đăng xuất không", "Xác nhận đăng xuất", MessageBoxButtons.YesNo);
+            DialogResult dialogResult = MessageBox.Show("Đăng xuất tài khoản ?", "Xác nhận đăng xuất", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
             {
                 logOut = true;
@@ -60,7 +60,7 @@ namespace QLNK
             }
             else
             {
-                MessageBox.Show("Vui lòng chọn tài khoản cần phân quyền");
+                MessageBox.Show("Vui lòng chọn tài khoản cần phân quyền!");
             }
         }
 
@@ -78,7 +78,7 @@ namespace QLNK
                 }
                 else
                 {
-                    MessageBox.Show("Vui lòng chọn nhân khẩu cần sửa");
+                    MessageBox.Show("Vui lòng chọn thông tin nhân khẩu cần chỉnh sửa!");
                 }
             }
             else if (this.tabPage2.Focus())
@@ -93,7 +93,7 @@ namespace QLNK
                 }
                 else
                 {
-                    MessageBox.Show("Vui lòng chọn hộ khẩu cần sửa");
+                    MessageBox.Show("Vui lòng chọn thông tin hộ khẩu cần chỉnh sửa!");
                 }
             }
             else if (this.tabPage3.Focus())
@@ -108,7 +108,7 @@ namespace QLNK
                 }
                 else
                 {
-                    MessageBox.Show("Vui lòng chọn tạm trú cần sửa");
+                    MessageBox.Show("Vui lòng chọn thông tin tạm trú cần chỉnh sửa!");
                 }
             }
             else if (this.tabPage4.Focus())
@@ -123,7 +123,7 @@ namespace QLNK
                 }
                 else
                 {
-                    MessageBox.Show("Vui lòng chọn chứng tử cần sửa");
+                    MessageBox.Show("Vui lòng chọn thông tin chứng tử cần chỉnh sửa!");
                 }
             }
             else if (this.tabPage5.Focus())
@@ -138,7 +138,7 @@ namespace QLNK
                 }
                 else
                 {
-                    MessageBox.Show("Vui lòng chọn chứng nhận kết hôn cần sửa");
+                    MessageBox.Show("Vui lòng chọn thông tin chứng nhận kết hôn cần chỉnh sửa!");
                 }
             }
             else if (this.tabPage6.Focus())
@@ -153,7 +153,7 @@ namespace QLNK
                 }
                 else
                 {
-                    MessageBox.Show("Vui lòng chọn tiền án tiền sự cần sửa");
+                    MessageBox.Show("Vui lòng chọn thông tin tiền án tiền sự cần chỉnh sửa!");
                 }
             }
             else if (this.tabPage8.Focus())
@@ -1008,7 +1008,7 @@ namespace QLNK
         {
             if (logOut == false)
             {
-                switch (MessageBox.Show(this, "Thoát chương trình", "Xác nhận thoát", MessageBoxButtons.YesNo))
+                switch (MessageBox.Show(this, "Thoát khỏi chương trình ?", "Xác nhận thoát", MessageBoxButtons.YesNo))
                 {
                     case DialogResult.No:
                         e.Cancel = true;

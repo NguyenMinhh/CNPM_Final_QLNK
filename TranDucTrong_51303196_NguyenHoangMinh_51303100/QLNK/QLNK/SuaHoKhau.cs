@@ -196,24 +196,24 @@ namespace QLNK
             string thang = cbNgay.Text;
             string nam = cbNam.Text;
 
-            if (!(maHoKhau.Equals("") || tenChuHo.Equals("") || cmndChuHo.Equals("") ||
-                  ngay.Equals("") || thang.Equals("") || nam.Equals("") ||
-                  diaChi.Equals("") || khuVuc.Equals("")))
+            if (!(maHoKhau.Equals("")   || tenChuHo.Equals("")  || cmndChuHo.Equals("") ||
+                  ngay.Equals("")       || thang.Equals("")     || nam.Equals("")       ||
+                  diaChi.Equals("")     || khuVuc.Equals("")))
             {
-                DialogResult dialogResult = MessageBox.Show("Có chắc muốn cập nhập thông tin không", "Xác nhận sửa thông tin", MessageBoxButtons.YesNo);
+                DialogResult dialogResult = MessageBox.Show(sc.MSGBOX_UPDATE, sc.MSGBOX_CAP_UPDATE, MessageBoxButtons.YesNo);
                 if (dialogResult == DialogResult.Yes)
                 {
                     flagSave = true;
                     if (sc.updateHoKhau(maHoKhau, tenChuHo, cmndChuHo, khuVuc, diaChi, ngayLap))
                     {
                         this.Close();
-                        MessageBox.Show("Cập nhật thành công");
+                        MessageBox.Show(sc.SUCCESS_UPDATE);
                     }
                 }
             }
             else
             {
-                MessageBox.Show("Điền đầy đủ rồi hẵng cập nhật");
+                MessageBox.Show(sc.ERROR_BLANK);
             }
         }
 
@@ -221,24 +221,38 @@ namespace QLNK
         {
             if (flagSave == false)
             {
+                string ngay = cbThang.Text;
+                string thang = cbNgay.Text;
+                string nam = cbNam.Text;
                 string maHoKhau = txtMaHoKhau.Text;
                 string tenChuHo = txtHoTenChuHo.Text;
                 string cmndChuHo = txtCMNDChuHo.Text;
                 string khuVuc = cbQueQuan.Text;
                 string diaChi = txtDiaChi.Text;
-                string ngayLap = cbNgay.Text + "/" + cbThang.Text + "/" + cbNam.Text;
+                string ngayLap = ngay + "/" + thang + "/" + nam;
 
                 if ((!maHoKhau.Equals(itemHoKhau[0]) || !tenChuHo.Equals(itemHoKhau[1]) ||
-                    !cmndChuHo.Equals(itemHoKhau[2]) || !khuVuc.Equals(itemHoKhau[3]) ||
-                    !diaChi.Equals(itemHoKhau[4]) || !ngayLap.Equals(itemHoKhau[5])))
+                    !cmndChuHo.Equals(itemHoKhau[2]) || !khuVuc.Equals(itemHoKhau[3])   ||
+                    !diaChi.Equals(itemHoKhau[4])    || !ngayLap.Equals(itemHoKhau[5])))
                 {
-                    DialogResult dialogResult = MessageBox.Show("Có muốn lưu thông tin đã sửa ?",
-                                                                "Xác nhận thoát", MessageBoxButtons.YesNoCancel);
+                    DialogResult dialogResult = MessageBox.Show(sc.MSGBOX_UPDATE,
+                                                                sc.MSGBOX_CAP_EXIT,
+                                                                MessageBoxButtons.YesNoCancel);
                     if (dialogResult == DialogResult.Yes)
                     {
-                        if (sc.updateHoKhau(maHoKhau, tenChuHo, cmndChuHo, khuVuc, diaChi, ngayLap))
+                        if (!(maHoKhau.Equals("")   || tenChuHo.Equals("")  || cmndChuHo.Equals("") ||
+                              ngay.Equals("")       || thang.Equals("")     || nam.Equals("")       ||
+                              diaChi.Equals("")     || khuVuc.Equals("")))
                         {
-                            MessageBox.Show("Cập nhật thành công");
+                            if (sc.updateHoKhau(maHoKhau, tenChuHo, cmndChuHo, khuVuc, diaChi, ngayLap))
+                            {
+                                MessageBox.Show(sc.SUCCESS_UPDATE);
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show(sc.ERROR_BLANK);
+                            e.Cancel = true;
                         }
                     }
                     else if (dialogResult == DialogResult.Cancel)
