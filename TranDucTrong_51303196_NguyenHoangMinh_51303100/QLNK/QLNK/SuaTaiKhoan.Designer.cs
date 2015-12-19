@@ -188,6 +188,7 @@
             this.Controls.Add(this.txtMatKhauCu);
             this.Controls.Add(this.materialLabel2);
             this.Controls.Add(this.materialLabel1);
+            this.MaximizeBox = false;
             this.Name = "SuaTaiKhoan";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ĐỔI MẬT KHẨU";

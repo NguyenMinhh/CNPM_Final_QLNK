@@ -15,23 +15,21 @@ namespace QLNK
             this.itemKetHon = itemKetHon;
             setNormal(itemKetHon);
         }
-
         private void setNormal(string[] items)
         {
-            txtMaKetHon.Text = items[0];
             txtHoTenChong.Text = items[1];
             string[] arr = items[2].Split('/');
             switch (arr[0])
             {
-                case "1": cbNgaySinhChong.SelectedIndex = 0; break;
-                case "2": cbNgaySinhChong.SelectedIndex = 1; break;
-                case "3": cbNgaySinhChong.SelectedIndex = 2; break;
-                case "4": cbNgaySinhChong.SelectedIndex = 3; break;
-                case "5": cbNgaySinhChong.SelectedIndex = 4; break;
-                case "6": cbNgaySinhChong.SelectedIndex = 5; break;
-                case "7": cbNgaySinhChong.SelectedIndex = 6; break;
-                case "8": cbNgaySinhChong.SelectedIndex = 7; break;
-                case "9": cbNgaySinhChong.SelectedIndex = 8; break;
+                case "01": cbNgaySinhChong.SelectedIndex = 0; break;
+                case "02": cbNgaySinhChong.SelectedIndex = 1; break;
+                case "03": cbNgaySinhChong.SelectedIndex = 2; break;
+                case "04": cbNgaySinhChong.SelectedIndex = 3; break;
+                case "05": cbNgaySinhChong.SelectedIndex = 4; break;
+                case "06": cbNgaySinhChong.SelectedIndex = 5; break;
+                case "07": cbNgaySinhChong.SelectedIndex = 6; break;
+                case "08": cbNgaySinhChong.SelectedIndex = 7; break;
+                case "09": cbNgaySinhChong.SelectedIndex = 8; break;
                 case "10": cbNgaySinhChong.SelectedIndex = 9; break;
                 case "11": cbNgaySinhChong.SelectedIndex = 10; break;
                 case "12": cbNgaySinhChong.SelectedIndex = 11; break;
@@ -57,15 +55,15 @@ namespace QLNK
             }
             switch (arr[1])
             {
-                case "1": cbThangSinhChong.SelectedIndex = 0; break;
-                case "2": cbThangSinhChong.SelectedIndex = 1; break;
-                case "3": cbThangSinhChong.SelectedIndex = 2; break;
-                case "4": cbThangSinhChong.SelectedIndex = 3; break;
-                case "5": cbThangSinhChong.SelectedIndex = 4; break;
-                case "6": cbThangSinhChong.SelectedIndex = 5; break;
-                case "7": cbThangSinhChong.SelectedIndex = 6; break;
-                case "8": cbThangSinhChong.SelectedIndex = 7; break;
-                case "9": cbThangSinhChong.SelectedIndex = 8; break;
+                case "01": cbThangSinhChong.SelectedIndex = 0; break;
+                case "02": cbThangSinhChong.SelectedIndex = 1; break;
+                case "03": cbThangSinhChong.SelectedIndex = 2; break;
+                case "04": cbThangSinhChong.SelectedIndex = 3; break;
+                case "05": cbThangSinhChong.SelectedIndex = 4; break;
+                case "06": cbThangSinhChong.SelectedIndex = 5; break;
+                case "07": cbThangSinhChong.SelectedIndex = 6; break;
+                case "08": cbThangSinhChong.SelectedIndex = 7; break;
+                case "09": cbThangSinhChong.SelectedIndex = 8; break;
                 case "10": cbThangSinhChong.SelectedIndex = 9; break;
                 case "11": cbThangSinhChong.SelectedIndex = 10; break;
                 case "12": cbThangSinhChong.SelectedIndex = 11; break;
@@ -110,9 +108,6 @@ namespace QLNK
                 case "1995": cbNamSinhChong.SelectedIndex = 35; break;
                 case "1996": cbNamSinhChong.SelectedIndex = 36; break;
                 case "1997": cbNamSinhChong.SelectedIndex = 37; break;
-                case "1998": cbNamSinhChong.SelectedIndex = 38; break;
-                case "1999": cbNamSinhChong.SelectedIndex = 39; break;
-                case "2000": cbNamSinhChong.SelectedIndex = 40; break;
             }
             switch (items[3])
             {
@@ -121,7 +116,7 @@ namespace QLNK
                 case "Thái": cbDanTocChong.SelectedIndex = 2; break;
                 case "Mường": cbDanTocChong.SelectedIndex = 3; break;
                 case "Khơ Me": cbDanTocChong.SelectedIndex = 4; break;
-                case "H'Mông": cbDanTocChong.SelectedIndex = 5; break;
+                case "HMông": cbDanTocChong.SelectedIndex = 5; break;
                 case "Nùng": cbDanTocChong.SelectedIndex = 6; break;
                 case "Hoa": cbDanTocChong.SelectedIndex = 7; break;
                 case "Dao": cbDanTocChong.SelectedIndex = 8; break;
@@ -135,8 +130,8 @@ namespace QLNK
                 case "Sán Dìu": cbDanTocChong.SelectedIndex = 16; break;
                 case "Hrê": cbDanTocChong.SelectedIndex = 17; break;
                 case "Ra Glai": cbDanTocChong.SelectedIndex = 18; break;
-                case "M'Nông": cbDanTocChong.SelectedIndex = 19; break;
-                case "X’Tiêng": cbDanTocChong.SelectedIndex = 20; break;
+                case "MNông": cbDanTocChong.SelectedIndex = 19; break;
+                case "XTiêng": cbDanTocChong.SelectedIndex = 20; break;
                 case "Bru-Vân Kiều": cbDanTocChong.SelectedIndex = 21; break;
                 case "Thổ": cbDanTocChong.SelectedIndex = 22; break;
                 case "Khơ Mú": cbDanTocChong.SelectedIndex = 23; break;
@@ -174,61 +169,69 @@ namespace QLNK
             }
             switch (items[4])
             {
-                case "Afghanistan": cbQuocTichChong.SelectedIndex = 0; break;
-                case "Akrotiri và Dhekelia": cbQuocTichChong.SelectedIndex = 1; break;
-                case "Ả Rập Saudi": cbQuocTichChong.SelectedIndex = 2; break;
-                case "Armenia": cbQuocTichChong.SelectedIndex = 3; break;
-                case "Azerbaijan": cbQuocTichChong.SelectedIndex = 4; break;
-                case "Ấn Độ": cbQuocTichChong.SelectedIndex = 5; break;
-                case "Bahrain": cbQuocTichChong.SelectedIndex = 6; break;
-                case "Bangladesh": cbQuocTichChong.SelectedIndex = 7; break;
-                case "Bhutan": cbQuocTichChong.SelectedIndex = 8; break;
-                case "Brunei": cbQuocTichChong.SelectedIndex = 9; break;
-                case "Campuchia": cbQuocTichChong.SelectedIndex = 10; break;
-                case "Đài Loan": cbQuocTichChong.SelectedIndex = 11; break;
-                case "Georgia": cbQuocTichChong.SelectedIndex = 12; break;
-                case "Hồng Kông": cbQuocTichChong.SelectedIndex = 13; break;
-                case "Indonesia": cbQuocTichChong.SelectedIndex = 14; break;
-                case "Iran": cbQuocTichChong.SelectedIndex = 15; break;
-                case "Iraq": cbQuocTichChong.SelectedIndex = 16; break;
-                case "Israel": cbQuocTichChong.SelectedIndex = 17; break;
-                case "Jordan": cbQuocTichChong.SelectedIndex = 18; break;
-                case "Kazakhstan": cbQuocTichChong.SelectedIndex = 19; break;
-                case "Kuwait": cbQuocTichChong.SelectedIndex = 20; break;
-                case "Kyrgyzstan": cbQuocTichChong.SelectedIndex = 21; break;
-                case "Lào": cbQuocTichChong.SelectedIndex = 22; break;
-                case "Liban": cbQuocTichChong.SelectedIndex = 23; break;
-                case "Ma Cao": cbQuocTichChong.SelectedIndex = 24; break;
-                case "Malaysia": cbQuocTichChong.SelectedIndex = 25; break;
-                case "Kuala Lumpur": cbQuocTichChong.SelectedIndex = 26; break;
-                case "Maldives": cbQuocTichChong.SelectedIndex = 27; break;
-                case "Mông Cổ": cbQuocTichChong.SelectedIndex = 28; break;
-                case "Myanma": cbQuocTichChong.SelectedIndex = 29; break;
-                case "Nagorno-Karabakh": cbQuocTichChong.SelectedIndex = 30; break;
-                case "Nepal": cbQuocTichChong.SelectedIndex = 31; break;
-                case "Nga": cbQuocTichChong.SelectedIndex = 32; break;
-                case "Nhật Bản": cbQuocTichChong.SelectedIndex = 33; break;
-                case "Oman": cbQuocTichChong.SelectedIndex = 34; break;
-                case "Pakistan": cbQuocTichChong.SelectedIndex = 35; break;
-                case "Palestine": cbQuocTichChong.SelectedIndex = 36; break;
-                case "Philippines": cbQuocTichChong.SelectedIndex = 37; break;
-                case "Qatar": cbQuocTichChong.SelectedIndex = 38; break;
-                case "Singapore": cbQuocTichChong.SelectedIndex = 39; break;
-                case "Bắc Síp": cbQuocTichChong.SelectedIndex = 40; break;
-                case "Síp": cbQuocTichChong.SelectedIndex = 41; break;
-                case "Sri Lanka": cbQuocTichChong.SelectedIndex = 42; break;
-                case "Syria": cbQuocTichChong.SelectedIndex = 43; break;
-                case "Tajikistan": cbQuocTichChong.SelectedIndex = 44; break;
-                case "Thái Lan": cbQuocTichChong.SelectedIndex = 45; break;
-                case "Đông Timor": cbQuocTichChong.SelectedIndex = 46; break;
-                case "Thổ Nhĩ Kỳ": cbQuocTichChong.SelectedIndex = 47; break;
-                case "Triều Tiên": cbQuocTichChong.SelectedIndex = 48; break;
-                case "Hàn Quốc": cbQuocTichChong.SelectedIndex = 49; break;
-                case "Trung Quốc": cbQuocTichChong.SelectedIndex = 50; break;
-                case "Turkmenistan": cbQuocTichChong.SelectedIndex = 51; break;
-                case "Uzbekistan": cbQuocTichChong.SelectedIndex = 52; break;
-                case "Việt Nam": cbQuocTichChong.SelectedIndex = 53; break;
-                case "Yemen": cbQuocTichChong.SelectedIndex = 54; break;
+                case "An Giang": cbQueQuanChong.SelectedIndex = 0; break;
+                case "Bà Rịa - Vũng Tàu": cbQueQuanChong.SelectedIndex = 1; break;
+                case "Bạc Liêu": cbQueQuanChong.SelectedIndex = 2; break;
+                case "Bắc Kạn": cbQueQuanChong.SelectedIndex = 3; break;
+                case "Bắc Giang": cbQueQuanChong.SelectedIndex = 4; break;
+                case "Bắc Ninh": cbQueQuanChong.SelectedIndex = 5; break;
+                case "Bến Tre": cbQueQuanChong.SelectedIndex = 6; break;
+                case "Bình Dương": cbQueQuanChong.SelectedIndex = 7; break;
+                case "Bình Định": cbQueQuanChong.SelectedIndex = 8; break;
+                case "Bình Phước": cbQueQuanChong.SelectedIndex = 9; break;
+                case "Bình Thuận": cbQueQuanChong.SelectedIndex = 10; break;
+                case "Cà Mau": cbQueQuanChong.SelectedIndex = 11; break;
+                case "Cao Bằng": cbQueQuanChong.SelectedIndex = 12; break;
+                case "Cần Thơ": cbQueQuanChong.SelectedIndex = 13; break;
+                case "Đà Nẵng": cbQueQuanChong.SelectedIndex = 14; break;
+                case "Đắk Lắk": cbQueQuanChong.SelectedIndex = 15; break;
+                case "Đắk Nông": cbQueQuanChong.SelectedIndex = 16; break;
+                case "Đồng Nai": cbQueQuanChong.SelectedIndex = 17; break;
+                case "Đồng Tháp": cbQueQuanChong.SelectedIndex = 18; break;
+                case "Điện Biên": cbQueQuanChong.SelectedIndex = 19; break;
+                case "Gia Lai": cbQueQuanChong.SelectedIndex = 20; break;
+                case "Hà Giang": cbQueQuanChong.SelectedIndex = 21; break;
+                case "Hà Nam": cbQueQuanChong.SelectedIndex = 22; break;
+                case "Hà Nội": cbQueQuanChong.SelectedIndex = 23; break;
+                case "Hà Tĩnh": cbQueQuanChong.SelectedIndex = 24; break;
+                case "Hải Dương": cbQueQuanChong.SelectedIndex = 25; break;
+                case "Hải Phòng": cbQueQuanChong.SelectedIndex = 26; break;
+                case "Hòa Bình": cbQueQuanChong.SelectedIndex = 27; break;
+                case "Hậu Giang": cbQueQuanChong.SelectedIndex = 28; break;
+                case "Hưng Yên": cbQueQuanChong.SelectedIndex = 29; break;
+                case "TPHCM": cbQueQuanChong.SelectedIndex = 30; break;
+                case "Khánh Hòa": cbQueQuanChong.SelectedIndex = 31; break;
+                case "Kiên Giang": cbQueQuanChong.SelectedIndex = 32; break;
+                case "Kon Tum": cbQueQuanChong.SelectedIndex = 33; break;
+                case "Lai Châu": cbQueQuanChong.SelectedIndex = 34; break;
+                case "Lào Cai": cbQueQuanChong.SelectedIndex = 35; break;
+                case "Lạng Sơn": cbQueQuanChong.SelectedIndex = 36; break;
+                case "Lâm Đồng": cbQueQuanChong.SelectedIndex = 37; break;
+                case "Long An": cbQueQuanChong.SelectedIndex = 38; break;
+                case "Nam Định": cbQueQuanChong.SelectedIndex = 39; break;
+                case "Nghệ An": cbQueQuanChong.SelectedIndex = 40; break;
+                case "Ninh Bình": cbQueQuanChong.SelectedIndex = 41; break;
+                case "Ninh Thuận": cbQueQuanChong.SelectedIndex = 42; break;
+                case "Phú Thọ": cbQueQuanChong.SelectedIndex = 43; break;
+                case "Phú Yên": cbQueQuanChong.SelectedIndex = 44; break;
+                case "Quảng Bình": cbQueQuanChong.SelectedIndex = 45; break;
+                case "Quảng Nam": cbQueQuanChong.SelectedIndex = 46; break;
+                case "Quảng Ngãi": cbQueQuanChong.SelectedIndex = 47; break;
+                case "Quảng Ninh": cbQueQuanChong.SelectedIndex = 48; break;
+                case "Quảng Trị": cbQueQuanChong.SelectedIndex = 49; break;
+                case "Sóc Trăng": cbQueQuanChong.SelectedIndex = 50; break;
+                case "Sơn La": cbQueQuanChong.SelectedIndex = 51; break;
+                case "Tây Ninh": cbQueQuanChong.SelectedIndex = 52; break;
+                case "Thái Bình": cbQueQuanChong.SelectedIndex = 53; break;
+                case "Thái Nguyên": cbQueQuanChong.SelectedIndex = 54; break;
+                case "Thanh Hóa": cbQueQuanChong.SelectedIndex = 55; break;
+                case "Thừa Thiên Huế": cbQueQuanChong.SelectedIndex = 56; break;
+                case "Tiền Giang": cbQueQuanChong.SelectedIndex = 57; break;
+                case "Trà Vinh": cbQueQuanChong.SelectedIndex = 58; break;
+                case "Tuyên Quang": cbQueQuanChong.SelectedIndex = 59; break;
+                case "Vĩnh Long": cbQueQuanChong.SelectedIndex = 60; break;
+                case "Vĩnh Phúc": cbQueQuanChong.SelectedIndex = 61; break;
+                case "Yên Bái": cbQueQuanChong.SelectedIndex = 62; break;
             }
             txtThuongTamTruChong.Text = items[5];
             txtCMNDChong.Text = items[6];
@@ -236,15 +239,15 @@ namespace QLNK
             string[] arr2 = items[8].Split('/');
             switch (arr2[0])
             {
-                case "1": cbNgaySinhVo.SelectedIndex = 0; break;
-                case "2": cbNgaySinhVo.SelectedIndex = 1; break;
-                case "3": cbNgaySinhVo.SelectedIndex = 2; break;
-                case "4": cbNgaySinhVo.SelectedIndex = 3; break;
-                case "5": cbNgaySinhVo.SelectedIndex = 4; break;
-                case "6": cbNgaySinhVo.SelectedIndex = 5; break;
-                case "7": cbNgaySinhVo.SelectedIndex = 6; break;
-                case "8": cbNgaySinhVo.SelectedIndex = 7; break;
-                case "9": cbNgaySinhVo.SelectedIndex = 8; break;
+                case "01": cbNgaySinhVo.SelectedIndex = 0; break;
+                case "02": cbNgaySinhVo.SelectedIndex = 1; break;
+                case "03": cbNgaySinhVo.SelectedIndex = 2; break;
+                case "04": cbNgaySinhVo.SelectedIndex = 3; break;
+                case "05": cbNgaySinhVo.SelectedIndex = 4; break;
+                case "06": cbNgaySinhVo.SelectedIndex = 5; break;
+                case "07": cbNgaySinhVo.SelectedIndex = 6; break;
+                case "08": cbNgaySinhVo.SelectedIndex = 7; break;
+                case "09": cbNgaySinhVo.SelectedIndex = 8; break;
                 case "10": cbNgaySinhVo.SelectedIndex = 9; break;
                 case "11": cbNgaySinhVo.SelectedIndex = 10; break;
                 case "12": cbNgaySinhVo.SelectedIndex = 11; break;
@@ -270,15 +273,15 @@ namespace QLNK
             }
             switch (arr2[1])
             {
-                case "1": cbThangSinhVo.SelectedIndex = 0; break;
-                case "2": cbThangSinhVo.SelectedIndex = 1; break;
-                case "3": cbThangSinhVo.SelectedIndex = 2; break;
-                case "4": cbThangSinhVo.SelectedIndex = 3; break;
-                case "5": cbThangSinhVo.SelectedIndex = 4; break;
-                case "6": cbThangSinhVo.SelectedIndex = 5; break;
-                case "7": cbThangSinhVo.SelectedIndex = 6; break;
-                case "8": cbThangSinhVo.SelectedIndex = 7; break;
-                case "9": cbThangSinhVo.SelectedIndex = 8; break;
+                case "01": cbThangSinhVo.SelectedIndex = 0; break;
+                case "02": cbThangSinhVo.SelectedIndex = 1; break;
+                case "03": cbThangSinhVo.SelectedIndex = 2; break;
+                case "04": cbThangSinhVo.SelectedIndex = 3; break;
+                case "05": cbThangSinhVo.SelectedIndex = 4; break;
+                case "06": cbThangSinhVo.SelectedIndex = 5; break;
+                case "07": cbThangSinhVo.SelectedIndex = 6; break;
+                case "08": cbThangSinhVo.SelectedIndex = 7; break;
+                case "09": cbThangSinhVo.SelectedIndex = 8; break;
                 case "10": cbThangSinhVo.SelectedIndex = 9; break;
                 case "11": cbThangSinhVo.SelectedIndex = 10; break;
                 case "12": cbThangSinhVo.SelectedIndex = 11; break;
@@ -323,9 +326,6 @@ namespace QLNK
                 case "1995": cbNamSinhVo.SelectedIndex = 35; break;
                 case "1996": cbNamSinhVo.SelectedIndex = 36; break;
                 case "1997": cbNamSinhVo.SelectedIndex = 37; break;
-                case "1998": cbNamSinhVo.SelectedIndex = 38; break;
-                case "1999": cbNamSinhVo.SelectedIndex = 39; break;
-                case "2000": cbNamSinhVo.SelectedIndex = 40; break;
             }
             switch (items[9])
             {
@@ -334,7 +334,7 @@ namespace QLNK
                 case "Thái": cbDanTocVo.SelectedIndex = 2; break;
                 case "Mường": cbDanTocVo.SelectedIndex = 3; break;
                 case "Khơ Me": cbDanTocVo.SelectedIndex = 4; break;
-                case "H'Mông": cbDanTocVo.SelectedIndex = 5; break;
+                case "HMông": cbDanTocVo.SelectedIndex = 5; break;
                 case "Nùng": cbDanTocVo.SelectedIndex = 6; break;
                 case "Hoa": cbDanTocVo.SelectedIndex = 7; break;
                 case "Dao": cbDanTocVo.SelectedIndex = 8; break;
@@ -348,8 +348,8 @@ namespace QLNK
                 case "Sán Dìu": cbDanTocVo.SelectedIndex = 16; break;
                 case "Hrê": cbDanTocVo.SelectedIndex = 17; break;
                 case "Ra Glai": cbDanTocVo.SelectedIndex = 18; break;
-                case "M'Nông": cbDanTocVo.SelectedIndex = 19; break;
-                case "X’Tiêng": cbDanTocVo.SelectedIndex = 20; break;
+                case "MNông": cbDanTocVo.SelectedIndex = 19; break;
+                case "XTiêng": cbDanTocVo.SelectedIndex = 20; break;
                 case "Bru-Vân Kiều": cbDanTocVo.SelectedIndex = 21; break;
                 case "Thổ": cbDanTocVo.SelectedIndex = 22; break;
                 case "Khơ Mú": cbDanTocVo.SelectedIndex = 23; break;
@@ -387,61 +387,69 @@ namespace QLNK
             }
             switch (items[10])
             {
-                case "Afghanistan": cbQuocTichVo.SelectedIndex = 0; break;
-                case "Akrotiri và Dhekelia": cbQuocTichVo.SelectedIndex = 1; break;
-                case "Ả Rập Saudi": cbQuocTichVo.SelectedIndex = 2; break;
-                case "Armenia": cbQuocTichVo.SelectedIndex = 3; break;
-                case "Azerbaijan": cbQuocTichVo.SelectedIndex = 4; break;
-                case "Ấn Độ": cbQuocTichVo.SelectedIndex = 5; break;
-                case "Bahrain": cbQuocTichVo.SelectedIndex = 6; break;
-                case "Bangladesh": cbQuocTichVo.SelectedIndex = 7; break;
-                case "Bhutan": cbQuocTichVo.SelectedIndex = 8; break;
-                case "Brunei": cbQuocTichVo.SelectedIndex = 9; break;
-                case "Campuchia": cbQuocTichVo.SelectedIndex = 10; break;
-                case "Đài Loan": cbQuocTichVo.SelectedIndex = 11; break;
-                case "Georgia": cbQuocTichVo.SelectedIndex = 12; break;
-                case "Hồng Kông": cbQuocTichVo.SelectedIndex = 13; break;
-                case "Indonesia": cbQuocTichVo.SelectedIndex = 14; break;
-                case "Iran": cbQuocTichVo.SelectedIndex = 15; break;
-                case "Iraq": cbQuocTichVo.SelectedIndex = 16; break;
-                case "Israel": cbQuocTichVo.SelectedIndex = 17; break;
-                case "Jordan": cbQuocTichVo.SelectedIndex = 18; break;
-                case "Kazakhstan": cbQuocTichVo.SelectedIndex = 19; break;
-                case "Kuwait": cbQuocTichVo.SelectedIndex = 20; break;
-                case "Kyrgyzstan": cbQuocTichVo.SelectedIndex = 21; break;
-                case "Lào": cbQuocTichVo.SelectedIndex = 22; break;
-                case "Liban": cbQuocTichVo.SelectedIndex = 23; break;
-                case "Ma Cao": cbQuocTichVo.SelectedIndex = 24; break;
-                case "Malaysia": cbQuocTichVo.SelectedIndex = 25; break;
-                case "Kuala Lumpur": cbQuocTichVo.SelectedIndex = 26; break;
-                case "Maldives": cbQuocTichVo.SelectedIndex = 27; break;
-                case "Mông Cổ": cbQuocTichVo.SelectedIndex = 28; break;
-                case "Myanma": cbQuocTichVo.SelectedIndex = 29; break;
-                case "Nagorno-Karabakh": cbQuocTichVo.SelectedIndex = 30; break;
-                case "Nepal": cbQuocTichVo.SelectedIndex = 31; break;
-                case "Nga": cbQuocTichVo.SelectedIndex = 32; break;
-                case "Nhật Bản": cbQuocTichVo.SelectedIndex = 33; break;
-                case "Oman": cbQuocTichVo.SelectedIndex = 34; break;
-                case "Pakistan": cbQuocTichVo.SelectedIndex = 35; break;
-                case "Palestine": cbQuocTichVo.SelectedIndex = 36; break;
-                case "Philippines": cbQuocTichVo.SelectedIndex = 37; break;
-                case "Qatar": cbQuocTichVo.SelectedIndex = 38; break;
-                case "Singapore": cbQuocTichVo.SelectedIndex = 39; break;
-                case "Bắc Síp": cbQuocTichVo.SelectedIndex = 40; break;
-                case "Síp": cbQuocTichVo.SelectedIndex = 41; break;
-                case "Sri Lanka": cbQuocTichVo.SelectedIndex = 42; break;
-                case "Syria": cbQuocTichVo.SelectedIndex = 43; break;
-                case "Tajikistan": cbQuocTichVo.SelectedIndex = 44; break;
-                case "Thái Lan": cbQuocTichVo.SelectedIndex = 45; break;
-                case "Đông Timor": cbQuocTichVo.SelectedIndex = 46; break;
-                case "Thổ Nhĩ Kỳ": cbQuocTichVo.SelectedIndex = 47; break;
-                case "Triều Tiên": cbQuocTichVo.SelectedIndex = 48; break;
-                case "Hàn Quốc": cbQuocTichVo.SelectedIndex = 49; break;
-                case "Trung Quốc": cbQuocTichVo.SelectedIndex = 50; break;
-                case "Turkmenistan": cbQuocTichVo.SelectedIndex = 51; break;
-                case "Uzbekistan": cbQuocTichVo.SelectedIndex = 52; break;
-                case "Việt Nam": cbQuocTichVo.SelectedIndex = 53; break;
-                case "Yemen": cbQuocTichVo.SelectedIndex = 54; break;
+                case "An Giang": cbQueQuanVo.SelectedIndex = 0; break;
+                case "Bà Rịa - Vũng Tàu": cbQueQuanVo.SelectedIndex = 1; break;
+                case "Bạc Liêu": cbQueQuanVo.SelectedIndex = 2; break;
+                case "Bắc Kạn": cbQueQuanVo.SelectedIndex = 3; break;
+                case "Bắc Giang": cbQueQuanVo.SelectedIndex = 4; break;
+                case "Bắc Ninh": cbQueQuanVo.SelectedIndex = 5; break;
+                case "Bến Tre": cbQueQuanVo.SelectedIndex = 6; break;
+                case "Bình Dương": cbQueQuanVo.SelectedIndex = 7; break;
+                case "Bình Định": cbQueQuanVo.SelectedIndex = 8; break;
+                case "Bình Phước": cbQueQuanVo.SelectedIndex = 9; break;
+                case "Bình Thuận": cbQueQuanVo.SelectedIndex = 10; break;
+                case "Cà Mau": cbQueQuanVo.SelectedIndex = 11; break;
+                case "Cao Bằng": cbQueQuanVo.SelectedIndex = 12; break;
+                case "Cần Thơ": cbQueQuanVo.SelectedIndex = 13; break;
+                case "Đà Nẵng": cbQueQuanVo.SelectedIndex = 14; break;
+                case "Đắk Lắk": cbQueQuanVo.SelectedIndex = 15; break;
+                case "Đắk Nông": cbQueQuanVo.SelectedIndex = 16; break;
+                case "Đồng Nai": cbQueQuanVo.SelectedIndex = 17; break;
+                case "Đồng Tháp": cbQueQuanVo.SelectedIndex = 18; break;
+                case "Điện Biên": cbQueQuanVo.SelectedIndex = 19; break;
+                case "Gia Lai": cbQueQuanVo.SelectedIndex = 20; break;
+                case "Hà Giang": cbQueQuanVo.SelectedIndex = 21; break;
+                case "Hà Nam": cbQueQuanVo.SelectedIndex = 22; break;
+                case "Hà Nội": cbQueQuanVo.SelectedIndex = 23; break;
+                case "Hà Tĩnh": cbQueQuanVo.SelectedIndex = 24; break;
+                case "Hải Dương": cbQueQuanVo.SelectedIndex = 25; break;
+                case "Hải Phòng": cbQueQuanVo.SelectedIndex = 26; break;
+                case "Hòa Bình": cbQueQuanVo.SelectedIndex = 27; break;
+                case "Hậu Giang": cbQueQuanVo.SelectedIndex = 28; break;
+                case "Hưng Yên": cbQueQuanVo.SelectedIndex = 29; break;
+                case "TPHCM": cbQueQuanVo.SelectedIndex = 30; break;
+                case "Khánh Hòa": cbQueQuanVo.SelectedIndex = 31; break;
+                case "Kiên Giang": cbQueQuanVo.SelectedIndex = 32; break;
+                case "Kon Tum": cbQueQuanVo.SelectedIndex = 33; break;
+                case "Lai Châu": cbQueQuanVo.SelectedIndex = 34; break;
+                case "Lào Cai": cbQueQuanVo.SelectedIndex = 35; break;
+                case "Lạng Sơn": cbQueQuanVo.SelectedIndex = 36; break;
+                case "Lâm Đồng": cbQueQuanVo.SelectedIndex = 37; break;
+                case "Long An": cbQueQuanVo.SelectedIndex = 38; break;
+                case "Nam Định": cbQueQuanVo.SelectedIndex = 39; break;
+                case "Nghệ An": cbQueQuanVo.SelectedIndex = 40; break;
+                case "Ninh Bình": cbQueQuanVo.SelectedIndex = 41; break;
+                case "Ninh Thuận": cbQueQuanVo.SelectedIndex = 42; break;
+                case "Phú Thọ": cbQueQuanVo.SelectedIndex = 43; break;
+                case "Phú Yên": cbQueQuanVo.SelectedIndex = 44; break;
+                case "Quảng Bình": cbQueQuanVo.SelectedIndex = 45; break;
+                case "Quảng Nam": cbQueQuanVo.SelectedIndex = 46; break;
+                case "Quảng Ngãi": cbQueQuanVo.SelectedIndex = 47; break;
+                case "Quảng Ninh": cbQueQuanVo.SelectedIndex = 48; break;
+                case "Quảng Trị": cbQueQuanVo.SelectedIndex = 49; break;
+                case "Sóc Trăng": cbQueQuanVo.SelectedIndex = 50; break;
+                case "Sơn La": cbQueQuanVo.SelectedIndex = 51; break;
+                case "Tây Ninh": cbQueQuanVo.SelectedIndex = 52; break;
+                case "Thái Bình": cbQueQuanVo.SelectedIndex = 53; break;
+                case "Thái Nguyên": cbQueQuanVo.SelectedIndex = 54; break;
+                case "Thanh Hóa": cbQueQuanVo.SelectedIndex = 55; break;
+                case "Thừa Thiên Huế": cbQueQuanVo.SelectedIndex = 56; break;
+                case "Tiền Giang": cbQueQuanVo.SelectedIndex = 57; break;
+                case "Trà Vinh": cbQueQuanVo.SelectedIndex = 58; break;
+                case "Tuyên Quang": cbQueQuanVo.SelectedIndex = 59; break;
+                case "Vĩnh Long": cbQueQuanVo.SelectedIndex = 60; break;
+                case "Vĩnh Phúc": cbQueQuanVo.SelectedIndex = 61; break;
+                case "Yên Bái": cbQueQuanVo.SelectedIndex = 62; break;
             }
             txtThuongTamTruVo.Text = items[11];
             txtCMNDVo.Text = items[12];
@@ -514,15 +522,15 @@ namespace QLNK
             string[] arr3 = items[14].Split('/');
             switch (arr3[0])
             {
-                case "1": cbNgayDangKy.SelectedIndex = 0; break;
-                case "2": cbNgayDangKy.SelectedIndex = 1; break;
-                case "3": cbNgayDangKy.SelectedIndex = 2; break;
-                case "4": cbNgayDangKy.SelectedIndex = 3; break;
-                case "5": cbNgayDangKy.SelectedIndex = 4; break;
-                case "6": cbNgayDangKy.SelectedIndex = 5; break;
-                case "7": cbNgayDangKy.SelectedIndex = 6; break;
-                case "8": cbNgayDangKy.SelectedIndex = 7; break;
-                case "9": cbNgayDangKy.SelectedIndex = 8; break;
+                case "01": cbNgayDangKy.SelectedIndex = 0; break;
+                case "02": cbNgayDangKy.SelectedIndex = 1; break;
+                case "03": cbNgayDangKy.SelectedIndex = 2; break;
+                case "04": cbNgayDangKy.SelectedIndex = 3; break;
+                case "05": cbNgayDangKy.SelectedIndex = 4; break;
+                case "06": cbNgayDangKy.SelectedIndex = 5; break;
+                case "07": cbNgayDangKy.SelectedIndex = 6; break;
+                case "08": cbNgayDangKy.SelectedIndex = 7; break;
+                case "09": cbNgayDangKy.SelectedIndex = 8; break;
                 case "10": cbNgayDangKy.SelectedIndex = 9; break;
                 case "11": cbNgayDangKy.SelectedIndex = 10; break;
                 case "12": cbNgayDangKy.SelectedIndex = 11; break;
@@ -548,15 +556,15 @@ namespace QLNK
             }
             switch (arr3[1])
             {
-                case "1": cbThangDangKy.SelectedIndex = 0; break;
-                case "2": cbThangDangKy.SelectedIndex = 1; break;
-                case "3": cbThangDangKy.SelectedIndex = 2; break;
-                case "4": cbThangDangKy.SelectedIndex = 3; break;
-                case "5": cbThangDangKy.SelectedIndex = 4; break;
-                case "6": cbThangDangKy.SelectedIndex = 5; break;
-                case "7": cbThangDangKy.SelectedIndex = 6; break;
-                case "8": cbThangDangKy.SelectedIndex = 7; break;
-                case "9": cbThangDangKy.SelectedIndex = 8; break;
+                case "01": cbThangDangKy.SelectedIndex = 0; break;
+                case "02": cbThangDangKy.SelectedIndex = 1; break;
+                case "03": cbThangDangKy.SelectedIndex = 2; break;
+                case "04": cbThangDangKy.SelectedIndex = 3; break;
+                case "05": cbThangDangKy.SelectedIndex = 4; break;
+                case "06": cbThangDangKy.SelectedIndex = 5; break;
+                case "07": cbThangDangKy.SelectedIndex = 6; break;
+                case "08": cbThangDangKy.SelectedIndex = 7; break;
+                case "09": cbThangDangKy.SelectedIndex = 8; break;
                 case "10": cbThangDangKy.SelectedIndex = 9; break;
                 case "11": cbThangDangKy.SelectedIndex = 10; break;
                 case "12": cbThangDangKy.SelectedIndex = 11; break;
@@ -604,73 +612,21 @@ namespace QLNK
                 case "1998": cbNamDangKy.SelectedIndex = 38; break;
                 case "1999": cbNamDangKy.SelectedIndex = 39; break;
                 case "2000": cbNamDangKy.SelectedIndex = 40; break;
-            }
-
-            switch (items[4])
-            {
-                case "An Giang": cbQueQuan.SelectedIndex = 0; break;
-                case "Bà Rịa - Vũng Tàu": cbQueQuan.SelectedIndex = 1; break;
-                case "Bạc Liêu": cbQueQuan.SelectedIndex = 2; break;
-                case "Bắc Kạn": cbQueQuan.SelectedIndex = 3; break;
-                case "Bắc Giang": cbQueQuan.SelectedIndex = 4; break;
-                case "Bắc Ninh": cbQueQuan.SelectedIndex = 5; break;
-                case "Bến Tre": cbQueQuan.SelectedIndex = 6; break;
-                case "Bình Dương": cbQueQuan.SelectedIndex = 7; break;
-                case "Bình Định": cbQueQuan.SelectedIndex = 8; break;
-                case "Bình Phước": cbQueQuan.SelectedIndex = 9; break;
-                case "Bình Thuận": cbQueQuan.SelectedIndex = 10; break;
-                case "Cà Mau": cbQueQuan.SelectedIndex = 11; break;
-                case "Cao Bằng": cbQueQuan.SelectedIndex = 12; break;
-                case "Cần Thơ": cbQueQuan.SelectedIndex = 13; break;
-                case "Đà Nẵng": cbQueQuan.SelectedIndex = 14; break;
-                case "Đắk Lắk": cbQueQuan.SelectedIndex = 15; break;
-                case "Đắk Nông": cbQueQuan.SelectedIndex = 16; break;
-                case "Đồng Nai": cbQueQuan.SelectedIndex = 17; break;
-                case "Đồng Tháp": cbQueQuan.SelectedIndex = 18; break;
-                case "Điện Biên": cbQueQuan.SelectedIndex = 19; break;
-                case "Gia Lai": cbQueQuan.SelectedIndex = 20; break;
-                case "Hà Giang": cbQueQuan.SelectedIndex = 21; break;
-                case "Hà Nam": cbQueQuan.SelectedIndex = 22; break;
-                case "Hà Nội": cbQueQuan.SelectedIndex = 23; break;
-                case "Hà Tĩnh": cbQueQuan.SelectedIndex = 24; break;
-                case "Hải Dương": cbQueQuan.SelectedIndex = 25; break;
-                case "Hải Phòng": cbQueQuan.SelectedIndex = 26; break;
-                case "Hòa Bình": cbQueQuan.SelectedIndex = 27; break;
-                case "Hậu Giang": cbQueQuan.SelectedIndex = 28; break;
-                case "Hưng Yên": cbQueQuan.SelectedIndex = 29; break;
-                case "TPHCM": cbQueQuan.SelectedIndex = 30; break;
-                case "Khánh Hòa": cbQueQuan.SelectedIndex = 31; break;
-                case "Kiên Giang": cbQueQuan.SelectedIndex = 32; break;
-                case "Kon Tum": cbQueQuan.SelectedIndex = 33; break;
-                case "Lai Châu": cbQueQuan.SelectedIndex = 34; break;
-                case "Lào Cai": cbQueQuan.SelectedIndex = 35; break;
-                case "Lạng Sơn": cbQueQuan.SelectedIndex = 36; break;
-                case "Lâm Đồng": cbQueQuan.SelectedIndex = 37; break;
-                case "Long An": cbQueQuan.SelectedIndex = 38; break;
-                case "Nam Định": cbQueQuan.SelectedIndex = 39; break;
-                case "Nghệ An": cbQueQuan.SelectedIndex = 40; break;
-                case "Ninh Bình": cbQueQuan.SelectedIndex = 41; break;
-                case "Ninh Thuận": cbQueQuan.SelectedIndex = 42; break;
-                case "Phú Thọ": cbQueQuan.SelectedIndex = 43; break;
-                case "Phú Yên": cbQueQuan.SelectedIndex = 44; break;
-                case "Quảng Bình": cbQueQuan.SelectedIndex = 45; break;
-                case "Quảng Nam": cbQueQuan.SelectedIndex = 46; break;
-                case "Quảng Ngãi": cbQueQuan.SelectedIndex = 47; break;
-                case "Quảng Ninh": cbQueQuan.SelectedIndex = 48; break;
-                case "Quảng Trị": cbQueQuan.SelectedIndex = 49; break;
-                case "Sóc Trăng": cbQueQuan.SelectedIndex = 50; break;
-                case "Sơn La": cbQueQuan.SelectedIndex = 51; break;
-                case "Tây Ninh": cbQueQuan.SelectedIndex = 52; break;
-                case "Thái Bình": cbQueQuan.SelectedIndex = 53; break;
-                case "Thái Nguyên": cbQueQuan.SelectedIndex = 54; break;
-                case "Thanh Hóa": cbQueQuan.SelectedIndex = 55; break;
-                case "Thừa Thiên Huế": cbQueQuan.SelectedIndex = 56; break;
-                case "Tiền Giang": cbQueQuan.SelectedIndex = 57; break;
-                case "Trà Vinh": cbQueQuan.SelectedIndex = 58; break;
-                case "Tuyên Quang": cbQueQuan.SelectedIndex = 59; break;
-                case "Vĩnh Long": cbQueQuan.SelectedIndex = 60; break;
-                case "Vĩnh Phúc": cbQueQuan.SelectedIndex = 61; break;
-                case "Yên Bái": cbQueQuan.SelectedIndex = 62; break;
+                case "2001": cbNamDangKy.SelectedIndex = 41; break;
+                case "2002": cbNamDangKy.SelectedIndex = 42; break;
+                case "2003": cbNamDangKy.SelectedIndex = 43; break;
+                case "2004": cbNamDangKy.SelectedIndex = 44; break;
+                case "2005": cbNamDangKy.SelectedIndex = 45; break;
+                case "2006": cbNamDangKy.SelectedIndex = 46; break;
+                case "2007": cbNamDangKy.SelectedIndex = 47; break;
+                case "2008": cbNamDangKy.SelectedIndex = 48; break;
+                case "2009": cbNamDangKy.SelectedIndex = 49; break;
+                case "2010": cbNamDangKy.SelectedIndex = 50; break;
+                case "2011": cbNamDangKy.SelectedIndex = 51; break;
+                case "2012": cbNamDangKy.SelectedIndex = 52; break;
+                case "2013": cbNamDangKy.SelectedIndex = 53; break;
+                case "2014": cbNamDangKy.SelectedIndex = 54; break;
+                case "2015": cbNamDangKy.SelectedIndex = 55; break;
             }
         }
 
@@ -686,17 +642,17 @@ namespace QLNK
             string thangDK = cbThangDangKy.Text;
             string namDK = cbNamDangKy.Text;
 
-            string maKetHon = txtMaKetHon.Text;
+            string maKetHon = itemKetHon[0];
             string hoTenChong = txtHoTenChong.Text;
             string ngaySinhChong = ngayChong + "/" + thangChong + "/" + namChong;
             string danTocChong = cbDanTocChong.Text;
-            string quocTichChong = cbQuocTichChong.Text;
+            string queQuanChong = cbQueQuanChong.Text;
             string cmndChong = txtCMNDChong.Text;
             string thuongTamTruChong = txtThuongTamTruChong.Text;
             string hoTenVo = txtHoTenVo.Text;
             string ngaySinhVo = ngayVo + "/" + thangVo + "/" + namVo;
             string danTocVo = cbDanTocVo.Text;
-            string quocTichVo = cbQuocTichVo.Text;
+            string queQuanVo = cbQueQuanVo.Text;
             string cmndVo = txtCMNDVo.Text;
             string thuongTamTruVo = txtThuongTamTruVo.Text;
             string khuVucDangKy = cbQueQuan.Text;
@@ -704,10 +660,10 @@ namespace QLNK
 
             if (!(maKetHon.Equals("")       || hoTenChong.Equals("")        || ngayChong.Equals("")         ||
                   thangChong.Equals("")     || namChong.Equals("")          || danTocChong.Equals("")       ||
-                  quocTichChong.Equals("")  || cmndChong.Equals("")         || thuongTamTruChong.Equals("") ||
+                  queQuanChong.Equals("")   || cmndChong.Equals("")         || thuongTamTruChong.Equals("") ||
                   hoTenVo.Equals("")        || ngayVo.Equals("")            || thangVo.Equals("")           ||
-                  namVo.Equals("")          || cbDanTocVo.Equals("")        || cbQuocTichVo.Equals("")      ||
-                  txtCMNDVo.Equals("")      || txtThuongTamTruVo.Equals("") || cbQueQuan.Equals("")         ||
+                  namVo.Equals("")          || danTocVo.Equals("")          || queQuanVo.Equals("")         ||
+                  cmndVo.Equals("")         || thuongTamTruVo.Equals("")    || khuVucDangKy.Equals("")      ||
                   ngayDK.Equals("")         || thangDK.Equals("")           || namDK.Equals("")))
             {
                 DialogResult dialogResult = MessageBox.Show(sc.MSGBOX_UPDATE, sc.MSGBOX_CAP_UPDATE, MessageBoxButtons.YesNo);
@@ -715,8 +671,8 @@ namespace QLNK
                 {
                     flagSave = true;
                     if (sc.updateKetHon(maKetHon, hoTenChong, ngaySinhChong, danTocChong,
-                                        quocTichChong, thuongTamTruChong, cmndChong, hoTenVo,
-                                        ngaySinhVo, danTocVo, quocTichVo, thuongTamTruVo,
+                                        queQuanChong, thuongTamTruChong, cmndChong, hoTenVo,
+                                        ngaySinhVo, danTocVo, queQuanVo, thuongTamTruVo,
                                         cmndVo, khuVucDangKy, ngayDangKy))
                     {
                         this.Close();
@@ -744,17 +700,17 @@ namespace QLNK
                 string thangDK = cbThangDangKy.Text;
                 string namDK = cbNamDangKy.Text;
 
-                string maKetHon = txtMaKetHon.Text;
+                string maKetHon = itemKetHon[0];
                 string hoTenChong = txtHoTenChong.Text;
                 string ngaySinhChong = ngayChong + "/" + thangChong + "/" + namChong;
                 string danTocChong = cbDanTocChong.Text;
-                string quocTichChong = cbQuocTichChong.Text;
+                string queQuanChong = cbQueQuanChong.Text;
                 string cmndChong = txtCMNDChong.Text;
                 string thuongTamTruChong = txtThuongTamTruChong.Text;
                 string hoTenVo = txtHoTenVo.Text;
                 string ngaySinhVo = ngayVo + "/" + thangVo + "/" + namVo;
                 string danTocVo = cbDanTocVo.Text;
-                string quocTichVo = cbQuocTichVo.Text;
+                string queQuanVo = cbQueQuanVo.Text;
                 string cmndVo = txtCMNDVo.Text;
                 string thuongTamTruVo = txtThuongTamTruVo.Text;
                 string khuVucDangKy = cbQueQuan.Text;
@@ -762,10 +718,10 @@ namespace QLNK
 
                 if ((!maKetHon.Equals(itemKetHon[0])        || !hoTenChong.Equals(itemKetHon[1])        ||
                      !ngaySinhChong.Equals(itemKetHon[2])   || !danTocChong.Equals(itemKetHon[3])       ||
-                     !quocTichChong.Equals(itemKetHon[4])   || !thuongTamTruChong.Equals(itemKetHon[5]) ||
+                     !queQuanChong.Equals(itemKetHon[4])    || !thuongTamTruChong.Equals(itemKetHon[5]) ||
                      !cmndChong.Equals(itemKetHon[6])       || !hoTenVo.Equals(itemKetHon[7])           ||
                      !ngaySinhVo.Equals(itemKetHon[8])      || !danTocVo.Equals(itemKetHon[9])          ||
-                     !quocTichVo.Equals(itemKetHon[10])     || !thuongTamTruVo.Equals(itemKetHon[11])   ||
+                     !queQuanVo.Equals(itemKetHon[10])      || !thuongTamTruVo.Equals(itemKetHon[11])   ||
                      !cmndVo.Equals(itemKetHon[12])         || !khuVucDangKy.Equals(itemKetHon[13])     ||
                      !ngayDangKy.Equals(itemKetHon[14])))
                 {
@@ -774,17 +730,17 @@ namespace QLNK
                                                                 MessageBoxButtons.YesNoCancel);
                     if (dialogResult == DialogResult.Yes)
                     {
-                        if (!(maKetHon.Equals("")       || hoTenChong.Equals("")        || ngayChong.Equals("")         ||
-                              thangChong.Equals("")     || namChong.Equals("")          || danTocChong.Equals("")       ||
-                              quocTichChong.Equals("")  || cmndChong.Equals("")         || thuongTamTruChong.Equals("") ||
-                              hoTenVo.Equals("")        || ngayVo.Equals("")            || thangVo.Equals("")           ||
-                              namVo.Equals("")          || cbDanTocVo.Equals("")        || cbQuocTichVo.Equals("")      ||
-                              txtCMNDVo.Equals("")      || txtThuongTamTruVo.Equals("") || cbQueQuan.Equals("")         ||
-                              ngayDK.Equals("")         || thangDK.Equals("")           || namDK.Equals("")))
+                        if (!(maKetHon.Equals("")       || hoTenChong.Equals("")    || ngayChong.Equals("")         ||
+                              thangChong.Equals("")     || namChong.Equals("")      || danTocChong.Equals("")       ||
+                              queQuanChong.Equals("")   || cmndChong.Equals("")     || thuongTamTruChong.Equals("") ||
+                              hoTenVo.Equals("")        || ngayVo.Equals("")        || thangVo.Equals("")           ||
+                              namVo.Equals("")          || danTocVo.Equals("")      || queQuanVo.Equals("")         ||
+                              cmndVo.Equals("")         || thuongTamTruVo.Equals("")|| khuVucDangKy.Equals("")      ||
+                              ngayDK.Equals("")         || thangDK.Equals("")       || namDK.Equals("")))
                         {
                             if (sc.updateKetHon(maKetHon, hoTenChong, ngaySinhChong, danTocChong,
-                                                quocTichChong, thuongTamTruChong, cmndChong, hoTenVo,
-                                                ngaySinhVo, danTocVo, quocTichVo, thuongTamTruVo,
+                                                queQuanChong, thuongTamTruChong, cmndChong, hoTenVo,
+                                                ngaySinhVo, danTocVo, queQuanVo, thuongTamTruVo,
                                                 cmndVo, khuVucDangKy, ngayDangKy))
                             {
                                 MessageBox.Show(sc.SUCCESS_UPDATE);
@@ -845,6 +801,312 @@ namespace QLNK
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
                 e.Handled = true;
+        }
+
+        private void cbQueQuan_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbQueQuan.Text != itemKetHon[13])
+            {
+                label1.Visible = true;
+            }
+            else
+            {
+                label1.Visible = false;
+            }
+        }
+
+        private void cbNgayDangKy_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string[] str = itemKetHon[14].Split('/');
+            if (cbNgayDangKy.Text != str[0])
+            {
+                label2.Visible = true;
+            }
+            else
+            {
+                label2.Visible = false;
+            }
+        }
+
+        private void cbThangDangKy_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string[] str = itemKetHon[14].Split('/');
+            if (cbThangDangKy.Text != str[1])
+            {
+                label2.Visible = true;
+            }
+            else
+            {
+                label2.Visible = false;
+            }
+        }
+
+        private void cbNamDangKy_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (!(cbNamDangKy.Text.Equals("") || cbNamSinhChong.Text.Equals("")))
+            {
+                int test = Int32.Parse(cbNamDangKy.Text) - Int32.Parse(cbNamSinhChong.Text);
+                if (test < 20 && test > 0)
+                {
+                    MessageBox.Show("Chưa đủ tuổi đăng ký kết hôn!");
+                    cbNamDangKy.SelectedIndex = -1;
+                }
+                else if (test < 0)
+                {
+                    MessageBox.Show("Không hợp lệ!");
+                    cbNamDangKy.SelectedIndex = -1;
+                }
+            }
+
+            if (!(cbNamDangKy.Text.Equals("") || cbNamSinhVo.Text.Equals("")))
+            {
+                int test = Int32.Parse(cbNamDangKy.Text) - Int32.Parse(cbNamSinhVo.Text);
+                if (test < 18 && test > 0)
+                {
+                    MessageBox.Show("Chưa đủ tuổi đăng ký kết hôn!");
+                    cbNamDangKy.SelectedIndex = -1;
+                }
+                else if (test < 0)
+                {
+                    MessageBox.Show("Không hợp lệ!");
+                    cbNamDangKy.SelectedIndex = -1;
+                }
+            }
+            string[] str = itemKetHon[14].Split('/');
+            if (cbNamDangKy.Text != str[2])
+            {
+                label2.Visible = true;
+            }
+            else
+            {
+                label2.Visible = false;
+            }
+        }
+
+        private void txtHoTenChong_TextChanged(object sender, EventArgs e)
+        {
+            if (txtHoTenChong.Text != itemKetHon[1])
+            {
+                label3.Visible = true;
+            }
+            else
+            {
+                label3.Visible = false;
+            }
+        }
+
+        private void cbNgaySinhChong_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string[] str = itemKetHon[2].Split('/');
+            if (cbNgaySinhChong.Text != str[0])
+            {
+                label4.Visible = true;
+            }
+            else
+            {
+                label4.Visible = false;
+            }
+        }
+
+        private void cbThangSinhChong_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string[] str = itemKetHon[2].Split('/');
+            if (cbThangSinhChong.Text != str[1])
+            {
+                label4.Visible = true;
+            }
+            else
+            {
+                label4.Visible = false;
+            }
+        }
+
+        private void cbNamSinhChong_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (!(cbNamDangKy.Text.Equals("") || cbNamSinhChong.Text.Equals("")))
+            {
+                int test = Int32.Parse(cbNamDangKy.Text) - Int32.Parse(cbNamSinhChong.Text);
+                if (test < 20 && test > 0)
+                {
+                    MessageBox.Show("Chưa đủ tuổi đăng ký kết hôn!");
+                    cbNamSinhChong.SelectedIndex = -1;
+                }
+                else if (test < 0)
+                {
+                    MessageBox.Show("Không hợp lệ!");
+                    cbNamSinhChong.SelectedIndex = -1;
+                }
+            }
+            string[] str = itemKetHon[2].Split('/');
+            if (cbNamSinhChong.Text != str[2])
+            {
+                label4.Visible = true;
+            }
+            else
+            {
+                label4.Visible = false;
+            }
+        }
+
+        private void cbDanTocChong_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbDanTocChong.Text != itemKetHon[3])
+            {
+                label5.Visible = true;
+            }
+            else
+            {
+                label5.Visible = false;
+            }
+        }
+
+        private void txtCMNDChong_TextChanged(object sender, EventArgs e)
+        {
+            if (txtCMNDChong.Text != itemKetHon[6])
+            {
+                label7.Visible = true;
+            }
+            else
+            {
+                label7.Visible = false;
+            }
+        }
+
+        private void txtThuongTamTruChong_TextChanged(object sender, EventArgs e)
+        {
+            if (txtThuongTamTruChong.Text != itemKetHon[5])
+            {
+                label8.Visible = true;
+            }
+            else
+            {
+                label8.Visible = false;
+            }
+        }
+
+        private void txtHoTenVo_TextChanged(object sender, EventArgs e)
+        {
+            if (txtHoTenVo.Text != itemKetHon[7])
+            {
+                label9.Visible = true;
+            }
+            else
+            {
+                label9.Visible = false;
+            }
+        }
+
+        private void cbNgaySinhVo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string[] str = itemKetHon[8].Split('/');
+            if (cbNgaySinhVo.Text != str[0])
+            {
+                label10.Visible = true;
+            }
+            else
+            {
+                label10.Visible = false;
+            }
+        }
+
+        private void cbThangSinhVo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string[] str = itemKetHon[8].Split('/');
+            if (cbThangSinhVo.Text != str[1])
+            {
+                label10.Visible = true;
+            }
+            else
+            {
+                label10.Visible = false;
+            }
+        }
+
+        private void cbNamSinhVo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (!(cbNamDangKy.Text.Equals("") || cbNamSinhVo.Text.Equals("")))
+            {
+                int test = Int32.Parse(cbNamDangKy.Text) - Int32.Parse(cbNamSinhVo.Text);
+                if (test < 18 && test > 0)
+                {
+                    MessageBox.Show("Chưa đủ tuổi đăng ký kết hôn!");
+                    cbNamSinhVo.SelectedIndex = -1;
+                }
+                else if (test < 0)
+                {
+                    MessageBox.Show("Không hợp lệ!");
+                    cbNamSinhVo.SelectedIndex = -1;
+                }
+            }
+            string[] str = itemKetHon[8].Split('/');
+            if (cbNamSinhVo.Text != str[2])
+            {
+                label10.Visible = true;
+            }
+            else
+            {
+                label10.Visible = false;
+            }
+        }
+
+        private void cbDanTocVo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbDanTocVo.Text != itemKetHon[9])
+            {
+                label11.Visible = true;
+            }
+            else
+            {
+                label11.Visible = false;
+            }
+        }
+
+        private void txtCMNDVo_TextChanged(object sender, EventArgs e)
+        {
+            if (txtCMNDVo.Text != itemKetHon[12])
+            {
+                label13.Visible = true;
+            }
+            else
+            {
+                label13.Visible = false;
+            }
+        }
+
+        private void txtThuongTamTruVo_TextChanged(object sender, EventArgs e)
+        {
+            if (txtThuongTamTruVo.Text != itemKetHon[11])
+            {
+                label14.Visible = true;
+            }
+            else
+            {
+                label14.Visible = false;
+            }
+        }
+
+        private void cbQueQuanChong_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbQueQuanChong.Text != itemKetHon[4])
+            {
+                label6.Visible = true;
+            }
+            else
+            {
+                label6.Visible = false;
+            }
+        }
+
+        private void cbQueQuanVo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbQueQuanVo.Text != itemKetHon[10])
+            {
+                label12.Visible = true;
+            }
+            else
+            {
+                label12.Visible = false;
+            }
         }
     }
 }

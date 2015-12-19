@@ -14,7 +14,6 @@ namespace QLNK
 
         private void btnClear_Click(object sender, EventArgs e)
         {
-            txtMaTienAnTienSu.Text = "";
             txtMaNhanKhau.Text = "";
             txtTenTienAnTienSu.Text = "";
             cbQueQuan.SelectedIndex = -1;
@@ -29,7 +28,8 @@ namespace QLNK
             string thang = cbThang.Text;
             string nam = cbNam.Text;
 
-            string maTienAnTienSu = txtMaTienAnTienSu.Text;
+            
+            string maTienAnTienSu = sc.setPrimaryKey("TIENANTIENSU", "TATS"); ;
             string maNhanKhau = txtMaNhanKhau.Text;
             string tenTienAnTienSu = txtTenTienAnTienSu.Text;
             string noiXetXu = cbQueQuan.Text;
@@ -74,16 +74,11 @@ namespace QLNK
                 e.Handled = true;
         }
 
-        private void txtMaTienAnTienSu_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
-                e.Handled = true;
-        }
-
         private void txtMaNhanKhau_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
                 e.Handled = true;
         }
+
     }
 }

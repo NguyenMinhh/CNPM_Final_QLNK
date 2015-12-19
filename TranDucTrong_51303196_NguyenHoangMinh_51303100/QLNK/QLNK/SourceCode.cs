@@ -13,7 +13,9 @@ namespace QLNK
         public string MSGBOX_UPDATE = "Lưu thông tin đã chỉnh sửa ?";
         public string MSGBOX_CAP_UPDATE = "Xác nhận chỉnh sửa";
         public string MSGBOX_CAP_EXIT = "Xác nhận thoát";
-        
+        public string ERROR_BLANK_FIND = "Vui lòng chọn thông tin cần tra cứu";
+        public string ERROR_BLANK_FIND_ITEM = "Vui lòng chọn mục cần tra cứu";
+
         private static string DATASOURCE = "localhost";
         private static string PORT = "3306";
         private static string USERNAME = "root";
@@ -97,16 +99,16 @@ namespace QLNK
         }
 
         public Boolean updateKetHon(string maKetHon, string hoTenChong, string ngaySinhChong,
-                                    string danTocChong, string quocTichChong, string thuongTamTruChong,
+                                    string danTocChong, string queQuanChong, string thuongTamTruChong,
                                     string cmndChong, string hoTenVo, string ngaySinhVo,
-                                    string danTocVo, string quocTichVo, string thuongTamTruVo,
+                                    string danTocVo, string queQuanVo, string thuongTamTruVo,
                                     string cmndVo, string khuVucDangKy, string ngayDangKy)
         {
             string sql = "UPDATE KETHON SET TenChong = '" + hoTenChong + "',NgaySinhChong = '" + ngaySinhChong
-                                        + "',DanTocChong = '" + danTocChong + "',QuocTichChong = '" + quocTichChong
+                                        + "',DanTocChong = '" + danTocChong + "',QueQuanChong = '" + queQuanChong
                                         + "',ThuongTamTruChong = '" + thuongTamTruChong + "',CMNDChong = '" + cmndChong
                                         + "',TenVo = '" + hoTenVo + "',ngaySinhVo = '" + ngaySinhVo
-                                        + "',DanTocVo = '" + danTocVo + "',QuocTichVo = '" + quocTichVo
+                                        + "',DanTocVo = '" + danTocVo + "',QueQuanVo = '" + queQuanVo
                                         + "',ThuongTamTruVo = '" + thuongTamTruVo + "',CMNDVo = '" + cmndVo
                                         + "',KVDK = '" + khuVucDangKy + "',NgayDK = '" + ngayDangKy
                                         + "' WHERE MKH = '" + maKetHon + "'";
@@ -259,18 +261,18 @@ namespace QLNK
         }
 
         public Boolean addKetHon(string maKetHon, string hoTenChong, string ngaySinhChong, string danTocChong,
-                                 string quocTichChong, string cmndChong, string thuongTamTruChong,
-                                 string hoTenVo, string ngaySinhVo, string danTocVo, string quocTichVo,
+                                 string queQuanChong, string cmndChong, string thuongTamTruChong,
+                                 string hoTenVo, string ngaySinhVo, string danTocVo, string queQuanVo,
                                  string thuongTamTruVo, string cmndVo, string khuVucDangKy, string ngayDangKy)
         {
-            string sql = "INSERT INTO KETHON(MKH,TenChong,NgaySinhChong,DanTocChong,QuocTichChong,"
+            string sql = "INSERT INTO KETHON(MKH,TenChong,NgaySinhChong,DanTocChong,QueQuanChong,"
                                           + "ThuongTamTruChong,CMNDChong,TenVo,NgaySinhVo,DanTocVo,"
-                                          + "QuocTichVo,ThuongTamTruVo,CMNDVo,KVDK,NgayDK) VALUES('"
+                                          + "QueQuanVo,ThuongTamTruVo,CMNDVo,KVDK,NgayDK) VALUES('"
                                           + maKetHon + "','" + hoTenChong + "','" + ngaySinhChong
-                                          + "','" + danTocChong + "','" + quocTichChong
+                                          + "','" + danTocChong + "','" + queQuanChong
                                           + "','" + cmndChong + "','" + thuongTamTruChong
                                           + "','" + hoTenVo + "','" + ngaySinhVo + "','" + danTocVo
-                                          + "','" + quocTichVo + "','" + thuongTamTruVo + "','" + cmndVo
+                                          + "','" + queQuanVo + "','" + thuongTamTruVo + "','" + cmndVo
                                           + "','"  + khuVucDangKy + "','" + ngayDangKy + "')";
             try
             {
@@ -554,13 +556,13 @@ namespace QLNK
                     item.SubItems.Add(dr["TenChong"].ToString());
                     item.SubItems.Add(dr["NgaySinhChong"].ToString());
                     item.SubItems.Add(dr["DanTocChong"].ToString());
-                    item.SubItems.Add(dr["QuocTichChong"].ToString());
+                    item.SubItems.Add(dr["QueQuanChong"].ToString());
                     item.SubItems.Add(dr["ThuongTamTruChong"].ToString());
                     item.SubItems.Add(dr["CMNDChong"].ToString());
                     item.SubItems.Add(dr["TenVo"].ToString());
                     item.SubItems.Add(dr["NgaySinhVo"].ToString());
                     item.SubItems.Add(dr["DanTocVo"].ToString());
-                    item.SubItems.Add(dr["QuocTichVo"].ToString());
+                    item.SubItems.Add(dr["QueQuanVo"].ToString());
                     item.SubItems.Add(dr["ThuongTamTruVo"].ToString());
                     item.SubItems.Add(dr["CMNDVo"].ToString());
                     item.SubItems.Add(dr["KVDK"].ToString());
@@ -670,6 +672,155 @@ namespace QLNK
                 MessageBox.Show(ex.Message);
             }
             return 0;
+        }
+
+        //-----------------------------------------------------------------SET PRIMARY KEY
+
+        public string setPrimaryKey(string tableName, string primaryKey)
+        {
+            string primaryKeyOfTable = "";
+            int count = 1;
+            string sql = "SELECT * FROM " + tableName;
+            MySqlConnection myConn = new MySqlConnection(myConnection);
+            MySqlCommand MyCommand = new MySqlCommand(sql, myConn);
+
+            try
+            {
+                myConn.Open();
+                MySqlDataReader dr = MyCommand.ExecuteReader();
+                while (dr.Read())
+                {
+                    string str = dr[primaryKey].ToString();
+                    string[] arr = str.Split('-');
+                    if (arr[1].Equals(count.ToString()))
+                    {
+                        count++;
+                    }
+                    else
+                    {
+                        primaryKeyOfTable = primaryKey + "-" + count.ToString();
+                    }
+                }
+                myConn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            if (primaryKeyOfTable.Equals(""))
+            {
+                primaryKeyOfTable = primaryKey + "-" + count.ToString();
+            }
+            return primaryKeyOfTable;
+        }
+
+        //----------------------------------------------------------------------------FIND
+
+        public void findAndDisplay(string tableName, string condition, string itemNeedToFind, ListView lstView)
+        {
+            lstView.Items.Clear();
+            string sql = "SELECT * FROM " + tableName + " WHERE " + condition + " = '" + itemNeedToFind + "'";
+            MySqlConnection myConn = new MySqlConnection(myConnection);
+            MySqlCommand MyCommand = new MySqlCommand(sql, myConn);
+            int count = 0;
+            try
+            {
+                myConn.Open();
+                MySqlDataReader dr = MyCommand.ExecuteReader();
+                while (dr.Read())
+                {
+                    string str = dr[condition].ToString();
+                    if (str == itemNeedToFind)
+                    {
+                        switch (tableName)
+                        {
+                            case "NHANKHAU":
+                                ListViewItem itemNK = new ListViewItem(dr["MNK"].ToString());
+                                itemNK.SubItems.Add(dr["Ten"].ToString());
+                                itemNK.SubItems.Add(dr["NgaySinh"].ToString());
+                                itemNK.SubItems.Add(dr["GioiTinh"].ToString());
+                                itemNK.SubItems.Add(dr["QueQuan"].ToString());
+                                itemNK.SubItems.Add(dr["TonGiao"].ToString());
+                                itemNK.SubItems.Add(dr["DanToc"].ToString());
+                                itemNK.SubItems.Add(dr["CMND"].ToString());
+                                itemNK.SubItems.Add(dr["MHK"].ToString());
+                                itemNK.SubItems.Add(dr["NgheNghiep"].ToString());
+                                lstView.Items.Add(itemNK);
+                                break;
+                            case "HOKHAU":
+                                ListViewItem itemHK = new ListViewItem(dr["MHK"].ToString());
+                                itemHK.SubItems.Add(dr["TenChuHo"].ToString());
+                                itemHK.SubItems.Add(dr["CMNDChuHo"].ToString());
+                                itemHK.SubItems.Add(dr["KhuVuc"].ToString());
+                                itemHK.SubItems.Add(dr["DiaChiHK"].ToString());
+                                itemHK.SubItems.Add(dr["NgayLap"].ToString());
+                                lstView.Items.Add(itemHK);
+                                break;
+                            case "TAMTRU":
+                                ListViewItem itemTT = new ListViewItem(dr["MTT"].ToString());
+                                itemTT.SubItems.Add(dr["MNK"].ToString());
+                                itemTT.SubItems.Add(dr["TenNoiTamTru"].ToString());
+                                itemTT.SubItems.Add(dr["DiaChi"].ToString());
+                                itemTT.SubItems.Add(dr["SoDienThoai"].ToString());
+                                itemTT.SubItems.Add(dr["ThoiHan"].ToString());
+                                lstView.Items.Add(itemTT);
+                                break;
+                            case "CHUNGTU":
+                                ListViewItem itemCT = new ListViewItem(dr["MCT"].ToString());
+                                itemCT.SubItems.Add(dr["TenNguoiKhai"].ToString());
+                                itemCT.SubItems.Add(dr["ThuongTamTru"].ToString());
+                                itemCT.SubItems.Add(dr["QHVoiNguoiMat"].ToString());
+                                itemCT.SubItems.Add(dr["TenNguoiMat"].ToString());
+                                itemCT.SubItems.Add(dr["NgaySinh"].ToString());
+                                itemCT.SubItems.Add(dr["DanToc"].ToString());
+                                itemCT.SubItems.Add(dr["QuocTich"].ToString());
+                                itemCT.SubItems.Add(dr["CMND"].ToString());
+                                itemCT.SubItems.Add(dr["NgayMat"].ToString());
+                                itemCT.SubItems.Add(dr["GioMat"].ToString());
+                                itemCT.SubItems.Add(dr["KVDK"].ToString());
+                                itemCT.SubItems.Add(dr["NgayDK"].ToString());
+                                lstView.Items.Add(itemCT);
+                                break;
+                            case "KETHON":
+                                ListViewItem itemKH = new ListViewItem(dr["MKH"].ToString());
+                                itemKH.SubItems.Add(dr["TenChong"].ToString());
+                                itemKH.SubItems.Add(dr["NgaySinhChong"].ToString());
+                                itemKH.SubItems.Add(dr["DanTocChong"].ToString());
+                                itemKH.SubItems.Add(dr["QueQuanChong"].ToString());
+                                itemKH.SubItems.Add(dr["ThuongTamTruChong"].ToString());
+                                itemKH.SubItems.Add(dr["CMNDChong"].ToString());
+                                itemKH.SubItems.Add(dr["TenVo"].ToString());
+                                itemKH.SubItems.Add(dr["NgaySinhVo"].ToString());
+                                itemKH.SubItems.Add(dr["DanTocVo"].ToString());
+                                itemKH.SubItems.Add(dr["QueQuanVo"].ToString());
+                                itemKH.SubItems.Add(dr["ThuongTamTruVo"].ToString());
+                                itemKH.SubItems.Add(dr["CMNDVo"].ToString());
+                                itemKH.SubItems.Add(dr["KVDK"].ToString());
+                                itemKH.SubItems.Add(dr["NgayDK"].ToString());
+                                lstView.Items.Add(itemKH);
+                                break;
+                            case "TIENANTIENSU":
+                                ListViewItem itemTATS = new ListViewItem(dr["MaTATS"].ToString());
+                                itemTATS.SubItems.Add(dr["MNK"].ToString());
+                                itemTATS.SubItems.Add(dr["TenTATS"].ToString());
+                                itemTATS.SubItems.Add(dr["NoiXetXu"].ToString());
+                                itemTATS.SubItems.Add(dr["NgayThucThi"].ToString());
+                                lstView.Items.Add(itemTATS);
+                                break;
+                        }
+                        count++;
+                    }
+                }
+                myConn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            if (count == 0)
+            {
+                MessageBox.Show("Dữ liệu cần tìm không tồn tại");
+            }
         }
     }
 }

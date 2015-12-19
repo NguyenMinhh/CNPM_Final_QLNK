@@ -31,12 +31,10 @@
             this.btnClearVo = new MaterialSkin.Controls.MaterialRaisedButton();
             this.btnClearChong = new MaterialSkin.Controls.MaterialRaisedButton();
             this.btnThemKetHon = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.lblMNK = new MaterialSkin.Controls.MaterialLabel();
-            this.txtMaKetHon = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.lblMHK = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel5 = new MaterialSkin.Controls.MaterialLabel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.cbQuocTichVo = new System.Windows.Forms.ComboBox();
+            this.cbQueQuanVo = new System.Windows.Forms.ComboBox();
             this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
             this.txtHoTenVo = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
@@ -54,7 +52,7 @@
             this.cbDanTocVo = new System.Windows.Forms.ComboBox();
             this.cbNamSinhVo = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.cbQuocTichChong = new System.Windows.Forms.ComboBox();
+            this.cbQueQuanChong = new System.Windows.Forms.ComboBox();
             this.materialLabel12 = new MaterialSkin.Controls.MaterialLabel();
             this.txtHoTenChong = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.materialLabel14 = new MaterialSkin.Controls.MaterialLabel();
@@ -120,39 +118,6 @@
             this.btnThemKetHon.UseVisualStyleBackColor = true;
             this.btnThemKetHon.Click += new System.EventHandler(this.btnThemKetHon_Click);
             // 
-            // lblMNK
-            // 
-            this.lblMNK.AutoSize = true;
-            this.lblMNK.BackColor = System.Drawing.Color.White;
-            this.lblMNK.Depth = 0;
-            this.lblMNK.Font = new System.Drawing.Font("Roboto", 11F);
-            this.lblMNK.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblMNK.Location = new System.Drawing.Point(364, 85);
-            this.lblMNK.MouseState = MaterialSkin.MouseState.HOVER;
-            this.lblMNK.Name = "lblMNK";
-            this.lblMNK.Size = new System.Drawing.Size(104, 24);
-            this.lblMNK.TabIndex = 115;
-            this.lblMNK.Text = "Mã kết hôn";
-            // 
-            // txtMaKetHon
-            // 
-            this.txtMaKetHon.BackColor = System.Drawing.Color.White;
-            this.txtMaKetHon.Depth = 0;
-            this.txtMaKetHon.Hint = "";
-            this.txtMaKetHon.Location = new System.Drawing.Point(478, 81);
-            this.txtMaKetHon.MaxLength = 10;
-            this.txtMaKetHon.MouseState = MaterialSkin.MouseState.HOVER;
-            this.txtMaKetHon.Name = "txtMaKetHon";
-            this.txtMaKetHon.PasswordChar = '\0';
-            this.txtMaKetHon.SelectedText = "";
-            this.txtMaKetHon.SelectionLength = 0;
-            this.txtMaKetHon.SelectionStart = 0;
-            this.txtMaKetHon.Size = new System.Drawing.Size(121, 28);
-            this.txtMaKetHon.TabIndex = 118;
-            this.txtMaKetHon.TabStop = false;
-            this.txtMaKetHon.UseSystemPasswordChar = false;
-            this.txtMaKetHon.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtMaKetHon_KeyPress);
-            // 
             // lblMHK
             // 
             this.lblMHK.AutoSize = true;
@@ -160,7 +125,7 @@
             this.lblMHK.Depth = 0;
             this.lblMHK.Font = new System.Drawing.Font("Roboto", 11F);
             this.lblMHK.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblMHK.Location = new System.Drawing.Point(613, 83);
+            this.lblMHK.Location = new System.Drawing.Point(468, 81);
             this.lblMHK.MouseState = MaterialSkin.MouseState.HOVER;
             this.lblMHK.Name = "lblMHK";
             this.lblMHK.Size = new System.Drawing.Size(129, 24);
@@ -174,7 +139,7 @@
             this.materialLabel5.Depth = 0;
             this.materialLabel5.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel5.Location = new System.Drawing.Point(389, 122);
+            this.materialLabel5.Location = new System.Drawing.Point(370, 118);
             this.materialLabel5.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel5.Name = "materialLabel5";
             this.materialLabel5.Size = new System.Drawing.Size(125, 24);
@@ -184,7 +149,7 @@
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.White;
-            this.groupBox2.Controls.Add(this.cbQuocTichVo);
+            this.groupBox2.Controls.Add(this.cbQueQuanVo);
             this.groupBox2.Controls.Add(this.materialLabel1);
             this.groupBox2.Controls.Add(this.txtHoTenVo);
             this.groupBox2.Controls.Add(this.materialLabel2);
@@ -208,72 +173,80 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông tin vợ";
             // 
-            // cbQuocTichVo
+            // cbQueQuanVo
             // 
-            this.cbQuocTichVo.DropDownHeight = 140;
-            this.cbQuocTichVo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbQuocTichVo.FormattingEnabled = true;
-            this.cbQuocTichVo.IntegralHeight = false;
-            this.cbQuocTichVo.Items.AddRange(new object[] {
-            "Afghanistan",
-            "Akrotiri và Dhekelia",
-            "Ả Rập Saudi",
-            "Armenia",
-            "Azerbaijan",
-            "Ấn Độ",
-            "Bahrain",
-            "Bangladesh",
-            "Bhutan",
-            "Brunei",
-            "Campuchia",
-            "Đài Loan",
-            "Georgia",
-            "Hồng Kông",
-            "Indonesia",
-            "Iran",
-            "Iraq",
-            "Israel",
-            "Jordan",
-            "Kazakhstan",
-            "Kuwait",
-            "Kyrgyzstan",
-            "Lào",
-            "Liban",
-            "Ma Cao",
-            "Malaysia",
-            "Kuala Lumpur",
-            "Maldives",
-            "Mông Cổ",
-            "Myanma",
-            "Nagorno-Karabakh",
-            "Nepal",
-            "Nga",
-            "Nhật Bản",
-            "Oman",
-            "Pakistan",
-            "Palestine",
-            "Philippines",
-            "Qatar",
-            "Singapore",
-            "Bắc Síp",
-            "Síp",
-            "Sri Lanka",
-            "Syria",
-            "Tajikistan",
-            "Thái Lan",
-            "Đông Timor",
-            "Thổ Nhĩ Kỳ",
-            "Triều Tiên",
-            "Hàn Quốc",
-            "Trung Quốc",
-            "Turkmenistan",
-            "Uzbekistan",
-            "Việt Nam\t",
-            "Yemen"});
-            this.cbQuocTichVo.Location = new System.Drawing.Point(414, 140);
-            this.cbQuocTichVo.Name = "cbQuocTichVo";
-            this.cbQuocTichVo.Size = new System.Drawing.Size(124, 24);
-            this.cbQuocTichVo.TabIndex = 194;
+            this.cbQueQuanVo.DropDownHeight = 140;
+            this.cbQueQuanVo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbQueQuanVo.FormattingEnabled = true;
+            this.cbQueQuanVo.IntegralHeight = false;
+            this.cbQueQuanVo.Items.AddRange(new object[] {
+            "An Giang",
+            "Bà Rịa - Vũng Tàu",
+            "Bạc Liêu",
+            "Bắc Kạn",
+            "Bắc Giang",
+            "Bắc Ninh",
+            "Bến Tre",
+            "Bình Dương",
+            "Bình Định",
+            "Bình Phước",
+            "Bình Thuận",
+            "Cà Mau",
+            "Cao Bằng",
+            "Cần Thơ",
+            "Đà Nẵng",
+            "Đắk Lắk",
+            "Đắk Nông",
+            "Đồng Nai",
+            "Đồng Tháp",
+            "Điện Biên",
+            "Gia Lai",
+            "Hà Giang",
+            "Hà Nam",
+            "Hà Nội",
+            "Hà Tĩnh",
+            "Hải Dương",
+            "Hải Phòng",
+            "Hòa Bình",
+            "Hậu Giang",
+            "Hưng Yên",
+            "TPHCM",
+            "Khánh Hòa",
+            "Kiên Giang",
+            "Kon Tum",
+            "Lai Châu",
+            "Lào Cai",
+            "Lạng Sơn",
+            "Lâm Đồng",
+            "Long An",
+            "Nam Định",
+            "Nghệ An",
+            "Ninh Bình",
+            "Ninh Thuận",
+            "Phú Thọ",
+            "Phú Yên",
+            "Quảng Bình",
+            "Quảng Nam",
+            "Quảng Ngãi",
+            "Quảng Ninh",
+            "Quảng Trị",
+            "Sóc Trăng",
+            "Sơn La",
+            "Tây Ninh",
+            "Thái Bình",
+            "Thái Nguyên",
+            "Thanh Hóa",
+            "Thừa Thiên Huế",
+            "Tiền Giang",
+            "Trà Vinh",
+            "Tuyên Quang",
+            "Vĩnh Long",
+            "Vĩnh Phúc",
+            "Yên Bái"});
+            this.cbQueQuanVo.Location = new System.Drawing.Point(417, 140);
+            this.cbQueQuanVo.Name = "cbQueQuanVo";
+            this.cbQueQuanVo.Size = new System.Drawing.Size(121, 24);
+            this.cbQueQuanVo.TabIndex = 263;
             // 
             // materialLabel1
             // 
@@ -431,12 +404,12 @@
             this.materialLabel13.Depth = 0;
             this.materialLabel13.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel13.Location = new System.Drawing.Point(321, 142);
+            this.materialLabel13.Location = new System.Drawing.Point(323, 142);
             this.materialLabel13.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel13.Name = "materialLabel13";
-            this.materialLabel13.Size = new System.Drawing.Size(90, 24);
+            this.materialLabel13.Size = new System.Drawing.Size(89, 24);
             this.materialLabel13.TabIndex = 128;
-            this.materialLabel13.Text = "Quốc tịch";
+            this.materialLabel13.Text = "Quê quán";
             // 
             // cbNgaySinhVo
             // 
@@ -445,15 +418,15 @@
             this.cbNgaySinhVo.FormattingEnabled = true;
             this.cbNgaySinhVo.IntegralHeight = false;
             this.cbNgaySinhVo.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
+            "01",
+            "02",
+            "03",
+            "04",
+            "05",
+            "06",
+            "07",
+            "08",
+            "09",
             "10",
             "11",
             "12",
@@ -488,15 +461,15 @@
             this.cbThangSinhVo.FormattingEnabled = true;
             this.cbThangSinhVo.IntegralHeight = false;
             this.cbThangSinhVo.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
+            "01",
+            "02",
+            "03",
+            "04",
+            "05",
+            "06",
+            "07",
+            "08",
+            "09",
             "10",
             "11",
             "12"});
@@ -537,7 +510,7 @@
             "Thái",
             "Mường",
             "Khơ Me",
-            "H\'Mông",
+            "HMông",
             "Nùng",
             "Hoa",
             "Dao",
@@ -551,8 +524,8 @@
             "Sán Dìu",
             "Hrê",
             "Ra Glai",
-            "M\'Nông",
-            "X’Tiêng",
+            "MNông",
+            "XTiêng",
             "Bru-Vân Kiều",
             "Thổ",
             "Khơ Mú",
@@ -636,19 +609,17 @@
             "1994",
             "1995",
             "1996",
-            "1997",
-            "1998",
-            "1999",
-            "2000"});
+            "1997"});
             this.cbNamSinhVo.Location = new System.Drawing.Point(470, 86);
             this.cbNamSinhVo.Name = "cbNamSinhVo";
             this.cbNamSinhVo.Size = new System.Drawing.Size(68, 24);
             this.cbNamSinhVo.TabIndex = 131;
+            this.cbNamSinhVo.SelectedIndexChanged += new System.EventHandler(this.cbNamSinhVo_SelectedIndexChanged);
             // 
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.White;
-            this.groupBox1.Controls.Add(this.cbQuocTichChong);
+            this.groupBox1.Controls.Add(this.cbQueQuanChong);
             this.groupBox1.Controls.Add(this.materialLabel12);
             this.groupBox1.Controls.Add(this.txtHoTenChong);
             this.groupBox1.Controls.Add(this.materialLabel14);
@@ -672,72 +643,80 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin chồng";
             // 
-            // cbQuocTichChong
+            // cbQueQuanChong
             // 
-            this.cbQuocTichChong.DropDownHeight = 140;
-            this.cbQuocTichChong.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbQuocTichChong.FormattingEnabled = true;
-            this.cbQuocTichChong.IntegralHeight = false;
-            this.cbQuocTichChong.Items.AddRange(new object[] {
-            "Afghanistan",
-            "Akrotiri và Dhekelia",
-            "Ả Rập Saudi",
-            "Armenia",
-            "Azerbaijan",
-            "Ấn Độ",
-            "Bahrain",
-            "Bangladesh",
-            "Bhutan",
-            "Brunei",
-            "Campuchia",
-            "Đài Loan",
-            "Georgia",
-            "Hồng Kông",
-            "Indonesia",
-            "Iran",
-            "Iraq",
-            "Israel",
-            "Jordan",
-            "Kazakhstan",
-            "Kuwait",
-            "Kyrgyzstan",
-            "Lào",
-            "Liban",
-            "Ma Cao",
-            "Malaysia",
-            "Kuala Lumpur",
-            "Maldives",
-            "Mông Cổ",
-            "Myanma",
-            "Nagorno-Karabakh",
-            "Nepal",
-            "Nga",
-            "Nhật Bản",
-            "Oman",
-            "Pakistan",
-            "Palestine",
-            "Philippines",
-            "Qatar",
-            "Singapore",
-            "Bắc Síp",
-            "Síp",
-            "Sri Lanka",
-            "Syria",
-            "Tajikistan",
-            "Thái Lan",
-            "Đông Timor",
-            "Thổ Nhĩ Kỳ",
-            "Triều Tiên",
-            "Hàn Quốc",
-            "Trung Quốc",
-            "Turkmenistan",
-            "Uzbekistan",
-            "Việt Nam\t",
-            "Yemen"});
-            this.cbQuocTichChong.Location = new System.Drawing.Point(417, 142);
-            this.cbQuocTichChong.Name = "cbQuocTichChong";
-            this.cbQuocTichChong.Size = new System.Drawing.Size(121, 24);
-            this.cbQuocTichChong.TabIndex = 193;
+            this.cbQueQuanChong.DropDownHeight = 140;
+            this.cbQueQuanChong.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbQueQuanChong.FormattingEnabled = true;
+            this.cbQueQuanChong.IntegralHeight = false;
+            this.cbQueQuanChong.Items.AddRange(new object[] {
+            "An Giang",
+            "Bà Rịa - Vũng Tàu",
+            "Bạc Liêu",
+            "Bắc Kạn",
+            "Bắc Giang",
+            "Bắc Ninh",
+            "Bến Tre",
+            "Bình Dương",
+            "Bình Định",
+            "Bình Phước",
+            "Bình Thuận",
+            "Cà Mau",
+            "Cao Bằng",
+            "Cần Thơ",
+            "Đà Nẵng",
+            "Đắk Lắk",
+            "Đắk Nông",
+            "Đồng Nai",
+            "Đồng Tháp",
+            "Điện Biên",
+            "Gia Lai",
+            "Hà Giang",
+            "Hà Nam",
+            "Hà Nội",
+            "Hà Tĩnh",
+            "Hải Dương",
+            "Hải Phòng",
+            "Hòa Bình",
+            "Hậu Giang",
+            "Hưng Yên",
+            "TPHCM",
+            "Khánh Hòa",
+            "Kiên Giang",
+            "Kon Tum",
+            "Lai Châu",
+            "Lào Cai",
+            "Lạng Sơn",
+            "Lâm Đồng",
+            "Long An",
+            "Nam Định",
+            "Nghệ An",
+            "Ninh Bình",
+            "Ninh Thuận",
+            "Phú Thọ",
+            "Phú Yên",
+            "Quảng Bình",
+            "Quảng Nam",
+            "Quảng Ngãi",
+            "Quảng Ninh",
+            "Quảng Trị",
+            "Sóc Trăng",
+            "Sơn La",
+            "Tây Ninh",
+            "Thái Bình",
+            "Thái Nguyên",
+            "Thanh Hóa",
+            "Thừa Thiên Huế",
+            "Tiền Giang",
+            "Trà Vinh",
+            "Tuyên Quang",
+            "Vĩnh Long",
+            "Vĩnh Phúc",
+            "Yên Bái"});
+            this.cbQueQuanChong.Location = new System.Drawing.Point(417, 140);
+            this.cbQueQuanChong.Name = "cbQueQuanChong";
+            this.cbQueQuanChong.Size = new System.Drawing.Size(121, 24);
+            this.cbQueQuanChong.TabIndex = 258;
             // 
             // materialLabel12
             // 
@@ -895,12 +874,12 @@
             this.materialLabel21.Depth = 0;
             this.materialLabel21.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel21.Location = new System.Drawing.Point(321, 142);
+            this.materialLabel21.Location = new System.Drawing.Point(325, 142);
             this.materialLabel21.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel21.Name = "materialLabel21";
-            this.materialLabel21.Size = new System.Drawing.Size(90, 24);
+            this.materialLabel21.Size = new System.Drawing.Size(89, 24);
             this.materialLabel21.TabIndex = 128;
-            this.materialLabel21.Text = "Quốc tịch";
+            this.materialLabel21.Text = "Quê quán";
             // 
             // cbNgaySinhChong
             // 
@@ -909,15 +888,15 @@
             this.cbNgaySinhChong.FormattingEnabled = true;
             this.cbNgaySinhChong.IntegralHeight = false;
             this.cbNgaySinhChong.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
+            "01",
+            "02",
+            "03",
+            "04",
+            "05",
+            "06",
+            "07",
+            "08",
+            "09",
             "10",
             "11",
             "12",
@@ -952,15 +931,15 @@
             this.cbThangSinhChong.FormattingEnabled = true;
             this.cbThangSinhChong.IntegralHeight = false;
             this.cbThangSinhChong.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
+            "01",
+            "02",
+            "03",
+            "04",
+            "05",
+            "06",
+            "07",
+            "08",
+            "09",
             "10",
             "11",
             "12"});
@@ -1001,7 +980,7 @@
             "Thái",
             "Mường",
             "Khơ Me",
-            "H\'Mông",
+            "HMông",
             "Nùng",
             "Hoa",
             "Dao",
@@ -1015,8 +994,8 @@
             "Sán Dìu",
             "Hrê",
             "Ra Glai",
-            "M\'Nông",
-            "X’Tiêng",
+            "MNông",
+            "XTiêng",
             "Bru-Vân Kiều",
             "Thổ",
             "Khơ Mú",
@@ -1100,14 +1079,12 @@
             "1994",
             "1995",
             "1996",
-            "1997",
-            "1998",
-            "1999",
-            "2000"});
+            "1997"});
             this.cbNamSinhChong.Location = new System.Drawing.Point(470, 86);
             this.cbNamSinhChong.Name = "cbNamSinhChong";
             this.cbNamSinhChong.Size = new System.Drawing.Size(68, 24);
             this.cbNamSinhChong.TabIndex = 131;
+            this.cbNamSinhChong.SelectedIndexChanged += new System.EventHandler(this.cbNamSinhChong_SelectedIndexChanged);
             // 
             // materialLabel4
             // 
@@ -1116,7 +1093,7 @@
             this.materialLabel4.Depth = 0;
             this.materialLabel4.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel4.Location = new System.Drawing.Point(600, 122);
+            this.materialLabel4.Location = new System.Drawing.Point(581, 118);
             this.materialLabel4.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel4.Name = "materialLabel4";
             this.materialLabel4.Size = new System.Drawing.Size(62, 24);
@@ -1130,7 +1107,7 @@
             this.materialLabel22.Depth = 0;
             this.materialLabel22.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel22.Location = new System.Drawing.Point(746, 122);
+            this.materialLabel22.Location = new System.Drawing.Point(727, 118);
             this.materialLabel22.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel22.Name = "materialLabel22";
             this.materialLabel22.Size = new System.Drawing.Size(51, 24);
@@ -1144,15 +1121,15 @@
             this.cbNgayDangKy.FormattingEnabled = true;
             this.cbNgayDangKy.IntegralHeight = false;
             this.cbNgayDangKy.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
+            "01",
+            "02",
+            "03",
+            "04",
+            "05",
+            "06",
+            "07",
+            "08",
+            "09",
             "10",
             "11",
             "12",
@@ -1175,7 +1152,7 @@
             "29",
             "30",
             "31"});
-            this.cbNgayDangKy.Location = new System.Drawing.Point(524, 122);
+            this.cbNgayDangKy.Location = new System.Drawing.Point(505, 118);
             this.cbNgayDangKy.Name = "cbNgayDangKy";
             this.cbNgayDangKy.Size = new System.Drawing.Size(55, 24);
             this.cbNgayDangKy.TabIndex = 181;
@@ -1187,19 +1164,19 @@
             this.cbThangDangKy.FormattingEnabled = true;
             this.cbThangDangKy.IntegralHeight = false;
             this.cbThangDangKy.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
+            "01",
+            "02",
+            "03",
+            "04",
+            "05",
+            "06",
+            "07",
+            "08",
+            "09",
             "10",
             "11",
             "12"});
-            this.cbThangDangKy.Location = new System.Drawing.Point(668, 122);
+            this.cbThangDangKy.Location = new System.Drawing.Point(649, 118);
             this.cbThangDangKy.Name = "cbThangDangKy";
             this.cbThangDangKy.Size = new System.Drawing.Size(56, 24);
             this.cbThangDangKy.TabIndex = 182;
@@ -1251,11 +1228,27 @@
             "1997",
             "1998",
             "1999",
-            "2000"});
-            this.cbNamDangKy.Location = new System.Drawing.Point(803, 122);
+            "2000",
+            "2001",
+            "2002",
+            "2003",
+            "2004",
+            "2005",
+            "2006",
+            "2007",
+            "2008",
+            "2009",
+            "2010",
+            "2011",
+            "2012",
+            "2013",
+            "2014",
+            "2015"});
+            this.cbNamDangKy.Location = new System.Drawing.Point(784, 118);
             this.cbNamDangKy.Name = "cbNamDangKy";
             this.cbNamDangKy.Size = new System.Drawing.Size(68, 24);
             this.cbNamDangKy.TabIndex = 183;
+            this.cbNamDangKy.SelectedIndexChanged += new System.EventHandler(this.cbNamDangKy_SelectedIndexChanged);
             // 
             // cbQueQuan
             // 
@@ -1327,7 +1320,7 @@
             "Vĩnh Long",
             "Vĩnh Phúc",
             "Yên Bái"});
-            this.cbQueQuan.Location = new System.Drawing.Point(757, 81);
+            this.cbQueQuan.Location = new System.Drawing.Point(612, 79);
             this.cbQueQuan.Name = "cbQueQuan";
             this.cbQueQuan.Size = new System.Drawing.Size(142, 24);
             this.cbQueQuan.TabIndex = 219;
@@ -1350,8 +1343,7 @@
             this.Controls.Add(this.btnClearChong);
             this.Controls.Add(this.btnThemKetHon);
             this.Controls.Add(this.lblMHK);
-            this.Controls.Add(this.txtMaKetHon);
-            this.Controls.Add(this.lblMNK);
+            this.MaximizeBox = false;
             this.Name = "ThemKetHon";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "THÊM CHỨNG NHẬN KẾT HÔN";
@@ -1368,8 +1360,6 @@
         private MaterialSkin.Controls.MaterialRaisedButton btnClearVo;
         private MaterialSkin.Controls.MaterialRaisedButton btnClearChong;
         private MaterialSkin.Controls.MaterialRaisedButton btnThemKetHon;
-        private MaterialSkin.Controls.MaterialLabel lblMNK;
-        private MaterialSkin.Controls.MaterialSingleLineTextField txtMaKetHon;
         private MaterialSkin.Controls.MaterialLabel lblMHK;
         private MaterialSkin.Controls.MaterialLabel materialLabel5;
         private System.Windows.Forms.GroupBox groupBox2;
@@ -1412,7 +1402,7 @@
         private System.Windows.Forms.ComboBox cbThangDangKy;
         private System.Windows.Forms.ComboBox cbNamDangKy;
         private System.Windows.Forms.ComboBox cbQueQuan;
-        private System.Windows.Forms.ComboBox cbQuocTichChong;
-        private System.Windows.Forms.ComboBox cbQuocTichVo;
+        private System.Windows.Forms.ComboBox cbQueQuanChong;
+        private System.Windows.Forms.ComboBox cbQueQuanVo;
     }
 }

@@ -18,22 +18,21 @@ namespace QLNK
 
         private void setNormal(string[] items)
         {
-            txtMaTienAnTienSu.Text = items[0];
             txtMaNhanKhau.Text = items[1];
             txtTenTienAnTienSu.Text = items[2];
             cbQueQuan.Text = items[3];
             string[] arr = items[4].Split('/');
             switch (arr[0])
             {
-                case "1": cbNgay.SelectedIndex = 0; break;
-                case "2": cbNgay.SelectedIndex = 1; break;
-                case "3": cbNgay.SelectedIndex = 2; break;
-                case "4": cbNgay.SelectedIndex = 3; break;
-                case "5": cbNgay.SelectedIndex = 4; break;
-                case "6": cbNgay.SelectedIndex = 5; break;
-                case "7": cbNgay.SelectedIndex = 6; break;
-                case "8": cbNgay.SelectedIndex = 7; break;
-                case "9": cbNgay.SelectedIndex = 8; break;
+                case "01": cbNgay.SelectedIndex = 0; break;
+                case "02": cbNgay.SelectedIndex = 1; break;
+                case "03": cbNgay.SelectedIndex = 2; break;
+                case "04": cbNgay.SelectedIndex = 3; break;
+                case "05": cbNgay.SelectedIndex = 4; break;
+                case "06": cbNgay.SelectedIndex = 5; break;
+                case "07": cbNgay.SelectedIndex = 6; break;
+                case "08": cbNgay.SelectedIndex = 7; break;
+                case "09": cbNgay.SelectedIndex = 8; break;
                 case "10": cbNgay.SelectedIndex = 9; break;
                 case "11": cbNgay.SelectedIndex = 10; break;
                 case "12": cbNgay.SelectedIndex = 11; break;
@@ -59,15 +58,15 @@ namespace QLNK
             }
             switch (arr[1])
             {
-                case "1": cbThang.SelectedIndex = 0; break;
-                case "2": cbThang.SelectedIndex = 1; break;
-                case "3": cbThang.SelectedIndex = 2; break;
-                case "4": cbThang.SelectedIndex = 3; break;
-                case "5": cbThang.SelectedIndex = 4; break;
-                case "6": cbThang.SelectedIndex = 5; break;
-                case "7": cbThang.SelectedIndex = 6; break;
-                case "8": cbThang.SelectedIndex = 7; break;
-                case "9": cbThang.SelectedIndex = 8; break;
+                case "01": cbThang.SelectedIndex = 0; break;
+                case "02": cbThang.SelectedIndex = 1; break;
+                case "03": cbThang.SelectedIndex = 2; break;
+                case "04": cbThang.SelectedIndex = 3; break;
+                case "05": cbThang.SelectedIndex = 4; break;
+                case "06": cbThang.SelectedIndex = 5; break;
+                case "07": cbThang.SelectedIndex = 6; break;
+                case "08": cbThang.SelectedIndex = 7; break;
+                case "09": cbThang.SelectedIndex = 8; break;
                 case "10": cbThang.SelectedIndex = 9; break;
                 case "11": cbThang.SelectedIndex = 10; break;
                 case "12": cbThang.SelectedIndex = 11; break;
@@ -115,6 +114,21 @@ namespace QLNK
                 case "1998": cbNam.SelectedIndex = 38; break;
                 case "1999": cbNam.SelectedIndex = 39; break;
                 case "2000": cbNam.SelectedIndex = 40; break;
+                case "2001": cbNam.SelectedIndex = 41; break;
+                case "2002": cbNam.SelectedIndex = 42; break;
+                case "2003": cbNam.SelectedIndex = 43; break;
+                case "2004": cbNam.SelectedIndex = 44; break;
+                case "2005": cbNam.SelectedIndex = 45; break;
+                case "2006": cbNam.SelectedIndex = 46; break;
+                case "2007": cbNam.SelectedIndex = 47; break;
+                case "2008": cbNam.SelectedIndex = 48; break;
+                case "2009": cbNam.SelectedIndex = 49; break;
+                case "2010": cbNam.SelectedIndex = 50; break;
+                case "2011": cbNam.SelectedIndex = 51; break;
+                case "2012": cbNam.SelectedIndex = 52; break;
+                case "2013": cbNam.SelectedIndex = 53; break;
+                case "2014": cbNam.SelectedIndex = 54; break;
+                case "2015": cbNam.SelectedIndex = 55; break;
             }
         }
 
@@ -124,7 +138,7 @@ namespace QLNK
             string thang = cbThang.Text;
             string nam = cbNam.Text;
 
-            string maTienAnTienSu = txtMaTienAnTienSu.Text;
+            string maTienAnTienSu = itemTienAnTienSu[0];
             string maNhanKhau = txtMaNhanKhau.Text;
             string tenTienAnTienSu = txtTenTienAnTienSu.Text;
             string noiXetXu = cbQueQuan.Text;
@@ -160,7 +174,7 @@ namespace QLNK
                 string thang = cbThang.Text;
                 string nam = cbNam.Text;
 
-                string maTienAnTienSu = txtMaTienAnTienSu.Text;
+                string maTienAnTienSu = itemTienAnTienSu[0];
                 string maNhanKhau = txtMaNhanKhau.Text;
                 string tenTienAnTienSu = txtTenTienAnTienSu.Text;
                 string noiXetXu = cbQueQuan.Text;
@@ -217,12 +231,6 @@ namespace QLNK
             base.WndProc(ref message);
         }
 
-        private void txtMaTienAnTienSu_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
-                e.Handled = true;
-        }
-
         private void txtMaNhanKhau_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
@@ -233,6 +241,81 @@ namespace QLNK
         {
             if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))
                 e.Handled = true;
+        }
+
+        private void txtMaNhanKhau_TextChanged(object sender, EventArgs e)
+        {
+            if (txtMaNhanKhau.Text != itemTienAnTienSu[1])
+            {
+                label1.Visible = true;
+            }
+            else
+            {
+                label1.Visible = false;
+            }
+        }
+
+        private void txtTenTienAnTienSu_TextChanged(object sender, EventArgs e)
+        {
+            if (txtTenTienAnTienSu.Text != itemTienAnTienSu[2])
+            {
+                label2.Visible = true;
+            }
+            else
+            {
+                label2.Visible = false;
+            }
+        }
+
+        private void cbQueQuan_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbQueQuan.Text != itemTienAnTienSu[3])
+            {
+                label3.Visible = true;
+            }
+            else
+            {
+                label3.Visible = false;
+            }
+        }
+
+        private void cbNgay_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string[] str = itemTienAnTienSu[4].Split('/');
+            if (cbNgay.Text != str[0])
+            {
+                label4.Visible = true;
+            }
+            else
+            {
+                label4.Visible = false;
+            }
+        }
+
+        private void cbThang_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string[] str = itemTienAnTienSu[4].Split('/');
+            if (cbThang.Text != str[1])
+            {
+                label4.Visible = true;
+            }
+            else
+            {
+                label4.Visible = false;
+            }
+        }
+
+        private void cbNam_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string[] str = itemTienAnTienSu[4].Split('/');
+            if (cbNam.Text != str[2])
+            {
+                label4.Visible = true;
+            }
+            else
+            {
+                label4.Visible = false;
+            }
         }
     }
 }

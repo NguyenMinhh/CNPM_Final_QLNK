@@ -18,7 +18,6 @@ namespace QLNK
 
         private void setNormal(string[] items)
         {
-            txtMaChungTu.Text = items[0];
             txtNguoiKhai.Text = items[1];
             txtThuongTamTru.Text = items[2];
             switch (items[3])
@@ -39,15 +38,15 @@ namespace QLNK
             string[] arr = items[5].Split('/');
             switch (arr[0])
             {
-                case "1": cbNgaySinh.SelectedIndex = 0; break;
-                case "2": cbNgaySinh.SelectedIndex = 1; break;
-                case "3": cbNgaySinh.SelectedIndex = 2; break;
-                case "4": cbNgaySinh.SelectedIndex = 3; break;
-                case "5": cbNgaySinh.SelectedIndex = 4; break;
-                case "6": cbNgaySinh.SelectedIndex = 5; break;
-                case "7": cbNgaySinh.SelectedIndex = 6; break;
-                case "8": cbNgaySinh.SelectedIndex = 7; break;
-                case "9": cbNgaySinh.SelectedIndex = 8; break;
+                case "01": cbNgaySinh.SelectedIndex = 0; break;
+                case "02": cbNgaySinh.SelectedIndex = 1; break;
+                case "03": cbNgaySinh.SelectedIndex = 2; break;
+                case "04": cbNgaySinh.SelectedIndex = 3; break;
+                case "05": cbNgaySinh.SelectedIndex = 4; break;
+                case "06": cbNgaySinh.SelectedIndex = 5; break;
+                case "07": cbNgaySinh.SelectedIndex = 6; break;
+                case "08": cbNgaySinh.SelectedIndex = 7; break;
+                case "09": cbNgaySinh.SelectedIndex = 8; break;
                 case "10": cbNgaySinh.SelectedIndex = 9; break;
                 case "11": cbNgaySinh.SelectedIndex = 10; break;
                 case "12": cbNgaySinh.SelectedIndex = 11; break;
@@ -73,15 +72,15 @@ namespace QLNK
             }
             switch (arr[1])
             {
-                case "1": cbThangSinh.SelectedIndex = 0; break;
-                case "2": cbThangSinh.SelectedIndex = 1; break;
-                case "3": cbThangSinh.SelectedIndex = 2; break;
-                case "4": cbThangSinh.SelectedIndex = 3; break;
-                case "5": cbThangSinh.SelectedIndex = 4; break;
-                case "6": cbThangSinh.SelectedIndex = 5; break;
-                case "7": cbThangSinh.SelectedIndex = 6; break;
-                case "8": cbThangSinh.SelectedIndex = 7; break;
-                case "9": cbThangSinh.SelectedIndex = 8; break;
+                case "01": cbThangSinh.SelectedIndex = 0; break;
+                case "02": cbThangSinh.SelectedIndex = 1; break;
+                case "03": cbThangSinh.SelectedIndex = 2; break;
+                case "04": cbThangSinh.SelectedIndex = 3; break;
+                case "05": cbThangSinh.SelectedIndex = 4; break;
+                case "06": cbThangSinh.SelectedIndex = 5; break;
+                case "07": cbThangSinh.SelectedIndex = 6; break;
+                case "08": cbThangSinh.SelectedIndex = 7; break;
+                case "09": cbThangSinh.SelectedIndex = 8; break;
                 case "10": cbThangSinh.SelectedIndex = 9; break;
                 case "11": cbThangSinh.SelectedIndex = 10; break;
                 case "12": cbThangSinh.SelectedIndex = 11; break;
@@ -129,15 +128,31 @@ namespace QLNK
                 case "1998": cbNamSinh.SelectedIndex = 38; break;
                 case "1999": cbNamSinh.SelectedIndex = 39; break;
                 case "2000": cbNamSinh.SelectedIndex = 40; break;
+                case "2001": cbNamSinh.SelectedIndex = 41; break;
+                case "2002": cbNamSinh.SelectedIndex = 42; break;
+                case "2003": cbNamSinh.SelectedIndex = 43; break;
+                case "2004": cbNamSinh.SelectedIndex = 44; break;
+                case "2005": cbNamSinh.SelectedIndex = 45; break;
+                case "2006": cbNamSinh.SelectedIndex = 46; break;
+                case "2007": cbNamSinh.SelectedIndex = 47; break;
+                case "2008": cbNamSinh.SelectedIndex = 48; break;
+                case "2009": cbNamSinh.SelectedIndex = 49; break;
+                case "2010": cbNamSinh.SelectedIndex = 50; break;
+                case "2011": cbNamSinh.SelectedIndex = 51; break;
+                case "2012": cbNamSinh.SelectedIndex = 52; break;
+                case "2013": cbNamSinh.SelectedIndex = 53; break;
+                case "2014": cbNamSinh.SelectedIndex = 54; break;
+                case "2015": cbNamSinh.SelectedIndex = 55; break;
             }
             switch (items[6])
             {
+                case "": cbDanToc.SelectedIndex = -1; cbDanToc.Enabled = false; lblDanToc.Enabled = false; break;
                 case "Kinh": cbDanToc.SelectedIndex = 0; break;
                 case "Tày": cbDanToc.SelectedIndex = 1; break;
                 case "Thái": cbDanToc.SelectedIndex = 2; break;
                 case "Mường": cbDanToc.SelectedIndex = 3; break;
                 case "Khơ Me": cbDanToc.SelectedIndex = 4; break;
-                case "H'Mông": cbDanToc.SelectedIndex = 5; break;
+                case "HMông": cbDanToc.SelectedIndex = 5; break;
                 case "Nùng": cbDanToc.SelectedIndex = 6; break;
                 case "Hoa": cbDanToc.SelectedIndex = 7; break;
                 case "Dao": cbDanToc.SelectedIndex = 8; break;
@@ -151,8 +166,8 @@ namespace QLNK
                 case "Sán Dìu": cbDanToc.SelectedIndex = 16; break;
                 case "Hrê": cbDanToc.SelectedIndex = 17; break;
                 case "Ra Glai": cbDanToc.SelectedIndex = 18; break;
-                case "M'Nông": cbDanToc.SelectedIndex = 19; break;
-                case "X’Tiêng": cbDanToc.SelectedIndex = 20; break;
+                case "MNông": cbDanToc.SelectedIndex = 19; break;
+                case "XTiêng": cbDanToc.SelectedIndex = 20; break;
                 case "Bru-Vân Kiều": cbDanToc.SelectedIndex = 21; break;
                 case "Thổ": cbDanToc.SelectedIndex = 22; break;
                 case "Khơ Mú": cbDanToc.SelectedIndex = 23; break;
@@ -246,19 +261,27 @@ namespace QLNK
                 case "Việt Nam": cbQuocTich.SelectedIndex = 53; break;
                 case "Yemen": cbQuocTich.SelectedIndex = 54; break;
             }
-            txtCMND.Text = items[8];
+            if (items[8].Equals(""))
+            {
+                lblCMND.Enabled = false;
+                txtCMND.Enabled = false;
+            }
+            else
+            {
+                txtCMND.Text = items[8];
+            }
             string[] arr2 = items[9].Split('/');
             switch (arr2[0])
             {
-                case "1": cbNgayMat.SelectedIndex = 0; break;
-                case "2": cbNgayMat.SelectedIndex = 1; break;
-                case "3": cbNgayMat.SelectedIndex = 2; break;
-                case "4": cbNgayMat.SelectedIndex = 3; break;
-                case "5": cbNgayMat.SelectedIndex = 4; break;
-                case "6": cbNgayMat.SelectedIndex = 5; break;
-                case "7": cbNgayMat.SelectedIndex = 6; break;
-                case "8": cbNgayMat.SelectedIndex = 7; break;
-                case "9": cbNgayMat.SelectedIndex = 8; break;
+                case "01": cbNgayMat.SelectedIndex = 0; break;
+                case "02": cbNgayMat.SelectedIndex = 1; break;
+                case "03": cbNgayMat.SelectedIndex = 2; break;
+                case "04": cbNgayMat.SelectedIndex = 3; break;
+                case "05": cbNgayMat.SelectedIndex = 4; break;
+                case "06": cbNgayMat.SelectedIndex = 5; break;
+                case "07": cbNgayMat.SelectedIndex = 6; break;
+                case "08": cbNgayMat.SelectedIndex = 7; break;
+                case "09": cbNgayMat.SelectedIndex = 8; break;
                 case "10": cbNgayMat.SelectedIndex = 9; break;
                 case "11": cbNgayMat.SelectedIndex = 10; break;
                 case "12": cbNgayMat.SelectedIndex = 11; break;
@@ -284,15 +307,15 @@ namespace QLNK
             }
             switch (arr2[1])
             {
-                case "1": cbThangMat.SelectedIndex = 0; break;
-                case "2": cbThangMat.SelectedIndex = 1; break;
-                case "3": cbThangMat.SelectedIndex = 2; break;
-                case "4": cbThangMat.SelectedIndex = 3; break;
-                case "5": cbThangMat.SelectedIndex = 4; break;
-                case "6": cbThangMat.SelectedIndex = 5; break;
-                case "7": cbThangMat.SelectedIndex = 6; break;
-                case "8": cbThangMat.SelectedIndex = 7; break;
-                case "9": cbThangMat.SelectedIndex = 8; break;
+                case "01": cbThangMat.SelectedIndex = 0; break;
+                case "02": cbThangMat.SelectedIndex = 1; break;
+                case "03": cbThangMat.SelectedIndex = 2; break;
+                case "04": cbThangMat.SelectedIndex = 3; break;
+                case "05": cbThangMat.SelectedIndex = 4; break;
+                case "06": cbThangMat.SelectedIndex = 5; break;
+                case "07": cbThangMat.SelectedIndex = 6; break;
+                case "08": cbThangMat.SelectedIndex = 7; break;
+                case "09": cbThangMat.SelectedIndex = 8; break;
                 case "10": cbThangMat.SelectedIndex = 9; break;
                 case "11": cbThangMat.SelectedIndex = 10; break;
                 case "12": cbThangMat.SelectedIndex = 11; break;
@@ -340,6 +363,21 @@ namespace QLNK
                 case "1998": cbNamMat.SelectedIndex = 38; break;
                 case "1999": cbNamMat.SelectedIndex = 39; break;
                 case "2000": cbNamMat.SelectedIndex = 40; break;
+                case "2001": cbNamMat.SelectedIndex = 41; break;
+                case "2002": cbNamMat.SelectedIndex = 42; break;
+                case "2003": cbNamMat.SelectedIndex = 43; break;
+                case "2004": cbNamMat.SelectedIndex = 44; break;
+                case "2005": cbNamMat.SelectedIndex = 45; break;
+                case "2006": cbNamMat.SelectedIndex = 46; break;
+                case "2007": cbNamMat.SelectedIndex = 47; break;
+                case "2008": cbNamMat.SelectedIndex = 48; break;
+                case "2009": cbNamMat.SelectedIndex = 49; break;
+                case "2010": cbNamMat.SelectedIndex = 50; break;
+                case "2011": cbNamMat.SelectedIndex = 51; break;
+                case "2012": cbNamMat.SelectedIndex = 52; break;
+                case "2013": cbNamMat.SelectedIndex = 53; break;
+                case "2014": cbNamMat.SelectedIndex = 54; break;
+                case "2015": cbNamMat.SelectedIndex = 55; break;
             }
             string[] arr3 = items[10].Split(':');
             switch (arr3[0])
@@ -501,15 +539,15 @@ namespace QLNK
             string[] arr4 = items[12].Split('/');
             switch (arr4[0])
             {
-                case "1": cbNgayDangKy.SelectedIndex = 0; break;
-                case "2": cbNgayDangKy.SelectedIndex = 1; break;
-                case "3": cbNgayDangKy.SelectedIndex = 2; break;
-                case "4": cbNgayDangKy.SelectedIndex = 3; break;
-                case "5": cbNgayDangKy.SelectedIndex = 4; break;
-                case "6": cbNgayDangKy.SelectedIndex = 5; break;
-                case "7": cbNgayDangKy.SelectedIndex = 6; break;
-                case "8": cbNgayDangKy.SelectedIndex = 7; break;
-                case "9": cbNgayDangKy.SelectedIndex = 8; break;
+                case "01": cbNgayDangKy.SelectedIndex = 0; break;
+                case "02": cbNgayDangKy.SelectedIndex = 1; break;
+                case "03": cbNgayDangKy.SelectedIndex = 2; break;
+                case "04": cbNgayDangKy.SelectedIndex = 3; break;
+                case "05": cbNgayDangKy.SelectedIndex = 4; break;
+                case "06": cbNgayDangKy.SelectedIndex = 5; break;
+                case "07": cbNgayDangKy.SelectedIndex = 6; break;
+                case "08": cbNgayDangKy.SelectedIndex = 7; break;
+                case "09": cbNgayDangKy.SelectedIndex = 8; break;
                 case "10": cbNgayDangKy.SelectedIndex = 9; break;
                 case "11": cbNgayDangKy.SelectedIndex = 10; break;
                 case "12": cbNgayDangKy.SelectedIndex = 11; break;
@@ -535,15 +573,15 @@ namespace QLNK
             }
             switch (arr4[1])
             {
-                case "1": cbThangDangKy.SelectedIndex = 0; break;
-                case "2": cbThangDangKy.SelectedIndex = 1; break;
-                case "3": cbThangDangKy.SelectedIndex = 2; break;
-                case "4": cbThangDangKy.SelectedIndex = 3; break;
-                case "5": cbThangDangKy.SelectedIndex = 4; break;
-                case "6": cbThangDangKy.SelectedIndex = 5; break;
-                case "7": cbThangDangKy.SelectedIndex = 6; break;
-                case "8": cbThangDangKy.SelectedIndex = 7; break;
-                case "9": cbThangDangKy.SelectedIndex = 8; break;
+                case "01": cbThangDangKy.SelectedIndex = 0; break;
+                case "02": cbThangDangKy.SelectedIndex = 1; break;
+                case "03": cbThangDangKy.SelectedIndex = 2; break;
+                case "04": cbThangDangKy.SelectedIndex = 3; break;
+                case "05": cbThangDangKy.SelectedIndex = 4; break;
+                case "06": cbThangDangKy.SelectedIndex = 5; break;
+                case "07": cbThangDangKy.SelectedIndex = 6; break;
+                case "08": cbThangDangKy.SelectedIndex = 7; break;
+                case "09": cbThangDangKy.SelectedIndex = 8; break;
                 case "10": cbThangDangKy.SelectedIndex = 9; break;
                 case "11": cbThangDangKy.SelectedIndex = 10; break;
                 case "12": cbThangDangKy.SelectedIndex = 11; break;
@@ -591,6 +629,21 @@ namespace QLNK
                 case "1998": cbNamDangKy.SelectedIndex = 38; break;
                 case "1999": cbNamDangKy.SelectedIndex = 39; break;
                 case "2000": cbNamDangKy.SelectedIndex = 40; break;
+                case "2001": cbNamDangKy.SelectedIndex = 41; break;
+                case "2002": cbNamDangKy.SelectedIndex = 42; break;
+                case "2003": cbNamDangKy.SelectedIndex = 43; break;
+                case "2004": cbNamDangKy.SelectedIndex = 44; break;
+                case "2005": cbNamDangKy.SelectedIndex = 45; break;
+                case "2006": cbNamDangKy.SelectedIndex = 46; break;
+                case "2007": cbNamDangKy.SelectedIndex = 47; break;
+                case "2008": cbNamDangKy.SelectedIndex = 48; break;
+                case "2009": cbNamDangKy.SelectedIndex = 49; break;
+                case "2010": cbNamDangKy.SelectedIndex = 50; break;
+                case "2011": cbNamDangKy.SelectedIndex = 51; break;
+                case "2012": cbNamDangKy.SelectedIndex = 52; break;
+                case "2013": cbNamDangKy.SelectedIndex = 53; break;
+                case "2014": cbNamDangKy.SelectedIndex = 54; break;
+                case "2015": cbNamDangKy.SelectedIndex = 55; break;
             }
         }
 
@@ -608,7 +661,7 @@ namespace QLNK
             string gioMat = cbGio.Text;
             string phutMat = cbPhut.Text;
 
-            string maChungTu = txtMaChungTu.Text;
+            string maChungTu = itemChungTu[0];
             string tenNguoiKhai = txtNguoiKhai.Text;
             string thuongTamTru = txtThuongTamTru.Text;
             string qhVoiNguoiMat = cbQuanHeVoiNguoiMat.Text;
@@ -621,26 +674,105 @@ namespace QLNK
             string thoiGianQuaDoi = gioMat + ":" + phutMat;
             string ngayDangKy = ngayDK + "/" + thangDK + "/" + namDK;
             string khuVucDangKy = cbQueQuan.Text;
+
             if (!(maChungTu.Equals("")      || tenNguoiKhai.Equals("")  || thuongTamTru.Equals("")  ||
                   qhVoiNguoiMat.Equals("")  || tenNguoiMat.Equals("")   || ngaySinh.Equals("")      ||
-                  thangSinh.Equals("")      || namSinh.Equals("")       || danToc.Equals("")        ||
-                  quocTich.Equals("")       || cmnd.Equals("")          || ngayMat.Equals("")       ||
-                  thangMat.Equals("")       || namMat.Equals("")        || gioMat.Equals("")        ||
-                  phutMat.Equals("")        || cbQueQuan.Equals("")     || ngayDK.Equals("")        ||
-                  thangDK.Equals("")        || namDK.Equals("")))
+                  thangSinh.Equals("")      || namSinh.Equals("")       || quocTich.Equals("")      ||
+                  ngayMat.Equals("")        || thangMat.Equals("")      || namMat.Equals("")        ||
+                  gioMat.Equals("")         || phutMat.Equals("")       || cbQueQuan.Equals("")     ||
+                  ngayDK.Equals("")         || thangDK.Equals("")       || namDK.Equals("")))
             {
-                DialogResult dialogResult = MessageBox.Show(sc.MSGBOX_UPDATE, sc.MSGBOX_CAP_UPDATE, MessageBoxButtons.YesNo);
-                if (dialogResult == DialogResult.Yes)
-                {
-                    flagSave = true;
-                    if (sc.updateChungTu(maChungTu, tenNguoiKhai, thuongTamTru, qhVoiNguoiMat,
-                                         tenNguoiMat, ngaySinhNguoiMat, danToc, quocTich, cmnd,
-                                         ngayQuaDoi, thoiGianQuaDoi, khuVucDangKy, ngayDangKy))
+                    if (txtCMND.Enabled == false)
                     {
-                        this.Close();
-                        MessageBox.Show(sc.SUCCESS_UPDATE);
+                        cmnd = "";
+                        if (cbDanToc.Enabled == false)
+                        {
+                            danToc = "";
+                            DialogResult dialogResult = MessageBox.Show(sc.MSGBOX_UPDATE, sc.MSGBOX_CAP_UPDATE, MessageBoxButtons.YesNo);
+                            if (dialogResult == DialogResult.Yes)
+                            {
+                                flagSave = true;
+                                if (sc.updateChungTu(maChungTu, tenNguoiKhai, thuongTamTru, qhVoiNguoiMat,
+                                                  tenNguoiMat, ngaySinhNguoiMat, danToc, quocTich, cmnd,
+                                                  ngayQuaDoi, thoiGianQuaDoi, khuVucDangKy, ngayDangKy))
+                                {
+                                    this.Close();
+                                    MessageBox.Show(sc.SUCCESS_UPDATE);
+                                }
+                            }
+                        }
+                        else
+                        {
+                            if (!danToc.Equals(""))
+                            {
+                                DialogResult dialogResult = MessageBox.Show(sc.MSGBOX_UPDATE, sc.MSGBOX_CAP_UPDATE, MessageBoxButtons.YesNo);
+                                if (dialogResult == DialogResult.Yes)
+                                {
+                                    flagSave = true;
+                                    if (sc.updateChungTu(maChungTu, tenNguoiKhai, thuongTamTru, qhVoiNguoiMat,
+                                                      tenNguoiMat, ngaySinhNguoiMat, danToc, quocTich, cmnd,
+                                                      ngayQuaDoi, thoiGianQuaDoi, khuVucDangKy, ngayDangKy))
+                                    {
+                                        this.Close();
+                                        MessageBox.Show(sc.SUCCESS_UPDATE);
+                                    }
+                                }
+                            }
+                            else
+                            {
+                                MessageBox.Show(sc.ERROR_BLANK);
+                            }
+                        }
                     }
-                }
+                    else
+                    {
+                        if (cbDanToc.Enabled == false)
+                        {
+                            danToc = "";
+                            if (!cmnd.Equals(""))
+                            {
+                                DialogResult dialogResult = MessageBox.Show(sc.MSGBOX_UPDATE, sc.MSGBOX_CAP_UPDATE, MessageBoxButtons.YesNo);
+                                if (dialogResult == DialogResult.Yes)
+                                {
+                                    flagSave = true;
+                                    if (sc.updateChungTu(maChungTu, tenNguoiKhai, thuongTamTru, qhVoiNguoiMat,
+                                                      tenNguoiMat, ngaySinhNguoiMat, danToc, quocTich, cmnd,
+                                                      ngayQuaDoi, thoiGianQuaDoi, khuVucDangKy, ngayDangKy))
+                                    {
+                                        this.Close();
+                                        MessageBox.Show(sc.SUCCESS_UPDATE);
+                                    }
+                                }
+                            }
+                            else
+                            {
+                                MessageBox.Show(sc.ERROR_BLANK);
+                            }
+                        }
+                        else
+                        {
+                            if (!(cmnd.Equals("") || danToc.Equals("")))
+                            {
+                                DialogResult dialogResult = MessageBox.Show(sc.MSGBOX_UPDATE, sc.MSGBOX_CAP_UPDATE, MessageBoxButtons.YesNo);
+                                if (dialogResult == DialogResult.Yes)
+                                {
+                                    flagSave = true;
+                                    if (sc.updateChungTu(maChungTu, tenNguoiKhai, thuongTamTru, qhVoiNguoiMat,
+                                                      tenNguoiMat, ngaySinhNguoiMat, danToc, quocTich, cmnd,
+                                                      ngayQuaDoi, thoiGianQuaDoi, khuVucDangKy, ngayDangKy))
+                                    {
+                                        this.Close();
+                                        MessageBox.Show(sc.SUCCESS_UPDATE);
+                                    }
+                                }
+                            }
+                            else
+                            {
+                                MessageBox.Show(sc.ERROR_BLANK);
+                            }
+                        }
+                    }
+                
             }
             else
             {
@@ -664,7 +796,7 @@ namespace QLNK
                 string gioMat = cbGio.Text;
                 string phutMat = cbPhut.Text;
 
-                string maChungTu = txtMaChungTu.Text;
+                string maChungTu = itemChungTu[0];
                 string tenNguoiKhai = txtNguoiKhai.Text;
                 string thuongTamTru = txtThuongTamTru.Text;
                 string qhVoiNguoiMat = cbQuanHeVoiNguoiMat.Text;
@@ -693,17 +825,79 @@ namespace QLNK
                     {
                         if (!(maChungTu.Equals("")      || tenNguoiKhai.Equals("")  || thuongTamTru.Equals("")  ||
                               qhVoiNguoiMat.Equals("")  || tenNguoiMat.Equals("")   || ngaySinh.Equals("")      ||
-                              thangSinh.Equals("")      || namSinh.Equals("")       || danToc.Equals("")        ||
-                              quocTich.Equals("")       || cmnd.Equals("")          || ngayMat.Equals("")       ||
-                              thangMat.Equals("")       || namMat.Equals("")        || gioMat.Equals("")        ||
-                              phutMat.Equals("")        || cbQueQuan.Equals("")     || ngayDK.Equals("")        ||
-                              thangDK.Equals("")        || namDK.Equals("")))
+                              thangSinh.Equals("")      || namSinh.Equals("")       || quocTich.Equals("")      ||
+                              ngayMat.Equals("")        || thangMat.Equals("")      || namMat.Equals("")        ||
+                              gioMat.Equals("")         || phutMat.Equals("")       || cbQueQuan.Equals("")     ||
+                              ngayDK.Equals("")         || thangDK.Equals("")       || namDK.Equals("")))
                         {
-                            if (sc.updateChungTu(maChungTu, tenNguoiKhai, thuongTamTru, qhVoiNguoiMat,
-                                                 tenNguoiMat, ngaySinhNguoiMat, danToc, quocTich, cmnd,
-                                                 ngayQuaDoi, thoiGianQuaDoi, khuVucDangKy, ngayDangKy))
+                            if (txtCMND.Enabled == false)
                             {
-                                MessageBox.Show(sc.SUCCESS_UPDATE);
+                                cmnd = "";
+                                if (cbDanToc.Enabled == false)
+                                {
+                                    danToc = "";
+                                    if (sc.updateChungTu(maChungTu, tenNguoiKhai, thuongTamTru, qhVoiNguoiMat,
+                                                      tenNguoiMat, ngaySinhNguoiMat, danToc, quocTich, cmnd,
+                                                      ngayQuaDoi, thoiGianQuaDoi, khuVucDangKy, ngayDangKy))
+                                    {
+                                        MessageBox.Show(sc.SUCCESS_UPDATE);
+                                    }
+                                }
+                                else
+                                {
+                                    if (!danToc.Equals(""))
+                                    {
+                                        if (sc.updateChungTu(maChungTu, tenNguoiKhai, thuongTamTru, qhVoiNguoiMat,
+                                                          tenNguoiMat, ngaySinhNguoiMat, danToc, quocTich, cmnd,
+                                                          ngayQuaDoi, thoiGianQuaDoi, khuVucDangKy, ngayDangKy))
+                                        {
+                                            MessageBox.Show(sc.SUCCESS_UPDATE);
+                                        }
+                                    }
+                                    else
+                                    {
+                                        MessageBox.Show(sc.ERROR_BLANK);
+                                        e.Cancel = true;
+                                    }
+                                }
+                            }
+                            else
+                            {
+                                if (cbDanToc.Enabled == false)
+                                {
+                                    danToc = "";
+                                    if (!cmnd.Equals(""))
+                                    {
+                                        if (sc.updateChungTu(maChungTu, tenNguoiKhai, thuongTamTru, qhVoiNguoiMat,
+                                                          tenNguoiMat, ngaySinhNguoiMat, danToc, quocTich, cmnd,
+                                                          ngayQuaDoi, thoiGianQuaDoi, khuVucDangKy, ngayDangKy))
+                                        {
+                                            MessageBox.Show(sc.SUCCESS_UPDATE);
+                                        }
+                                    }
+                                    else
+                                    {
+                                        MessageBox.Show(sc.ERROR_BLANK);
+                                        e.Cancel = true;
+                                    }
+                                }
+                                else
+                                {
+                                    if (!(cmnd.Equals("") || danToc.Equals("")))
+                                    {
+                                        if (sc.updateChungTu(maChungTu, tenNguoiKhai, thuongTamTru, qhVoiNguoiMat,
+                                                          tenNguoiMat, ngaySinhNguoiMat, danToc, quocTich, cmnd,
+                                                          ngayQuaDoi, thoiGianQuaDoi, khuVucDangKy, ngayDangKy))
+                                        {
+                                            MessageBox.Show(sc.SUCCESS_UPDATE);
+                                        }
+                                    }
+                                    else
+                                    {
+                                        MessageBox.Show(sc.ERROR_BLANK);
+                                        e.Cancel = true;
+                                    }
+                                }
                             }
                         }
                         else
@@ -756,5 +950,488 @@ namespace QLNK
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
                 e.Handled = true;
         }
+
+        //--------------------------------------------------------------------Không hợp lệ
+        private void detectNamDangKyVaNamMat(int n)
+        {
+            if (!(cbNamDangKy.Text.Equals("") || cbNamMat.Text.Equals("")))
+            {
+                int namDangKy = Int32.Parse(cbNamDangKy.Text);
+                int namMat = Int32.Parse(cbNamMat.Text);
+                if (namDangKy == namMat)
+                {
+                    if (!(cbThangDangKy.Text.Equals("") || cbThangMat.Text.Equals("")))
+                    {
+                        int thangDangKy = Int32.Parse(cbThangDangKy.Text);
+                        int thangMat = Int32.Parse(cbThangMat.Text);
+                        if (thangDangKy == thangMat)
+                        {
+                            if (!(cbNgayDangKy.Text.Equals("") || cbNgayMat.Text.Equals("")))
+                            {
+                                int ngayDangKy = Int32.Parse(cbNgayDangKy.Text);
+                                int ngayMat = Int32.Parse(cbNgayMat.Text);
+                                if (ngayDangKy < ngayMat)
+                                {
+                                    MessageBox.Show("Không hợp lệ!");
+                                    switch (n)
+                                    {
+                                        case 1: cbNamDangKy.SelectedIndex = -1; break;
+                                        case 2: cbThangDangKy.SelectedIndex = -1; break;
+                                        case 3: cbNgayDangKy.SelectedIndex = -1; break;
+                                        case 4: cbNamMat.SelectedIndex = -1; break;
+                                        case 5: cbThangMat.SelectedIndex = -1; break;
+                                        case 6: cbNgayMat.SelectedIndex = -1; break;
+                                    }
+                                }
+                            }
+                        }
+                        else if (thangDangKy < thangMat)
+                        {
+                            MessageBox.Show("Không hợp lệ!");
+                            switch (n)
+                            {
+                                case 1: cbNamDangKy.SelectedIndex = -1; break;
+                                case 2: cbThangDangKy.SelectedIndex = -1; break;
+                                case 3: cbNgayDangKy.SelectedIndex = -1; break;
+                                case 4: cbNamMat.SelectedIndex = -1; break;
+                                case 5: cbThangMat.SelectedIndex = -1; break;
+                                case 6: cbNgayMat.SelectedIndex = -1; break;
+                            }
+                        }
+                    }
+                }
+                else if (namDangKy < namMat)
+                {
+                    MessageBox.Show("Không hợp lệ!");
+                    switch (n)
+                    {
+                        case 1: cbNamDangKy.SelectedIndex = -1; break;
+                        case 2: cbThangDangKy.SelectedIndex = -1; break;
+                        case 3: cbNgayDangKy.SelectedIndex = -1; break;
+                        case 4: cbNamMat.SelectedIndex = -1; break;
+                        case 5: cbThangMat.SelectedIndex = -1; break;
+                        case 6: cbNgayMat.SelectedIndex = -1; break;
+                    }
+                }
+            }
+        }
+
+        private void detectNamDangKyVaNamSinh(int n)
+        {
+            if (!(cbNamDangKy.Text.Equals("") || cbNamSinh.Text.Equals("")))
+            {
+                int namDangKy = Int32.Parse(cbNamDangKy.Text);
+                int namSinh = Int32.Parse(cbNamSinh.Text);
+                if (namDangKy == namSinh)
+                {
+                    if (!(cbThangDangKy.Text.Equals("") || cbThangSinh.Text.Equals("")))
+                    {
+                        int thangDangKy = Int32.Parse(cbThangDangKy.Text);
+                        int thangSinh = Int32.Parse(cbThangSinh.Text);
+                        if (thangDangKy == thangSinh)
+                        {
+                            if (!(cbNgayDangKy.Text.Equals("") || cbNgaySinh.Text.Equals("")))
+                            {
+                                int ngayDangKy = Int32.Parse(cbNgayDangKy.Text);
+                                int ngaySinh = Int32.Parse(cbNgaySinh.Text);
+                                if (ngayDangKy < ngaySinh)
+                                {
+                                    MessageBox.Show("Không hợp lệ!");
+                                    switch (n)
+                                    {
+                                        case 1: cbNamDangKy.SelectedIndex = -1; break;
+                                        case 2: cbThangDangKy.SelectedIndex = -1; break;
+                                        case 3: cbNgayDangKy.SelectedIndex = -1; break;
+                                        case 4: cbNamSinh.SelectedIndex = -1; break;
+                                        case 5: cbThangSinh.SelectedIndex = -1; break;
+                                        case 6: cbNgaySinh.SelectedIndex = -1; break;
+                                    }
+                                }
+                            }
+                        }
+                        else if (thangDangKy < thangSinh)
+                        {
+                            MessageBox.Show("Không hợp lệ!");
+                            switch (n)
+                            {
+                                case 1: cbNamDangKy.SelectedIndex = -1; break;
+                                case 2: cbThangDangKy.SelectedIndex = -1; break;
+                                case 3: cbNgayDangKy.SelectedIndex = -1; break;
+                                case 4: cbNamSinh.SelectedIndex = -1; break;
+                                case 5: cbThangSinh.SelectedIndex = -1; break;
+                                case 6: cbNgaySinh.SelectedIndex = -1; break;
+                            }
+                        }
+                    }
+                }
+                else if (namDangKy < namSinh)
+                {
+                    MessageBox.Show("Không hợp lệ!");
+                    switch (n)
+                    {
+                        case 1: cbNamDangKy.SelectedIndex = -1; break;
+                        case 2: cbThangDangKy.SelectedIndex = -1; break;
+                        case 3: cbNgayDangKy.SelectedIndex = -1; break;
+                        case 4: cbNamSinh.SelectedIndex = -1; break;
+                        case 5: cbThangSinh.SelectedIndex = -1; break;
+                        case 6: cbNgaySinh.SelectedIndex = -1; break;
+                    }
+                }
+            }
+        }
+
+        private void detectNamMatVaNamSinh(int n)
+        {
+            if (!(cbNamSinh.Text.Equals("") || cbNamMat.Text.Equals("")))
+            {
+                int namMat = Int32.Parse(cbNamMat.Text);
+                int namSinh = Int32.Parse(cbNamSinh.Text);
+                if (namMat == namSinh)
+                {
+                    if (!(cbThangMat.Text.Equals("") || cbThangSinh.Text.Equals("")))
+                    {
+                        int thangMat = Int32.Parse(cbThangMat.Text);
+                        int thangSinh = Int32.Parse(cbThangSinh.Text);
+                        if (thangMat == thangSinh)
+                        {
+                            if (!(cbNgayMat.Text.Equals("") || cbNgaySinh.Text.Equals("")))
+                            {
+                                int ngayMat = Int32.Parse(cbNgayMat.Text);
+                                int ngaySinh = Int32.Parse(cbNgaySinh.Text);
+                                if (ngayMat < ngaySinh)
+                                {
+                                    MessageBox.Show("Không hợp lệ!");
+                                    switch (n)
+                                    {
+                                        case 1: cbNamMat.SelectedIndex = -1; break;
+                                        case 2: cbThangMat.SelectedIndex = -1; break;
+                                        case 3: cbNgayMat.SelectedIndex = -1; break;
+                                        case 4: cbNamSinh.SelectedIndex = -1; break;
+                                        case 5: cbThangSinh.SelectedIndex = -1; break;
+                                        case 6: cbNgaySinh.SelectedIndex = -1; break;
+                                    }
+                                }
+                            }
+                        }
+                        else if (thangMat < thangSinh)
+                        {
+                            MessageBox.Show("Không hợp lệ!");
+                            switch (n)
+                            {
+                                case 1: cbNamMat.SelectedIndex = -1; break;
+                                case 2: cbThangMat.SelectedIndex = -1; break;
+                                case 3: cbNgayMat.SelectedIndex = -1; break;
+                                case 4: cbNamSinh.SelectedIndex = -1; break;
+                                case 5: cbThangSinh.SelectedIndex = -1; break;
+                                case 6: cbNgaySinh.SelectedIndex = -1; break;
+                            }
+                        }
+                    }
+                }
+                else if (namMat < namSinh)
+                {
+                    MessageBox.Show("Không hợp lệ!");
+                    switch (n)
+                    {
+                        case 1: cbNamMat.SelectedIndex = -1; break;
+                        case 2: cbThangMat.SelectedIndex = -1; break;
+                        case 3: cbNgayMat.SelectedIndex = -1; break;
+                        case 4: cbNamSinh.SelectedIndex = -1; break;
+                        case 5: cbThangSinh.SelectedIndex = -1; break;
+                        case 6: cbNgaySinh.SelectedIndex = -1; break;
+                    }
+                }
+            }
+        }
+
+        private void cbNgayDangKy_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string[] str = itemChungTu[12].Split('/');
+            if (cbNgayDangKy.Text != str[0])
+            {
+                label5.Visible = true;
+            }
+            else
+            {
+                label5.Visible = false;
+            }
+            detectNamDangKyVaNamSinh(3);
+            detectNamDangKyVaNamMat(3);
+        }
+
+        private void cbThangDangKy_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string[] str = itemChungTu[12].Split('/');
+            if (cbThangDangKy.Text != str[1])
+            {
+                label5.Visible = true;
+            }
+            else
+            {
+                label5.Visible = false;
+            }
+            detectNamDangKyVaNamSinh(2);
+            detectNamDangKyVaNamMat(2);
+        }
+
+        private void cbNamDangKy_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string[] str = itemChungTu[12].Split('/');
+            if (cbNamDangKy.Text != str[2])
+            {
+                label5.Visible = true;
+            }
+            else
+            {
+                label5.Visible = false;
+            }
+            detectNamDangKyVaNamSinh(1);
+            detectNamDangKyVaNamMat(1);
+        }
+
+        private void cbNgaySinh_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string[] str = itemChungTu[5].Split('/');
+            if (cbNgaySinh.Text != str[0])
+            {
+                label7.Visible = true;
+            }
+            else
+            {
+                label7.Visible = false;
+            }
+            detectNamDangKyVaNamSinh(6);
+            detectNamMatVaNamSinh(6);
+        }
+
+        private void cbThangSinh_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string[] str = itemChungTu[5].Split('/');
+            if (cbThangSinh.Text != str[1])
+            {
+                label7.Visible = true;
+            }
+            else
+            {
+                label7.Visible = false;
+            }
+            detectNamDangKyVaNamSinh(5);
+            detectNamMatVaNamSinh(5);
+        }
+
+        private void cbNamSinh_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string[] str = itemChungTu[5].Split('/');
+            if (cbNamSinh.Text != str[2])
+            {
+                label7.Visible = true;
+            }
+            else
+            {
+                label7.Visible = false;
+            }
+            detectNamDangKyVaNamSinh(4);
+            detectNamMatVaNamSinh(4);
+            switch (cbNamSinh.Text)
+            {
+                case "2000":
+                case "2001":
+                case "2002":
+                case "2003":
+                case "2004":
+                case "2005":
+                case "2006":
+                case "2007":
+                case "2008":
+                case "2009":
+                case "2010":
+                case "2011":
+                case "2012":
+                case "2013":
+                case "2014":
+                case "2015":
+                    txtCMND.Enabled = false; lblCMND.Enabled = false; break;
+                default:
+                    txtCMND.Enabled = true; lblCMND.Enabled = true; break;
+            }
+        }
+
+        private void cbNgayMat_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string[] str = itemChungTu[9].Split('/');
+            if (cbNgayMat.Text != str[0])
+            {
+                label11.Visible = true;
+            }
+            else
+            {
+                label11.Visible = false;
+            }
+            detectNamDangKyVaNamMat(6);
+            detectNamMatVaNamSinh(3);
+        }
+
+        private void cbThangMat_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string[] str = itemChungTu[9].Split('/');
+            if (cbThangMat.Text != str[1])
+            {
+                label11.Visible = true;
+            }
+            else
+            {
+                label11.Visible = false;
+            }
+            detectNamDangKyVaNamMat(5);
+            detectNamMatVaNamSinh(2);
+        }
+
+        private void cbNamMat_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string[] str = itemChungTu[9].Split('/');
+            if (cbNamMat.Text != str[2])
+            {
+                label11.Visible = true;
+            }
+            else
+            {
+                label11.Visible = false;
+            }
+            detectNamDangKyVaNamMat(4);
+            detectNamMatVaNamSinh(1);
+        }
+
+        private void cbQuocTich_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbQuocTich.Text != itemChungTu[7])
+            {
+                label9.Visible = true;
+            }
+            else
+            {
+                label9.Visible = false;
+            }
+            if (!cbQuocTich.Text.Equals("Việt Nam"))
+            {
+                lblDanToc.Enabled = false;
+                cbDanToc.Enabled = false;
+            }
+            else
+            {
+                lblDanToc.Enabled = true;
+                cbDanToc.Enabled = true;
+            }
+        }
+
+        private void txtNguoiKhai_TextChanged(object sender, EventArgs e)
+        {
+            if (txtNguoiKhai.Text != itemChungTu[1])
+            {
+                label2.Visible = true;
+            }
+            else
+            {
+                label2.Visible = false;
+            }
+        }
+
+        private void txtThuongTamTru_TextChanged(object sender, EventArgs e)
+        {
+            if (txtThuongTamTru.Text != itemChungTu[2])
+            {
+                label3.Visible = true;
+            }
+            else
+            {
+                label3.Visible = false;
+            }
+        }
+
+        private void cbQuanHeVoiNguoiMat_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbQuanHeVoiNguoiMat.Text != itemChungTu[3])
+            {
+                label1.Visible = true;
+            }
+            else
+            {
+                label1.Visible = false;
+            }
+        }
+
+        private void cbQueQuan_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbQueQuan.Text != itemChungTu[11])
+            {
+                label4.Visible = true;
+            }
+            else
+            {
+                label4.Visible = false;
+            }
+        }
+
+        private void txtTenNguoiMat_TextChanged(object sender, EventArgs e)
+        {
+            if (txtTenNguoiMat.Text != itemChungTu[4])
+            {
+                label6.Visible = true;
+            }
+            else
+            {
+                label6.Visible = false;
+            }
+        }
+
+        private void cbDanToc_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbDanToc.Text != itemChungTu[6])
+            {
+                label8.Visible = true;
+            }
+            else
+            {
+                label8.Visible = false;
+            }
+        }
+
+        private void txtCMND_TextChanged(object sender, EventArgs e)
+        {
+            if (txtCMND.Text != itemChungTu[8])
+            {
+                label10.Visible = true;
+            }
+            else
+            {
+                label10.Visible = false;
+            }
+        }
+
+        private void cbGio_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string[] str = itemChungTu[10].Split(':');
+            if (cbGio.Text != str[0])
+            {
+                label12.Visible = true;
+            }
+            else
+            {
+                label12.Visible = false;
+            }
+        }
+
+        private void cbPhut_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string[] str = itemChungTu[10].Split(':');
+            if (cbPhut.Text != str[1])
+            {
+                label12.Visible = true;
+            }
+            else
+            {
+                label12.Visible = false;
+            }
+        }
+
     }
 }

@@ -24,12 +24,11 @@ namespace QLNK
             txtCMND.Text = "";
             txtHoTen.Text = "";
             txtMaHoKhau.Text = "";
-            txtMaNhanKhau.Text = "";
             txtNgheNghiep.Text = "";
         }
         private void btnThemNhanKhau_Click(object sender, EventArgs e)
         {
-            string maNhanKhau = txtMaNhanKhau.Text;
+            string maNhanKhau = sc.setPrimaryKey("NHANKHAU", "MNK"); ;
             string hoTen = txtHoTen.Text;
             string ngay = cbNgay.Text;
             string thang = cbThang.Text;
@@ -44,15 +43,34 @@ namespace QLNK
             string ngheNghiep = txtNgheNghiep.Text;
 
             if (!(maNhanKhau.Equals("") || hoTen.Equals("")     || (!rdNam.Checked && !rdNu.Checked)    ||
-                  ngay.Equals("")       || thang.Equals("")     || nam.Equals("")   || danToc.Equals("")||
-                  queQuan.Equals("")    || tonGiao.Equals("")   || cmnd.Equals("")  ||
-                  maHoKhau.Equals("")   || ngheNghiep.Equals("")))
+                  ngay.Equals("")       || thang.Equals("")     || nam.Equals("")        || danToc.Equals("")||
+                  queQuan.Equals("")    || tonGiao.Equals("")   || maHoKhau.Equals("")   || ngheNghiep.Equals("")))
             {
-                if (sc.addNhanKhau(maNhanKhau, hoTen, ngaySinh, gioiTinh, queQuan, 
-                                   tonGiao, danToc, cmnd, maHoKhau, ngheNghiep))
+                if (txtCMND.Enabled == false)
                 {
-                    MessageBox.Show(sc.SUCCESS_ADD);
-                    this.Close();
+                    cmnd = "";
+                    if (sc.addNhanKhau(maNhanKhau, hoTen, ngaySinh, gioiTinh, queQuan,
+                                   tonGiao, danToc, cmnd, maHoKhau, ngheNghiep))
+                    {
+                        MessageBox.Show(sc.SUCCESS_ADD);
+                        this.Close();
+                    }
+                }
+                else
+                {
+                    if (!cmnd.Equals(""))
+                    {
+                        if (sc.addNhanKhau(maNhanKhau, hoTen, ngaySinh, gioiTinh, queQuan,
+                                           tonGiao, danToc, cmnd, maHoKhau, ngheNghiep))
+                        {
+                            MessageBox.Show(sc.SUCCESS_ADD);
+                            this.Close();
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show(sc.ERROR_BLANK);
+                    }
                 }
             }
             else
@@ -79,12 +97,6 @@ namespace QLNK
             base.WndProc(ref message);
         }
 
-        private void txtMaNhanKhau_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
-                e.Handled = true;
-        }
-
         private void txtHoTen_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))
@@ -101,6 +113,32 @@ namespace QLNK
         {
             if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
                 e.Handled = true;
+        }
+
+        private void cbNam_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            switch (cbNam.Text)
+            {
+                case "2000":
+                case "2001":
+                case "2002":
+                case "2003":
+                case "2004":
+                case "2005":
+                case "2006":
+                case "2007":
+                case "2008":
+                case "2009":
+                case "2010":
+                case "2011":
+                case "2012":
+                case "2013":
+                case "2014":
+                case "2015":
+                    txtCMND.Enabled = false; lblCMND.Enabled = false; break;
+                default:
+                    txtCMND.Enabled = true; lblCMND.Enabled = true; break;
+            }
         }
     }
 }

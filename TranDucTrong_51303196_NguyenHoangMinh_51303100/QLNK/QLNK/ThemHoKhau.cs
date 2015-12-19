@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 using MaterialSkin.Controls;
+using MySql.Data.MySqlClient;
 
 namespace QLNK
 {
@@ -17,7 +18,6 @@ namespace QLNK
             cbNam.SelectedIndex = -1;
             cbNgay.SelectedIndex = -1;
             cbThang.SelectedIndex = -1;
-            txtMaHoKhau.Text = "";
             txtHoTenChuHo.Text = "";
             cbQueQuan.Text = "";
             txtDiaChi.Text = "";
@@ -25,7 +25,7 @@ namespace QLNK
         }
         private void btnThemHoKhau_Click(object sender, EventArgs e)
         {
-            string maHoKhau = txtMaHoKhau.Text;
+            string maHoKhau = sc.setPrimaryKey("HOKHAU", "MHK");
             string tenChuHo = txtHoTenChuHo.Text;
             string cmndChuHo = txtCMNDChuHo.Text;
             string khuVuc = cbQueQuan.Text;
@@ -34,7 +34,6 @@ namespace QLNK
             string ngay = cbThang.Text;
             string thang = cbNgay.Text;
             string nam = cbNam.Text;
-
             if (!(maHoKhau.Equals("")   || tenChuHo.Equals("")  || cmndChuHo.Equals("") ||
                   ngay.Equals("")       || thang.Equals("")     || nam.Equals("")       ||
                   diaChi.Equals("")     || khuVuc.Equals("")))
@@ -68,12 +67,6 @@ namespace QLNK
             }
 
             base.WndProc(ref message);
-        }
-
-        private void txtMaHoKhau_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
-                e.Handled = true;
         }
 
         private void txtHoTenChuHo_KeyPress(object sender, KeyPressEventArgs e)

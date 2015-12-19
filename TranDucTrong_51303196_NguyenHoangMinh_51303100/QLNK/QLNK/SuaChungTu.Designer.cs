@@ -48,12 +48,11 @@
             this.materialLabel12 = new MaterialSkin.Controls.MaterialLabel();
             this.cbQueQuan = new System.Windows.Forms.ComboBox();
             this.txtTenNguoiMat = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.txtMaChungTu = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.btnSuaChungTu = new MaterialSkin.Controls.MaterialRaisedButton();
             this.materialLabel14 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel15 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialLabel16 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialLabel17 = new MaterialSkin.Controls.MaterialLabel();
+            this.lblDanToc = new MaterialSkin.Controls.MaterialLabel();
+            this.lblCMND = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel18 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel19 = new MaterialSkin.Controls.MaterialLabel();
             this.txtNguoiKhai = new MaterialSkin.Controls.MaterialSingleLineTextField();
@@ -67,13 +66,24 @@
             this.cbDanToc = new System.Windows.Forms.ComboBox();
             this.cbNamSinh = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.cbGio = new System.Windows.Forms.ComboBox();
             this.cbPhut = new System.Windows.Forms.ComboBox();
             this.cbQuocTich = new System.Windows.Forms.ComboBox();
             this.lblMKV = new MaterialSkin.Controls.MaterialLabel();
             this.lblHoTen2 = new MaterialSkin.Controls.MaterialLabel();
-            this.lblMHK2 = new MaterialSkin.Controls.MaterialLabel();
             this.cbQuanHeVoiNguoiMat = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -84,7 +94,7 @@
             this.materialLabel6.Depth = 0;
             this.materialLabel6.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel6.Location = new System.Drawing.Point(163, 224);
+            this.materialLabel6.Location = new System.Drawing.Point(166, 224);
             this.materialLabel6.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel6.Name = "materialLabel6";
             this.materialLabel6.Size = new System.Drawing.Size(39, 24);
@@ -98,7 +108,7 @@
             this.materialLabel7.Depth = 0;
             this.materialLabel7.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel7.Location = new System.Drawing.Point(281, 226);
+            this.materialLabel7.Location = new System.Drawing.Point(284, 226);
             this.materialLabel7.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel7.Name = "materialLabel7";
             this.materialLabel7.Size = new System.Drawing.Size(48, 24);
@@ -112,7 +122,7 @@
             this.materialLabel3.Depth = 0;
             this.materialLabel3.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel3.Location = new System.Drawing.Point(161, 182);
+            this.materialLabel3.Location = new System.Drawing.Point(164, 182);
             this.materialLabel3.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel3.Name = "materialLabel3";
             this.materialLabel3.Size = new System.Drawing.Size(54, 24);
@@ -126,7 +136,7 @@
             this.materialLabel4.Depth = 0;
             this.materialLabel4.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel4.Location = new System.Drawing.Point(281, 182);
+            this.materialLabel4.Location = new System.Drawing.Point(284, 182);
             this.materialLabel4.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel4.Name = "materialLabel4";
             this.materialLabel4.Size = new System.Drawing.Size(62, 24);
@@ -140,7 +150,7 @@
             this.materialLabel5.Depth = 0;
             this.materialLabel5.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel5.Location = new System.Drawing.Point(415, 183);
+            this.materialLabel5.Location = new System.Drawing.Point(418, 183);
             this.materialLabel5.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel5.Name = "materialLabel5";
             this.materialLabel5.Size = new System.Drawing.Size(51, 24);
@@ -154,15 +164,15 @@
             this.cbNgayMat.FormattingEnabled = true;
             this.cbNgayMat.IntegralHeight = false;
             this.cbNgayMat.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
+            "01",
+            "02",
+            "03",
+            "04",
+            "05",
+            "06",
+            "07",
+            "08",
+            "09",
             "10",
             "11",
             "12",
@@ -185,10 +195,11 @@
             "29",
             "30",
             "31"});
-            this.cbNgayMat.Location = new System.Drawing.Point(216, 182);
+            this.cbNgayMat.Location = new System.Drawing.Point(219, 182);
             this.cbNgayMat.Name = "cbNgayMat";
             this.cbNgayMat.Size = new System.Drawing.Size(55, 24);
             this.cbNgayMat.TabIndex = 182;
+            this.cbNgayMat.SelectedIndexChanged += new System.EventHandler(this.cbNgayMat_SelectedIndexChanged);
             // 
             // cbThangMat
             // 
@@ -197,22 +208,23 @@
             this.cbThangMat.FormattingEnabled = true;
             this.cbThangMat.IntegralHeight = false;
             this.cbThangMat.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
+            "01",
+            "02",
+            "03",
+            "04",
+            "05",
+            "06",
+            "07",
+            "08",
+            "09",
             "10",
             "11",
             "12"});
-            this.cbThangMat.Location = new System.Drawing.Point(349, 182);
+            this.cbThangMat.Location = new System.Drawing.Point(352, 182);
             this.cbThangMat.Name = "cbThangMat";
             this.cbThangMat.Size = new System.Drawing.Size(56, 24);
             this.cbThangMat.TabIndex = 183;
+            this.cbThangMat.SelectedIndexChanged += new System.EventHandler(this.cbThangMat_SelectedIndexChanged);
             // 
             // cbNamMat
             // 
@@ -261,11 +273,27 @@
             "1997",
             "1998",
             "1999",
-            "2000"});
-            this.cbNamMat.Location = new System.Drawing.Point(472, 182);
+            "2000",
+            "2001",
+            "2002",
+            "2003",
+            "2004",
+            "2005",
+            "2006",
+            "2007",
+            "2008",
+            "2009",
+            "2010",
+            "2011",
+            "2012",
+            "2013",
+            "2014",
+            "2015"});
+            this.cbNamMat.Location = new System.Drawing.Point(475, 182);
             this.cbNamMat.Name = "cbNamMat";
             this.cbNamMat.Size = new System.Drawing.Size(68, 24);
             this.cbNamMat.TabIndex = 184;
+            this.cbNamMat.SelectedIndexChanged += new System.EventHandler(this.cbNamMat_SelectedIndexChanged);
             // 
             // materialLabel2
             // 
@@ -274,7 +302,7 @@
             this.materialLabel2.Depth = 0;
             this.materialLabel2.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel2.Location = new System.Drawing.Point(70, 222);
+            this.materialLabel2.Location = new System.Drawing.Point(71, 224);
             this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel2.Name = "materialLabel2";
             this.materialLabel2.Size = new System.Drawing.Size(77, 24);
@@ -288,7 +316,7 @@
             this.materialLabel10.Depth = 0;
             this.materialLabel10.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel10.Location = new System.Drawing.Point(221, 243);
+            this.materialLabel10.Location = new System.Drawing.Point(224, 198);
             this.materialLabel10.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel10.Name = "materialLabel10";
             this.materialLabel10.Size = new System.Drawing.Size(54, 24);
@@ -302,7 +330,7 @@
             this.materialLabel9.Depth = 0;
             this.materialLabel9.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel9.Location = new System.Drawing.Point(80, 243);
+            this.materialLabel9.Location = new System.Drawing.Point(81, 198);
             this.materialLabel9.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel9.Name = "materialLabel9";
             this.materialLabel9.Size = new System.Drawing.Size(125, 24);
@@ -316,7 +344,7 @@
             this.materialLabel11.Depth = 0;
             this.materialLabel11.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel11.Location = new System.Drawing.Point(346, 243);
+            this.materialLabel11.Location = new System.Drawing.Point(349, 198);
             this.materialLabel11.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel11.Name = "materialLabel11";
             this.materialLabel11.Size = new System.Drawing.Size(62, 24);
@@ -330,7 +358,7 @@
             this.materialLabel8.Depth = 0;
             this.materialLabel8.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel8.Location = new System.Drawing.Point(352, 205);
+            this.materialLabel8.Location = new System.Drawing.Point(353, 160);
             this.materialLabel8.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel8.Name = "materialLabel8";
             this.materialLabel8.Size = new System.Drawing.Size(111, 24);
@@ -344,7 +372,7 @@
             this.materialLabel13.Depth = 0;
             this.materialLabel13.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel13.Location = new System.Drawing.Point(491, 243);
+            this.materialLabel13.Location = new System.Drawing.Point(494, 198);
             this.materialLabel13.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel13.Name = "materialLabel13";
             this.materialLabel13.Size = new System.Drawing.Size(51, 24);
@@ -358,15 +386,15 @@
             this.cbNgayDangKy.FormattingEnabled = true;
             this.cbNgayDangKy.IntegralHeight = false;
             this.cbNgayDangKy.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
+            "01",
+            "02",
+            "03",
+            "04",
+            "05",
+            "06",
+            "07",
+            "08",
+            "09",
             "10",
             "11",
             "12",
@@ -389,10 +417,11 @@
             "29",
             "30",
             "31"});
-            this.cbNgayDangKy.Location = new System.Drawing.Point(276, 243);
+            this.cbNgayDangKy.Location = new System.Drawing.Point(279, 198);
             this.cbNgayDangKy.Name = "cbNgayDangKy";
             this.cbNgayDangKy.Size = new System.Drawing.Size(55, 24);
             this.cbNgayDangKy.TabIndex = 235;
+            this.cbNgayDangKy.SelectedIndexChanged += new System.EventHandler(this.cbNgayDangKy_SelectedIndexChanged);
             // 
             // cbThangDangKy
             // 
@@ -401,22 +430,23 @@
             this.cbThangDangKy.FormattingEnabled = true;
             this.cbThangDangKy.IntegralHeight = false;
             this.cbThangDangKy.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
+            "01",
+            "02",
+            "03",
+            "04",
+            "05",
+            "06",
+            "07",
+            "08",
+            "09",
             "10",
             "11",
             "12"});
-            this.cbThangDangKy.Location = new System.Drawing.Point(414, 243);
+            this.cbThangDangKy.Location = new System.Drawing.Point(417, 198);
             this.cbThangDangKy.Name = "cbThangDangKy";
             this.cbThangDangKy.Size = new System.Drawing.Size(56, 24);
             this.cbThangDangKy.TabIndex = 236;
+            this.cbThangDangKy.SelectedIndexChanged += new System.EventHandler(this.cbThangDangKy_SelectedIndexChanged);
             // 
             // cbNamDangKy
             // 
@@ -465,11 +495,27 @@
             "1997",
             "1998",
             "1999",
-            "2000"});
-            this.cbNamDangKy.Location = new System.Drawing.Point(548, 243);
+            "2000",
+            "2001",
+            "2002",
+            "2003",
+            "2004",
+            "2005",
+            "2006",
+            "2007",
+            "2008",
+            "2009",
+            "2010",
+            "2011",
+            "2012",
+            "2013",
+            "2014",
+            "2015"});
+            this.cbNamDangKy.Location = new System.Drawing.Point(551, 198);
             this.cbNamDangKy.Name = "cbNamDangKy";
             this.cbNamDangKy.Size = new System.Drawing.Size(68, 24);
             this.cbNamDangKy.TabIndex = 237;
+            this.cbNamDangKy.SelectedIndexChanged += new System.EventHandler(this.cbNamDangKy_SelectedIndexChanged);
             // 
             // materialLabel12
             // 
@@ -478,7 +524,7 @@
             this.materialLabel12.Depth = 0;
             this.materialLabel12.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel12.Location = new System.Drawing.Point(161, 65);
+            this.materialLabel12.Location = new System.Drawing.Point(164, 65);
             this.materialLabel12.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel12.Name = "materialLabel12";
             this.materialLabel12.Size = new System.Drawing.Size(54, 24);
@@ -555,17 +601,18 @@
             "Vĩnh Long",
             "Vĩnh Phúc",
             "Yên Bái"});
-            this.cbQueQuan.Location = new System.Drawing.Point(477, 205);
+            this.cbQueQuan.Location = new System.Drawing.Point(480, 160);
             this.cbQueQuan.Name = "cbQueQuan";
             this.cbQueQuan.Size = new System.Drawing.Size(139, 24);
             this.cbQueQuan.TabIndex = 242;
+            this.cbQueQuan.SelectedIndexChanged += new System.EventHandler(this.cbQueQuan_SelectedIndexChanged);
             // 
             // txtTenNguoiMat
             // 
             this.txtTenNguoiMat.BackColor = System.Drawing.Color.White;
             this.txtTenNguoiMat.Depth = 0;
             this.txtTenNguoiMat.Hint = "";
-            this.txtTenNguoiMat.Location = new System.Drawing.Point(165, 24);
+            this.txtTenNguoiMat.Location = new System.Drawing.Point(168, 24);
             this.txtTenNguoiMat.MaxLength = 50;
             this.txtTenNguoiMat.MouseState = MaterialSkin.MouseState.HOVER;
             this.txtTenNguoiMat.Name = "txtTenNguoiMat";
@@ -578,29 +625,12 @@
             this.txtTenNguoiMat.TabStop = false;
             this.txtTenNguoiMat.UseSystemPasswordChar = false;
             this.txtTenNguoiMat.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTenNguoiMat_KeyPress);
-            // 
-            // txtMaChungTu
-            // 
-            this.txtMaChungTu.Depth = 0;
-            this.txtMaChungTu.Enabled = false;
-            this.txtMaChungTu.Hint = "";
-            this.txtMaChungTu.Location = new System.Drawing.Point(223, 80);
-            this.txtMaChungTu.MaxLength = 10;
-            this.txtMaChungTu.MouseState = MaterialSkin.MouseState.HOVER;
-            this.txtMaChungTu.Name = "txtMaChungTu";
-            this.txtMaChungTu.PasswordChar = '\0';
-            this.txtMaChungTu.SelectedText = "";
-            this.txtMaChungTu.SelectionLength = 0;
-            this.txtMaChungTu.SelectionStart = 0;
-            this.txtMaChungTu.Size = new System.Drawing.Size(393, 28);
-            this.txtMaChungTu.TabIndex = 223;
-            this.txtMaChungTu.TabStop = false;
-            this.txtMaChungTu.UseSystemPasswordChar = false;
+            this.txtTenNguoiMat.TextChanged += new System.EventHandler(this.txtTenNguoiMat_TextChanged);
             // 
             // btnSuaChungTu
             // 
             this.btnSuaChungTu.Depth = 0;
-            this.btnSuaChungTu.Location = new System.Drawing.Point(541, 563);
+            this.btnSuaChungTu.Location = new System.Drawing.Point(544, 518);
             this.btnSuaChungTu.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnSuaChungTu.Name = "btnSuaChungTu";
             this.btnSuaChungTu.Primary = true;
@@ -617,7 +647,7 @@
             this.materialLabel14.Depth = 0;
             this.materialLabel14.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel14.Location = new System.Drawing.Point(81, 28);
+            this.materialLabel14.Location = new System.Drawing.Point(82, 28);
             this.materialLabel14.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel14.Name = "materialLabel14";
             this.materialLabel14.Size = new System.Drawing.Size(66, 24);
@@ -631,40 +661,40 @@
             this.materialLabel15.Depth = 0;
             this.materialLabel15.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel15.Location = new System.Drawing.Point(53, 65);
+            this.materialLabel15.Location = new System.Drawing.Point(54, 65);
             this.materialLabel15.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel15.Name = "materialLabel15";
             this.materialLabel15.Size = new System.Drawing.Size(94, 24);
             this.materialLabel15.TabIndex = 117;
             this.materialLabel15.Text = "Ngày sinh";
             // 
-            // materialLabel16
+            // lblDanToc
             // 
-            this.materialLabel16.AutoSize = true;
-            this.materialLabel16.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.materialLabel16.Depth = 0;
-            this.materialLabel16.Font = new System.Drawing.Font("Roboto", 11F);
-            this.materialLabel16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel16.Location = new System.Drawing.Point(73, 106);
-            this.materialLabel16.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel16.Name = "materialLabel16";
-            this.materialLabel16.Size = new System.Drawing.Size(74, 24);
-            this.materialLabel16.TabIndex = 121;
-            this.materialLabel16.Text = "Dân tộc";
+            this.lblDanToc.AutoSize = true;
+            this.lblDanToc.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblDanToc.Depth = 0;
+            this.lblDanToc.Font = new System.Drawing.Font("Roboto", 11F);
+            this.lblDanToc.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lblDanToc.Location = new System.Drawing.Point(74, 106);
+            this.lblDanToc.MouseState = MaterialSkin.MouseState.HOVER;
+            this.lblDanToc.Name = "lblDanToc";
+            this.lblDanToc.Size = new System.Drawing.Size(74, 24);
+            this.lblDanToc.TabIndex = 121;
+            this.lblDanToc.Text = "Dân tộc";
             // 
-            // materialLabel17
+            // lblCMND
             // 
-            this.materialLabel17.AutoSize = true;
-            this.materialLabel17.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.materialLabel17.Depth = 0;
-            this.materialLabel17.Font = new System.Drawing.Font("Roboto", 11F);
-            this.materialLabel17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel17.Location = new System.Drawing.Point(82, 145);
-            this.materialLabel17.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel17.Name = "materialLabel17";
-            this.materialLabel17.Size = new System.Drawing.Size(65, 24);
-            this.materialLabel17.TabIndex = 122;
-            this.materialLabel17.Text = "CMND";
+            this.lblCMND.AutoSize = true;
+            this.lblCMND.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblCMND.Depth = 0;
+            this.lblCMND.Font = new System.Drawing.Font("Roboto", 11F);
+            this.lblCMND.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lblCMND.Location = new System.Drawing.Point(83, 145);
+            this.lblCMND.MouseState = MaterialSkin.MouseState.HOVER;
+            this.lblCMND.Name = "lblCMND";
+            this.lblCMND.Size = new System.Drawing.Size(65, 24);
+            this.lblCMND.TabIndex = 122;
+            this.lblCMND.Text = "CMND";
             // 
             // materialLabel18
             // 
@@ -673,7 +703,7 @@
             this.materialLabel18.Depth = 0;
             this.materialLabel18.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel18.Location = new System.Drawing.Point(55, 183);
+            this.materialLabel18.Location = new System.Drawing.Point(56, 183);
             this.materialLabel18.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel18.Name = "materialLabel18";
             this.materialLabel18.Size = new System.Drawing.Size(92, 24);
@@ -687,7 +717,7 @@
             this.materialLabel19.Depth = 0;
             this.materialLabel19.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel19.Location = new System.Drawing.Point(281, 65);
+            this.materialLabel19.Location = new System.Drawing.Point(284, 65);
             this.materialLabel19.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel19.Name = "materialLabel19";
             this.materialLabel19.Size = new System.Drawing.Size(62, 24);
@@ -699,7 +729,7 @@
             this.txtNguoiKhai.BackColor = System.Drawing.Color.White;
             this.txtNguoiKhai.Depth = 0;
             this.txtNguoiKhai.Hint = "";
-            this.txtNguoiKhai.Location = new System.Drawing.Point(223, 121);
+            this.txtNguoiKhai.Location = new System.Drawing.Point(226, 76);
             this.txtNguoiKhai.MaxLength = 50;
             this.txtNguoiKhai.MouseState = MaterialSkin.MouseState.HOVER;
             this.txtNguoiKhai.Name = "txtNguoiKhai";
@@ -712,6 +742,7 @@
             this.txtNguoiKhai.TabStop = false;
             this.txtNguoiKhai.UseSystemPasswordChar = false;
             this.txtNguoiKhai.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNguoiKhai_KeyPress);
+            this.txtNguoiKhai.TextChanged += new System.EventHandler(this.txtNguoiKhai_TextChanged);
             // 
             // materialLabel20
             // 
@@ -720,7 +751,7 @@
             this.materialLabel20.Depth = 0;
             this.materialLabel20.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel20.Location = new System.Drawing.Point(415, 66);
+            this.materialLabel20.Location = new System.Drawing.Point(418, 66);
             this.materialLabel20.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel20.Name = "materialLabel20";
             this.materialLabel20.Size = new System.Drawing.Size(51, 24);
@@ -734,7 +765,7 @@
             this.materialLabel21.Depth = 0;
             this.materialLabel21.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel21.Location = new System.Drawing.Point(323, 105);
+            this.materialLabel21.Location = new System.Drawing.Point(316, 105);
             this.materialLabel21.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel21.Name = "materialLabel21";
             this.materialLabel21.Size = new System.Drawing.Size(90, 24);
@@ -748,22 +779,23 @@
             this.cbThangSinh.FormattingEnabled = true;
             this.cbThangSinh.IntegralHeight = false;
             this.cbThangSinh.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
+            "01",
+            "02",
+            "03",
+            "04",
+            "05",
+            "06",
+            "07",
+            "08",
+            "09",
             "10",
             "11",
             "12"});
-            this.cbThangSinh.Location = new System.Drawing.Point(349, 65);
+            this.cbThangSinh.Location = new System.Drawing.Point(352, 65);
             this.cbThangSinh.Name = "cbThangSinh";
             this.cbThangSinh.Size = new System.Drawing.Size(56, 24);
             this.cbThangSinh.TabIndex = 130;
+            this.cbThangSinh.SelectedIndexChanged += new System.EventHandler(this.cbThangSinh_SelectedIndexChanged);
             // 
             // materialLabel1
             // 
@@ -772,7 +804,7 @@
             this.materialLabel1.Depth = 0;
             this.materialLabel1.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel1.Location = new System.Drawing.Point(57, 166);
+            this.materialLabel1.Location = new System.Drawing.Point(58, 121);
             this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel1.Name = "materialLabel1";
             this.materialLabel1.Size = new System.Drawing.Size(148, 24);
@@ -786,15 +818,15 @@
             this.cbNgaySinh.FormattingEnabled = true;
             this.cbNgaySinh.IntegralHeight = false;
             this.cbNgaySinh.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
+            "01",
+            "02",
+            "03",
+            "04",
+            "05",
+            "06",
+            "07",
+            "08",
+            "09",
             "10",
             "11",
             "12",
@@ -817,17 +849,18 @@
             "29",
             "30",
             "31"});
-            this.cbNgaySinh.Location = new System.Drawing.Point(216, 65);
+            this.cbNgaySinh.Location = new System.Drawing.Point(219, 65);
             this.cbNgaySinh.Name = "cbNgaySinh";
             this.cbNgaySinh.Size = new System.Drawing.Size(55, 24);
             this.cbNgaySinh.TabIndex = 129;
+            this.cbNgaySinh.SelectedIndexChanged += new System.EventHandler(this.cbNgaySinh_SelectedIndexChanged);
             // 
             // txtThuongTamTru
             // 
             this.txtThuongTamTru.BackColor = System.Drawing.Color.White;
             this.txtThuongTamTru.Depth = 0;
             this.txtThuongTamTru.Hint = "";
-            this.txtThuongTamTru.Location = new System.Drawing.Point(223, 162);
+            this.txtThuongTamTru.Location = new System.Drawing.Point(226, 117);
             this.txtThuongTamTru.MaxLength = 100;
             this.txtThuongTamTru.MouseState = MaterialSkin.MouseState.HOVER;
             this.txtThuongTamTru.Name = "txtThuongTamTru";
@@ -839,13 +872,14 @@
             this.txtThuongTamTru.TabIndex = 232;
             this.txtThuongTamTru.TabStop = false;
             this.txtThuongTamTru.UseSystemPasswordChar = false;
+            this.txtThuongTamTru.TextChanged += new System.EventHandler(this.txtThuongTamTru_TextChanged);
             // 
             // txtCMND
             // 
             this.txtCMND.BackColor = System.Drawing.Color.White;
             this.txtCMND.Depth = 0;
             this.txtCMND.Hint = "";
-            this.txtCMND.Location = new System.Drawing.Point(167, 141);
+            this.txtCMND.Location = new System.Drawing.Point(170, 141);
             this.txtCMND.Margin = new System.Windows.Forms.Padding(0);
             this.txtCMND.MaxLength = 9;
             this.txtCMND.MouseState = MaterialSkin.MouseState.HOVER;
@@ -859,6 +893,7 @@
             this.txtCMND.TabStop = false;
             this.txtCMND.UseSystemPasswordChar = false;
             this.txtCMND.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCMND_KeyPress);
+            this.txtCMND.TextChanged += new System.EventHandler(this.txtCMND_TextChanged);
             // 
             // cbDanToc
             // 
@@ -872,7 +907,7 @@
             "Thái",
             "Mường",
             "Khơ Me",
-            "H\'Mông",
+            "HMông",
             "Nùng",
             "Hoa",
             "Dao",
@@ -886,8 +921,8 @@
             "Sán Dìu",
             "Hrê",
             "Ra Glai",
-            "M\'Nông",
-            "X’Tiêng",
+            "MNông",
+            "XTiêng",
             "Bru-Vân Kiều",
             "Thổ",
             "Khơ Mú",
@@ -922,10 +957,11 @@
             "Brâu",
             "Ơ Đu",
             "Thành phần khác"});
-            this.cbDanToc.Location = new System.Drawing.Point(165, 106);
+            this.cbDanToc.Location = new System.Drawing.Point(168, 106);
             this.cbDanToc.Name = "cbDanToc";
             this.cbDanToc.Size = new System.Drawing.Size(113, 24);
             this.cbDanToc.TabIndex = 176;
+            this.cbDanToc.SelectedIndexChanged += new System.EventHandler(this.cbDanToc_SelectedIndexChanged);
             // 
             // cbNamSinh
             // 
@@ -974,15 +1010,38 @@
             "1997",
             "1998",
             "1999",
-            "2000"});
-            this.cbNamSinh.Location = new System.Drawing.Point(472, 66);
+            "2000",
+            "2001",
+            "2002",
+            "2003",
+            "2004",
+            "2005",
+            "2006",
+            "2007",
+            "2008",
+            "2009",
+            "2010",
+            "2011",
+            "2012",
+            "2013",
+            "2014",
+            "2015"});
+            this.cbNamSinh.Location = new System.Drawing.Point(475, 66);
             this.cbNamSinh.Name = "cbNamSinh";
             this.cbNamSinh.Size = new System.Drawing.Size(68, 24);
             this.cbNamSinh.TabIndex = 131;
+            this.cbNamSinh.SelectedIndexChanged += new System.EventHandler(this.cbNamSinh_SelectedIndexChanged);
             // 
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.White;
+            this.groupBox1.Controls.Add(this.label12);
+            this.groupBox1.Controls.Add(this.label11);
+            this.groupBox1.Controls.Add(this.label10);
+            this.groupBox1.Controls.Add(this.label9);
+            this.groupBox1.Controls.Add(this.label8);
+            this.groupBox1.Controls.Add(this.label7);
+            this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.cbGio);
             this.groupBox1.Controls.Add(this.cbPhut);
             this.groupBox1.Controls.Add(this.cbQuocTich);
@@ -999,8 +1058,8 @@
             this.groupBox1.Controls.Add(this.txtTenNguoiMat);
             this.groupBox1.Controls.Add(this.materialLabel14);
             this.groupBox1.Controls.Add(this.materialLabel15);
-            this.groupBox1.Controls.Add(this.materialLabel16);
-            this.groupBox1.Controls.Add(this.materialLabel17);
+            this.groupBox1.Controls.Add(this.lblDanToc);
+            this.groupBox1.Controls.Add(this.lblCMND);
             this.groupBox1.Controls.Add(this.materialLabel18);
             this.groupBox1.Controls.Add(this.materialLabel19);
             this.groupBox1.Controls.Add(this.materialLabel20);
@@ -1010,12 +1069,96 @@
             this.groupBox1.Controls.Add(this.txtCMND);
             this.groupBox1.Controls.Add(this.cbDanToc);
             this.groupBox1.Controls.Add(this.cbNamSinh);
-            this.groupBox1.Location = new System.Drawing.Point(58, 284);
+            this.groupBox1.Location = new System.Drawing.Point(61, 239);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(558, 265);
             this.groupBox1.TabIndex = 239;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin người mất";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.Color.White;
+            this.label12.ForeColor = System.Drawing.Color.Red;
+            this.label12.Location = new System.Drawing.Point(142, 227);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(23, 17);
+            this.label12.TabIndex = 256;
+            this.label12.Text = "(*)";
+            this.label12.Visible = false;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.White;
+            this.label11.ForeColor = System.Drawing.Color.Red;
+            this.label11.Location = new System.Drawing.Point(142, 186);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(23, 17);
+            this.label11.TabIndex = 255;
+            this.label11.Text = "(*)";
+            this.label11.Visible = false;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.White;
+            this.label10.ForeColor = System.Drawing.Color.Red;
+            this.label10.Location = new System.Drawing.Point(142, 148);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(23, 17);
+            this.label10.TabIndex = 254;
+            this.label10.Text = "(*)";
+            this.label10.Visible = false;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.White;
+            this.label9.ForeColor = System.Drawing.Color.Red;
+            this.label9.Location = new System.Drawing.Point(399, 108);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(23, 17);
+            this.label9.TabIndex = 253;
+            this.label9.Text = "(*)";
+            this.label9.Visible = false;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.White;
+            this.label8.ForeColor = System.Drawing.Color.Red;
+            this.label8.Location = new System.Drawing.Point(142, 109);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(23, 17);
+            this.label8.TabIndex = 252;
+            this.label8.Text = "(*)";
+            this.label8.Visible = false;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.White;
+            this.label7.ForeColor = System.Drawing.Color.Red;
+            this.label7.Location = new System.Drawing.Point(142, 68);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(23, 17);
+            this.label7.TabIndex = 251;
+            this.label7.Text = "(*)";
+            this.label7.Visible = false;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.White;
+            this.label6.ForeColor = System.Drawing.Color.Red;
+            this.label6.Location = new System.Drawing.Point(142, 32);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(23, 17);
+            this.label6.TabIndex = 250;
+            this.label6.Text = "(*)";
+            this.label6.Visible = false;
             // 
             // cbGio
             // 
@@ -1047,10 +1190,11 @@
             "20",
             "21",
             "22"});
-            this.cbGio.Location = new System.Drawing.Point(216, 224);
+            this.cbGio.Location = new System.Drawing.Point(219, 224);
             this.cbGio.Name = "cbGio";
             this.cbGio.Size = new System.Drawing.Size(55, 24);
             this.cbGio.TabIndex = 193;
+            this.cbGio.SelectedIndexChanged += new System.EventHandler(this.cbGio_SelectedIndexChanged);
             // 
             // cbPhut
             // 
@@ -1119,10 +1263,11 @@
             "57",
             "58",
             "59"});
-            this.cbPhut.Location = new System.Drawing.Point(349, 226);
+            this.cbPhut.Location = new System.Drawing.Point(352, 226);
             this.cbPhut.Name = "cbPhut";
             this.cbPhut.Size = new System.Drawing.Size(56, 24);
             this.cbPhut.TabIndex = 194;
+            this.cbPhut.SelectedIndexChanged += new System.EventHandler(this.cbPhut_SelectedIndexChanged);
             // 
             // cbQuocTich
             // 
@@ -1186,10 +1331,11 @@
             "Uzbekistan",
             "Việt Nam",
             "Yemen"});
-            this.cbQuocTich.Location = new System.Drawing.Point(419, 105);
+            this.cbQuocTich.Location = new System.Drawing.Point(422, 105);
             this.cbQuocTich.Name = "cbQuocTich";
             this.cbQuocTich.Size = new System.Drawing.Size(121, 24);
             this.cbQuocTich.TabIndex = 192;
+            this.cbQuocTich.SelectedIndexChanged += new System.EventHandler(this.cbQuocTich_SelectedIndexChanged);
             // 
             // lblMKV
             // 
@@ -1198,7 +1344,7 @@
             this.lblMKV.Depth = 0;
             this.lblMKV.Font = new System.Drawing.Font("Roboto", 11F);
             this.lblMKV.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblMKV.Location = new System.Drawing.Point(5, 205);
+            this.lblMKV.Location = new System.Drawing.Point(6, 160);
             this.lblMKV.MouseState = MaterialSkin.MouseState.HOVER;
             this.lblMKV.Name = "lblMKV";
             this.lblMKV.Size = new System.Drawing.Size(200, 24);
@@ -1212,27 +1358,12 @@
             this.lblHoTen2.Depth = 0;
             this.lblHoTen2.Font = new System.Drawing.Font("Roboto", 11F);
             this.lblHoTen2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblHoTen2.Location = new System.Drawing.Point(102, 125);
+            this.lblHoTen2.Location = new System.Drawing.Point(103, 80);
             this.lblHoTen2.MouseState = MaterialSkin.MouseState.HOVER;
             this.lblHoTen2.Name = "lblHoTen2";
             this.lblHoTen2.Size = new System.Drawing.Size(103, 24);
             this.lblHoTen2.TabIndex = 225;
             this.lblHoTen2.Text = "Người khai";
-            // 
-            // lblMHK2
-            // 
-            this.lblMHK2.AutoSize = true;
-            this.lblMHK2.BackColor = System.Drawing.Color.White;
-            this.lblMHK2.Depth = 0;
-            this.lblMHK2.Font = new System.Drawing.Font("Roboto", 11F);
-            this.lblMHK2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblMHK2.Location = new System.Drawing.Point(87, 84);
-            this.lblMHK2.MouseState = MaterialSkin.MouseState.HOVER;
-            this.lblMHK2.Name = "lblMHK2";
-            this.lblMHK2.Size = new System.Drawing.Size(118, 24);
-            this.lblMHK2.TabIndex = 224;
-            this.lblMHK2.Text = "Mã chứng tử";
-            this.lblMHK2.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // cbQuanHeVoiNguoiMat
             // 
@@ -1252,16 +1383,82 @@
             "Chú",
             "Bác",
             "Dì"});
-            this.cbQuanHeVoiNguoiMat.Location = new System.Drawing.Point(223, 205);
+            this.cbQuanHeVoiNguoiMat.Location = new System.Drawing.Point(226, 160);
             this.cbQuanHeVoiNguoiMat.Name = "cbQuanHeVoiNguoiMat";
             this.cbQuanHeVoiNguoiMat.Size = new System.Drawing.Size(108, 24);
             this.cbQuanHeVoiNguoiMat.TabIndex = 243;
+            this.cbQuanHeVoiNguoiMat.SelectedIndexChanged += new System.EventHandler(this.cbQuanHeVoiNguoiMat_SelectedIndexChanged);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.White;
+            this.label2.ForeColor = System.Drawing.Color.Red;
+            this.label2.Location = new System.Drawing.Point(200, 83);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(23, 17);
+            this.label2.TabIndex = 245;
+            this.label2.Text = "(*)";
+            this.label2.Visible = false;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.White;
+            this.label3.ForeColor = System.Drawing.Color.Red;
+            this.label3.Location = new System.Drawing.Point(200, 124);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(23, 17);
+            this.label3.TabIndex = 246;
+            this.label3.Text = "(*)";
+            this.label3.Visible = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.White;
+            this.label1.ForeColor = System.Drawing.Color.Red;
+            this.label1.Location = new System.Drawing.Point(200, 163);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(23, 17);
+            this.label1.TabIndex = 247;
+            this.label1.Text = "(*)";
+            this.label1.Visible = false;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.White;
+            this.label4.ForeColor = System.Drawing.Color.Red;
+            this.label4.Location = new System.Drawing.Point(457, 164);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(23, 17);
+            this.label4.TabIndex = 248;
+            this.label4.Text = "(*)";
+            this.label4.Visible = false;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.White;
+            this.label5.ForeColor = System.Drawing.Color.Red;
+            this.label5.Location = new System.Drawing.Point(200, 201);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(23, 17);
+            this.label5.TabIndex = 249;
+            this.label5.Text = "(*)";
+            this.label5.Visible = false;
             // 
             // SuaChungTu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(641, 640);
+            this.ClientSize = new System.Drawing.Size(641, 593);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.cbQuanHeVoiNguoiMat);
             this.Controls.Add(this.materialLabel10);
             this.Controls.Add(this.materialLabel9);
@@ -1272,7 +1469,6 @@
             this.Controls.Add(this.cbThangDangKy);
             this.Controls.Add(this.cbNamDangKy);
             this.Controls.Add(this.cbQueQuan);
-            this.Controls.Add(this.txtMaChungTu);
             this.Controls.Add(this.btnSuaChungTu);
             this.Controls.Add(this.txtNguoiKhai);
             this.Controls.Add(this.materialLabel1);
@@ -1280,7 +1476,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.lblMKV);
             this.Controls.Add(this.lblHoTen2);
-            this.Controls.Add(this.lblMHK2);
+            this.MaximizeBox = false;
             this.Name = "SuaChungTu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SỬA THÔNG TIN CHỨNG TỬ";
@@ -1314,12 +1510,11 @@
         private MaterialSkin.Controls.MaterialLabel materialLabel12;
         private System.Windows.Forms.ComboBox cbQueQuan;
         private MaterialSkin.Controls.MaterialSingleLineTextField txtTenNguoiMat;
-        private MaterialSkin.Controls.MaterialSingleLineTextField txtMaChungTu;
         private MaterialSkin.Controls.MaterialRaisedButton btnSuaChungTu;
         private MaterialSkin.Controls.MaterialLabel materialLabel14;
         private MaterialSkin.Controls.MaterialLabel materialLabel15;
-        private MaterialSkin.Controls.MaterialLabel materialLabel16;
-        private MaterialSkin.Controls.MaterialLabel materialLabel17;
+        private MaterialSkin.Controls.MaterialLabel lblDanToc;
+        private MaterialSkin.Controls.MaterialLabel lblCMND;
         private MaterialSkin.Controls.MaterialLabel materialLabel18;
         private MaterialSkin.Controls.MaterialLabel materialLabel19;
         private MaterialSkin.Controls.MaterialSingleLineTextField txtNguoiKhai;
@@ -1335,10 +1530,21 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private MaterialSkin.Controls.MaterialLabel lblMKV;
         private MaterialSkin.Controls.MaterialLabel lblHoTen2;
-        private MaterialSkin.Controls.MaterialLabel lblMHK2;
         private System.Windows.Forms.ComboBox cbQuocTich;
         private System.Windows.Forms.ComboBox cbGio;
         private System.Windows.Forms.ComboBox cbPhut;
         private System.Windows.Forms.ComboBox cbQuanHeVoiNguoiMat;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label11;
     }
 }

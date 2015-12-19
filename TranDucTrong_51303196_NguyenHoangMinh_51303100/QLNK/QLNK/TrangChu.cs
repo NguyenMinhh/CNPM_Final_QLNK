@@ -265,6 +265,416 @@ namespace QLNK
             }
         }
 
+        private void btnTim_Click(object sender, EventArgs e)
+        {
+            int index;
+            if (cbNhanKhau.Visible)
+            {
+                index = cbNhanKhau.SelectedIndex;
+                switch (index)
+                {
+                    case -1:
+                        MessageBox.Show(sc.ERROR_BLANK_FIND_ITEM);
+                        break;
+                    case 0:
+                    case 1:
+                    case 7:
+                    case 8:
+                    case 9:
+                        if (txtInput.Text == "")
+                        {
+                            MessageBox.Show(sc.ERROR_BLANK_FIND);
+                        }
+                        else
+                        {
+                            if (index == 0)
+                                sc.findAndDisplay("NHANKHAU", "MNK", txtInput.Text, listViewNhanKhau);
+                            else if (index == 1)
+                                sc.findAndDisplay("NHANKHAU", "Ten", txtInput.Text, listViewNhanKhau);
+                            else if (index == 7)
+                                sc.findAndDisplay("NHANKHAU", "CMND", txtInput.Text, listViewNhanKhau);
+                            else if (index == 8)
+                                sc.findAndDisplay("NHANKHAU", "MHK", txtInput.Text, listViewNhanKhau);
+                            else if (index == 9)
+                                sc.findAndDisplay("NHANKHAU", "NgheNghiep", txtInput.Text, listViewNhanKhau);
+                        }
+                        break;
+                    case 2:
+                        if (cbNgay.Text.Equals("") || cbThang.Text.Equals("") || cbNam.Text.Equals(""))
+                        {
+                            MessageBox.Show(sc.ERROR_BLANK_FIND);
+                        }
+                        else
+                        {
+                            sc.findAndDisplay("NHANKHAU", "NgaySinh", cbNgay.Text + "/" + cbThang.Text + "/" + cbNam.Text, listViewNhanKhau);
+                        }
+                        break;
+                    case 3:
+                        if (rdTimNam.Checked == false && rdTimNu.Checked == false)
+                        {
+                            MessageBox.Show(sc.ERROR_BLANK_FIND);
+                        }
+                        else
+                        {
+                            string gioiTinh;
+                            if (rdTimNam.Checked == true)
+                                gioiTinh = "Nam";
+                            else
+                                gioiTinh = "Nữ";
+                            sc.findAndDisplay("NHANKHAU", "GioiTinh", gioiTinh, listViewNhanKhau);
+                        }
+                        break;
+                    case 4:
+                        if (cbQueQuan.Text.Equals(""))
+                        {
+                            MessageBox.Show(sc.ERROR_BLANK_FIND);
+                        }
+                        else
+                        {
+                            sc.findAndDisplay("NHANKHAU", "QueQuan", cbQueQuan.Text, listViewNhanKhau);
+                        }
+                        break;
+                    case 5:
+                        if (cbTonGiao.Text.Equals(""))
+                        {
+                            MessageBox.Show(sc.ERROR_BLANK_FIND);
+                        }
+                        else
+                        {
+                            sc.findAndDisplay("NHANKHAU", "TonGiao", cbTonGiao.Text, listViewNhanKhau);
+                        }
+                        break;
+                    case 6:
+                        if (cbDanToc.Text.Equals(""))
+                        {
+                            MessageBox.Show(sc.ERROR_BLANK_FIND);
+                        }
+                        else
+                        {
+                            sc.findAndDisplay("NHANKHAU", "DanToc", cbDanToc.Text, listViewNhanKhau);
+                        }
+                        break;
+                }
+            }
+
+            if (cbHoKhau.Visible)
+            {
+                index = cbHoKhau.SelectedIndex;
+                switch (index)
+                {
+                    case -1:
+                        MessageBox.Show(sc.ERROR_BLANK_FIND_ITEM);
+                        break;
+                    case 0:
+                    case 1:
+                    case 2:
+                        if (txtInput.Text == "")
+                        {
+                            MessageBox.Show(sc.ERROR_BLANK_FIND);
+                        }
+                        else
+                        {
+                            if (index == 0)
+                                sc.findAndDisplay("HOKHAU", "MHK", txtInput.Text, listViewHoKhau);
+                            else if (index == 1)
+                                sc.findAndDisplay("HOKHAU", "TenChuHo", txtInput.Text, listViewHoKhau);
+                            else if (index == 2)
+                                sc.findAndDisplay("HOKHAU", "CMNDChuHo", txtInput.Text, listViewHoKhau);
+                        }
+                        break;
+                    case 3:
+                        if (cbQueQuan.Text == "")
+                        {
+                            MessageBox.Show(sc.ERROR_BLANK_FIND);
+                        }
+                        else
+                        {
+                            sc.findAndDisplay("HOKHAU", "KhuVuc", cbQueQuan.Text, listViewHoKhau);
+                        }
+                        break;
+                    case 4:
+                        if (cbNgay.Text.Equals("") || cbThang.Text.Equals("") || cbNam.Text.Equals(""))
+                        {
+                            MessageBox.Show(sc.ERROR_BLANK_FIND);
+                        }
+                        else
+                        {
+                            sc.findAndDisplay("HOKHAU", "NgayLap", cbNgay.Text + "/" + cbThang.Text + "/" + cbNam.Text, listViewHoKhau);
+                        }
+                        break;
+                }
+            }
+
+            if (cbChungTu.Visible)
+            {
+                index = cbChungTu.SelectedIndex;
+                switch (index)
+                {
+                    case -1:
+                        MessageBox.Show(sc.ERROR_BLANK_FIND_ITEM);
+                        break;
+                    case 0:
+                    case 1:
+                    case 3:
+                    case 7:
+                        if (txtInput.Text == "")
+                        {
+                            MessageBox.Show(sc.ERROR_BLANK_FIND);
+                        }
+                        else
+                        {
+                            if (index == 0)
+                                sc.findAndDisplay("CHUNGTU", "MCT", txtInput.Text, listViewChungTu);
+                            else if (index == 1)
+                                sc.findAndDisplay("CHUNGTU", "TenNguoiKhai", txtInput.Text, listViewChungTu);
+                            else if (index == 3)
+                                sc.findAndDisplay("CHUNGTU", "TenNguoiMat", txtInput.Text, listViewChungTu);
+                            else if (index == 7)
+                                sc.findAndDisplay("CHUNGTU", "CMND", txtInput.Text, listViewChungTu);
+                        }
+                        break;
+                    case 2:
+                        if (cbQuanHe.Text.Equals(""))
+                        {
+                            MessageBox.Show(sc.ERROR_BLANK_FIND);
+                        }
+                        else
+                        {
+                            sc.findAndDisplay("CHUNGTU", "QHVoiNguoiMat", cbQuanHe.Text, listViewChungTu);
+                        }
+                        break;
+                    case 4:
+                    case 8:
+                    case 11:
+                        if (cbNgay.Text.Equals("") || cbThang.Text.Equals("") || cbNam.Text.Equals(""))
+                        {
+                            MessageBox.Show(sc.ERROR_BLANK_FIND);
+                        }
+                        else
+                        {
+                            if (index == 4)
+                                sc.findAndDisplay("CHUNGTU", "NgaySinh", cbNgay.Text + "/" + cbThang.Text + "/" + cbNam.Text, listViewChungTu);
+                            else if (index == 8)
+                                sc.findAndDisplay("CHUNGTU", "NgayMat", cbNgay.Text + "/" + cbThang.Text + "/" + cbNam.Text, listViewChungTu);
+                            else if(index == 11)
+                                sc.findAndDisplay("CHUNGTU", "NgayDK", cbNgay.Text + "/" + cbThang.Text + "/" + cbNam.Text, listViewChungTu);
+                        }
+                        break;
+                    case 5:
+                        if (cbDanToc.Text.Equals(""))
+                        {
+                            MessageBox.Show(sc.ERROR_BLANK_FIND);
+                        }
+                        else
+                        {
+                            sc.findAndDisplay("CHUNGTU", "DanToc", cbDanToc.Text, listViewChungTu);
+                        }
+                        break;
+                    case 6:
+                        if (cbQuocTich.Text.Equals(""))
+                        {
+                            MessageBox.Show(sc.ERROR_BLANK_FIND);
+                        }
+                        else
+                        {
+                            sc.findAndDisplay("CHUNGTU", "QuocTich", cbQuocTich.Text, listViewChungTu);
+                        }
+                        break;
+                    case 9:
+                        if (cbGio.Text.Equals("") || cbPhut.Text.Equals(""))
+                        {
+                            MessageBox.Show(sc.ERROR_BLANK_FIND);
+                        }
+                        else
+                        {
+                            sc.findAndDisplay("CHUNGTU", "GioMat", cbGio.Text + ":" + cbPhut.Text, listViewChungTu);
+                        }
+                        break;
+                    case 10:
+                        if (cbQueQuan.Text.Equals(""))
+                        {
+                            MessageBox.Show(sc.ERROR_BLANK_FIND);
+                        }
+                        else
+                        {
+                            sc.findAndDisplay("CHUNGTU", "KVDK", cbQueQuan.Text, listViewChungTu);
+                        }
+                        break;
+                }
+            }
+
+            if (cbKetHon.Visible)
+            {
+                index = cbKetHon.SelectedIndex;
+                switch (index)
+                {
+                    case -1:
+                        MessageBox.Show(sc.ERROR_BLANK_FIND_ITEM);
+                        break;
+                    case 0:
+                    case 1:
+                    case 5:
+                    case 6:
+                    case 10:
+                        if (txtInput.Text == "")
+                        {
+                            MessageBox.Show(sc.ERROR_BLANK_FIND);
+                        }
+                        else
+                        {
+                            if (index == 0)
+                                sc.findAndDisplay("KETHON", "MKH", txtInput.Text, listViewKetHon);
+                            else if (index == 1)
+                                sc.findAndDisplay("KETHON", "TenChong", txtInput.Text, listViewKetHon);
+                            else if (index == 5)
+                                sc.findAndDisplay("KETHON", "CMNDChong", txtInput.Text, listViewKetHon);
+                            else if (index == 6)
+                                sc.findAndDisplay("KETHON", "TenVo", txtInput.Text, listViewKetHon);
+                            else if (index == 10)
+                                sc.findAndDisplay("KETHON", "CMNDVo", txtInput.Text, listViewKetHon);
+                        }
+                        break;
+                    case 2:
+                    case 7:
+                    case 12:
+                        if (cbNgay.Text.Equals("") || cbThang.Text.Equals("") || cbNam.Text.Equals(""))
+                        {
+                            MessageBox.Show(sc.ERROR_BLANK_FIND);
+                        }
+                        else
+                        {
+                            if (index == 2)
+                                sc.findAndDisplay("KETHON", "NgaySinhChong", cbNgay.Text + "/" + cbThang.Text + "/" + cbNam.Text, listViewKetHon);
+                            else if (index == 7)
+                                sc.findAndDisplay("KETHON", "NgaySinhVo", cbNgay.Text + "/" + cbThang.Text + "/" + cbNam.Text, listViewKetHon);
+                            else if (index == 12)
+                                sc.findAndDisplay("KETHON", "NgayDK", cbNgay.Text + "/" + cbThang.Text + "/" + cbNam.Text, listViewKetHon);
+                        }
+                        break;
+                    case 3:
+                    case 8:
+                        if (cbDanToc.Text.Equals(""))
+                        {
+                            MessageBox.Show(sc.ERROR_BLANK_FIND);
+                        }
+                        else
+                        {
+                            if (index == 3)
+                                sc.findAndDisplay("KETHON", "DanTocChong", cbDanToc.Text, listViewKetHon);
+                            else if (index == 8)
+                                sc.findAndDisplay("KETHON", "DanTocVo", cbDanToc.Text, listViewKetHon);
+                        }
+                        break;
+                    case 4:
+                    case 9:
+                    case 11:
+                        if (cbQueQuan.Text.Equals(""))
+                        {
+                            MessageBox.Show(sc.ERROR_BLANK_FIND);
+                        }
+                        else
+                        {
+                            if (index == 4)
+                                sc.findAndDisplay("KETHON", "QueQuanChong", cbQueQuan.Text, listViewKetHon);
+                            else if (index == 9)
+                                sc.findAndDisplay("KETHON", "QueQuanVo", cbQueQuan.Text, listViewKetHon);
+                            else if (index == 11)
+                                sc.findAndDisplay("KETHON", "KVDK", cbQueQuan.Text, listViewKetHon);
+                        }
+                        break;
+                }
+            }
+
+            if (cbTamTru.Visible)
+            {
+                index = cbKetHon.SelectedIndex;
+                switch (index)
+                {
+                    case -1:
+                        MessageBox.Show(sc.ERROR_BLANK_FIND_ITEM);
+                        break;
+                    case 0:
+                    case 1:
+                    case 2:
+                    case 3:
+                        if (txtInput.Text == "")
+                        {
+                            MessageBox.Show(sc.ERROR_BLANK_FIND);
+                        }
+                        else
+                        {
+                            if (index == 0)
+                                sc.findAndDisplay("TAMTRU", "MTT", txtInput.Text, listViewTamTru);
+                            else if (index == 1)
+                                sc.findAndDisplay("TAMTRU", "MNK", txtInput.Text, listViewTamTru);
+                            else if (index == 2)
+                                sc.findAndDisplay("TAMTRU", "TenNoiTamTru", txtInput.Text, listViewTamTru);
+                            else if (index == 3)
+                                sc.findAndDisplay("TAMTRU", "SoDienThoai", txtInput.Text, listViewTamTru);
+                        }
+                        break;
+                    case 4:
+                        if (cbNgay.Text.Equals("") || cbThang.Text.Equals("") || cbNam.Text.Equals(""))
+                        {
+                            MessageBox.Show(sc.ERROR_BLANK_FIND);
+                        }
+                        else
+                        {
+                            sc.findAndDisplay("TAMTRU", "ThoiHan", cbNgay.Text + "/" + cbThang.Text + "/" + cbNam.Text, listViewTamTru);
+                        }
+                        break;
+                }
+            }
+
+            if (cbTienAnTienSu.Visible)
+            {
+                index = cbKetHon.SelectedIndex;
+                switch (index)
+                {
+                    case -1:
+                        MessageBox.Show(sc.ERROR_BLANK_FIND_ITEM);
+                        break;
+                    case 0:
+                    case 1:
+                    case 2:
+                        if (txtInput.Text == "")
+                        {
+                            MessageBox.Show(sc.ERROR_BLANK_FIND);
+                        }
+                        else
+                        {
+                            if (index == 0)
+                                sc.findAndDisplay("TIENANTIENSU", "MaTATS", txtInput.Text, listViewTienAnTienSu);
+                            else if (index == 1)
+                                sc.findAndDisplay("TIENANTIENSU", "MNK", txtInput.Text, listViewTienAnTienSu);
+                            else if (index == 2)
+                                sc.findAndDisplay("TIENANTIENSU", "TenTATS", txtInput.Text, listViewTienAnTienSu);
+                        }
+                        break;
+                    case 3:
+                        if (cbQueQuan.Text.Equals(""))
+                        {
+                            MessageBox.Show(sc.ERROR_BLANK_FIND);
+                        }
+                        else
+                        {
+                            sc.findAndDisplay("TIENANTIENSU", "NoiXetXu", cbQueQuan.Text, listViewTienAnTienSu);
+                        }
+                        break;
+                    case 4:
+                        if (cbNgay.Text.Equals("") || cbThang.Text.Equals("") || cbNam.Text.Equals(""))
+                        {
+                            MessageBox.Show(sc.ERROR_BLANK_FIND);
+                        }
+                        else
+                        {
+                            sc.findAndDisplay("TIENANTIENSU", "NgayThucThi", cbNgay.Text + "/" + cbThang.Text + "/" + cbNam.Text, listViewTienAnTienSu);
+                        }
+                        break;
+                }
+            }
+        }
+        
         //-------------------------------------------LƯU THÔNG TIN KHI CLICK VÀO ĐỐI TƯỢNG
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -435,269 +845,18 @@ namespace QLNK
             listViewTienAnTienSu.Visible = true;
             cbTienAnTienSu.Visible = true;
         }
-
-        private void btnTim_Click(object sender, EventArgs e)
-        {
-            int index;
-            if (cbNhanKhau.Visible)
-            {
-                index = cbNhanKhau.SelectedIndex;
-                if (index == -1)
-                {
-                    MessageBox.Show("Vui lòng chọn mục cần tra cứu");
-                }
-                else
-                {
-                    if (index == 2)
-                    {
-                        if (cbNgay.SelectedIndex == -1 || cbThang.SelectedIndex == -1 || cbNam.SelectedIndex == -1)
-                        {
-                            MessageBox.Show("Vui lòng chọn thông tin cần tra cứu");
-                        }
-                    }
-                    else if (index == 3)
-                    {
-                        if (rdTimNam.Checked == false && rdTimNu.Checked == false)
-                        {
-
-                        }
-                    }
-                    else if (index == 4)
-                    {
-                        if (cbQueQuan.SelectedIndex == -1)
-                        {
-                            MessageBox.Show("Vui lòng chọn thông tin cần tra cứu");
-                        }
-                    }
-                    else if (index == 5)
-                    {
-                        if (cbTonGiao.SelectedIndex == -1)
-                        {
-                            MessageBox.Show("Vui lòng chọn thông tin cần tra cứu");
-                        }
-                    }
-                    else if (index == 6)
-                    {
-                        if (cbDanToc.SelectedIndex == -1)
-                        {
-                            MessageBox.Show("Vui lòng chọn thông tin cần tra cứu");
-                        }
-                    }
-                    else
-                    {
-                        if (txtInput.Text.Equals(""))
-                        {
-                            MessageBox.Show("Vui lòng nhập thông tin cần tra cứu");
-                        }
-                    }
-                }
-            }
-
-            if (cbHoKhau.Visible)
-            {
-                index = cbHoKhau.SelectedIndex;
-                if (index == -1)
-                {
-                    MessageBox.Show("Vui lòng chọn mục cần tra cứu");
-                }
-                else
-                {
-                    if (index == 3)
-                    {
-                        if (cbQueQuan.SelectedIndex == -1)
-                        {
-                            MessageBox.Show("Vui lòng chọn thông tin cần tra cứu");
-                        }
-                    }
-                    else if (index == 4)
-                    {
-                        if (cbNgay.SelectedIndex == -1 || cbThang.SelectedIndex == -1 || cbNam.SelectedIndex == -1)
-                        {
-                            MessageBox.Show("Vui lòng chọn thông tin cần tra cứu");
-                        }
-                    }
-                    else
-                    {
-                        if (txtInput.Text.Equals(""))
-                        {
-                            MessageBox.Show("Vui lòng nhập thông tin cần tra cứu");
-                        }
-                    }
-                }
-            }
-
-            if (cbChungTu.Visible)
-            {
-                index = cbChungTu.SelectedIndex;
-                if (index == -1)
-                {
-                    MessageBox.Show("Vui lòng chọn mục cần tra cứu");
-                }
-                else
-                {
-                    if (index == 2)
-                    {
-                        if (cbQuanHe.SelectedIndex == -1)
-                        {
-                            MessageBox.Show("Vui lòng chọn thông tin cần tra cứu");
-                        }
-                    }
-                    else if (index == 4 || index == 8 || index == 11)
-                    {
-                        if (cbNgay.SelectedIndex == -1 || cbThang.SelectedIndex == -1 || cbNam.SelectedIndex == -1)
-                        {
-                            MessageBox.Show("Vui lòng chọn thông tin cần tra cứu");
-                        }
-                    }
-                    else if (index == 5)
-                    {
-                        if (cbDanToc.SelectedIndex == -1)
-                        {
-                            MessageBox.Show("Vui lòng chọn thông tin cần tra cứu");
-                        }
-                    }
-                    else if (index == 6)
-                    {
-                        if (cbQuocTich.SelectedIndex == -1)
-                        {
-                            MessageBox.Show("Vui lòng chọn thông tin cần tra cứu");
-                        }
-                    }
-                    else if (index == 9)
-                    {
-                        if (cbGio.SelectedIndex == -1 || cbPhut.SelectedIndex == -1)
-                        {
-                            MessageBox.Show("Vui lòng chọn thông tin cần tra cứu");
-                        }
-                    }
-                    else if (index == 10)
-                    {
-                        if (cbQueQuan.SelectedIndex == -1)
-                        {
-                            MessageBox.Show("Vui lòng chọn thông tin cần tra cứu");
-                        }
-                    }
-                    else
-                    {
-                        if (txtInput.Text.Equals(""))
-                        {
-                            MessageBox.Show("Vui lòng nhập thông tin cần tra cứu");
-                        }
-                    }
-                }
-            }
-
-            if (cbKetHon.Visible)
-            {
-                index = cbKetHon.SelectedIndex;
-                if (index == -1)
-                {
-                    MessageBox.Show("Vui lòng chọn mục cần tra cứu");
-                }
-                else
-                {
-                    if (index == 2 || index == 7 || index == 12)
-                    {
-                        if (cbNgay.SelectedIndex == -1 || cbThang.SelectedIndex == -1 || cbNam.SelectedIndex == -1)
-                        {
-                            MessageBox.Show("Vui lòng chọn thông tin cần tra cứu");
-                        }
-                    }
-                    else if (index == 3 || index == 8)
-                    {
-                        if (cbDanToc.SelectedIndex == -1)
-                        {
-                            MessageBox.Show("Vui lòng chọn thông tin cần tra cứu");
-                        }
-                    }
-                    else if (index == 4 || index == 9)
-                    {
-                        if (cbQuocTich.SelectedIndex == -1)
-                        {
-                            MessageBox.Show("Vui lòng chọn thông tin cần tra cứu");
-                        }
-                    }
-                    else if (index == 11)
-                    {
-                        if (cbQueQuan.SelectedIndex == -1)
-                        {
-                            MessageBox.Show("Vui lòng chọn thông tin cần tra cứu");
-                        }
-                    }
-                    else
-                    {
-                        if (txtInput.Text.Equals(""))
-                        {
-                            MessageBox.Show("Vui lòng nhập thông tin cần tra cứu");
-                        }
-                    }
-                }
-            }
-            if (cbTamTru.Visible)
-            {
-                index = cbKetHon.SelectedIndex;
-                if (index == -1)
-                {
-                    MessageBox.Show("Vui lòng chọn mục cần tra cứu");
-                }
-                else
-                {
-                    if (index == 4)
-                    {
-                        if (cbNgay.SelectedIndex == -1 || cbThang.SelectedIndex == -1 || cbNam.SelectedIndex == -1)
-                        {
-                            MessageBox.Show("Vui lòng chọn thông tin cần tra cứu");
-                        }
-                    }
-                    else
-                    {
-                        if (txtInput.Text.Equals(""))
-                        {
-                            MessageBox.Show("Vui lòng nhập thông tin cần tra cứu");
-                        }
-                    }
-                }
-            }
-            if (cbTienAnTienSu.Visible)
-            {
-                index = cbKetHon.SelectedIndex;
-                if (index == -1)
-                {
-                    MessageBox.Show("Vui lòng chọn mục cần tra cứu");
-                }
-                else
-                {
-                    if (index == 2)
-                    {
-                        if (cbQueQuan.SelectedIndex == -1)
-                        {
-                            MessageBox.Show("Vui lòng chọn thông tin cần tra cứu");
-                        }
-                    }
-                    else if (index == 3)
-                    {
-                        if (cbNgay.SelectedIndex == -1 || cbThang.SelectedIndex == -1 || cbNam.SelectedIndex == -1)
-                        {
-                            MessageBox.Show("Vui lòng chọn thông tin cần tra cứu");
-                        }
-                    }
-                    else
-                    {
-                        if (txtInput.Text.Equals(""))
-                        {
-                            MessageBox.Show("Vui lòng nhập thông tin cần tra cứu");
-                        }
-                    }
-                }
-            }
-        }
-
+        
         //-----------------------------------------------------------COMBOX TABPAGE TRA CUU
         private void cbNhanKhau_SelectedIndexChanged(object sender, EventArgs e)
         {
             int index = cbNhanKhau.SelectedIndex;
             hideComboboxChange();
-            if (index == 2)
+            if (index == 0)
+            {
+                txtInput.Visible = true;
+                txtInput.Text = "MNK-";
+            }
+            else if (index == 2)
             {
                 lblDauGach1.Visible = true;
                 lblDauGach2.Visible = true;
@@ -709,6 +868,7 @@ namespace QLNK
             {
                 rdTimNam.Visible = true;
                 rdTimNu.Visible = true;
+                panel1.Visible = true;
             }
             else if (index == 4)
             {
@@ -725,6 +885,7 @@ namespace QLNK
             else
             {
                 txtInput.Visible = true;
+                txtInput.Text = "";
             }
         }
 
@@ -732,7 +893,12 @@ namespace QLNK
         {
             int index = cbHoKhau.SelectedIndex;
             hideComboboxChange();
-            if (index == 3)
+            if (index == 0)
+            {
+                txtInput.Visible = true;
+                txtInput.Text = "MHK-";
+            }
+            else if(index == 3)
             {
                 cbQueQuan.Visible = true;
             }
@@ -747,6 +913,7 @@ namespace QLNK
             else
             {
                 txtInput.Visible = true;
+                txtInput.Text = "";
             }
         }
 
@@ -754,7 +921,12 @@ namespace QLNK
         {
             int index = cbTamTru.SelectedIndex;
             hideComboboxChange();
-            if (index == 4)
+            if (index == 0)
+            {
+                txtInput.Visible = true;
+                txtInput.Text = "MTT-";
+            }
+            else if (index == 4)
             {
                 lblDauGach1.Visible = true;
                 lblDauGach2.Visible = true;
@@ -765,6 +937,7 @@ namespace QLNK
             else
             {
                 txtInput.Visible = true;
+                txtInput.Text = "";
             }
         }
 
@@ -772,7 +945,12 @@ namespace QLNK
         {
             int index = cbChungTu.SelectedIndex;
             hideComboboxChange();
-            if (index == 2)
+            if (index == 0)
+            {
+                txtInput.Visible = true;
+                txtInput.Text = "MCT-";
+            }
+            else if (index == 2)
             {
                 cbQuanHe.Visible = true;
             }
@@ -805,6 +983,7 @@ namespace QLNK
             else
             {
                 txtInput.Visible = true;
+                txtInput.Text = "";
             }
         }
 
@@ -812,7 +991,12 @@ namespace QLNK
         {
             int index = cbKetHon.SelectedIndex;
             hideComboboxChange();
-            if (index == 2 || index == 7 || index == 12)
+            if (index == 0)
+            {
+                txtInput.Visible = true;
+                txtInput.Text = "MKH-";
+            }
+            else if (index == 2 || index == 7 || index == 12)
             {
                 lblDauGach1.Visible = true;
                 lblDauGach2.Visible = true;
@@ -835,6 +1019,7 @@ namespace QLNK
             else
             {
                 txtInput.Visible = true;
+                txtInput.Text = "";
             }
         }
 
@@ -842,7 +1027,12 @@ namespace QLNK
         {
             int index = cbTienAnTienSu.SelectedIndex;
             hideComboboxChange();
-            if (index == 2)
+            if (index == 0)
+            {
+                txtInput.Visible = true;
+                txtInput.Text = "TATS-";
+            }
+            else if (index == 2)
             {
                 cbQueQuan.Visible = true;
             }
@@ -857,6 +1047,7 @@ namespace QLNK
             else
             {
                 txtInput.Visible = true;
+                txtInput.Text = "";
             }
         }
 
@@ -900,22 +1091,35 @@ namespace QLNK
             lblTienAnTienSu.Visible = false;
 
             listViewKetHon.Visible = false;
+            listViewKetHon.Items.Clear();
             listViewTamTru.Visible = false;
+            listViewTamTru.Items.Clear();
             listViewNhanKhau.Visible = false;
+            listViewNhanKhau.Items.Clear();
             listViewHoKhau.Visible = false;
+            listViewHoKhau.Items.Clear();
             listViewChungTu.Visible = false;
+            listViewChungTu.Items.Clear();
             listViewTienAnTienSu.Visible = false;
+            listViewTienAnTienSu.Items.Clear();
 
             cbChungTu.Visible = false;
+            cbChungTu.SelectedIndex = -1;
             cbHoKhau.Visible = false;
+            cbHoKhau.SelectedIndex = -1;
             cbKetHon.Visible = false;
+            cbKetHon.SelectedIndex = -1;
             cbNhanKhau.Visible = false;
+            cbNhanKhau.SelectedIndex = -1;
             cbTamTru.Visible = false;
+            cbTamTru.SelectedIndex = -1;
             cbTienAnTienSu.Visible = false;
+            cbTienAnTienSu.SelectedIndex = -1;
         }
 
         private void hideComboboxChange()
         {
+            panel1.Visible = false;
             rdTimNam.Visible = false;
             rdTimNu.Visible = false;
             txtInput.Visible = false;
@@ -1139,5 +1343,100 @@ namespace QLNK
             this.listView6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(rValue)))), ((int)(((byte)(gValue)))), ((int)(((byte)(bValue)))));
             this.listView7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(rValue)))), ((int)(((byte)(gValue)))), ((int)(((byte)(bValue)))));
         }
+
+        private void txtInput_TextChanged(object sender, EventArgs e)
+        {
+            string text = txtInput.Text;
+            if (cbNhanKhau.Visible && cbNhanKhau.SelectedIndex == 0)
+            {
+                if (text.Length < 4                 || text.Equals("")                  ||
+                    !text[0].ToString().Equals("M") || !text[1].ToString().Equals("N")  ||
+                    !text[2].ToString().Equals("K") || !text[3].ToString().Equals("-"))
+                {
+                    txtInput.Text = "MNK-";
+                }
+            }
+            if (cbHoKhau.Visible && cbHoKhau.SelectedIndex == 0)
+            {
+                if (text.Length < 4                 || text.Equals("")                  ||
+                    !text[0].ToString().Equals("M") || !text[1].ToString().Equals("H")  ||
+                    !text[2].ToString().Equals("K") || !text[3].ToString().Equals("-"))
+                {
+                    txtInput.Text = "MHK-";
+                }
+            }
+            if (cbTamTru.Visible && cbTamTru.SelectedIndex == 0)
+            {
+                if (text.Length < 4                 || text.Equals("")                  ||
+                    !text[0].ToString().Equals("M") || !text[1].ToString().Equals("T")  ||
+                    !text[2].ToString().Equals("T") || !text[3].ToString().Equals("-"))
+                {
+                    txtInput.Text = "MTT-";
+                }
+            }
+            if (cbChungTu.Visible && cbChungTu.SelectedIndex == 0)
+            {
+                if (text.Length < 4                 || text.Equals("")                  ||
+                    !text[0].ToString().Equals("M") || !text[1].ToString().Equals("C")  ||
+                    !text[2].ToString().Equals("T") || !text[3].ToString().Equals("-"))
+                {
+                    txtInput.Text = "MCT-";
+                }
+            }
+            if (cbKetHon.Visible && cbKetHon.SelectedIndex == 0)
+            {
+                if (text.Length < 4                 || text.Equals("")                  ||
+                    !text[0].ToString().Equals("M") || !text[1].ToString().Equals("K")  ||
+                    !text[2].ToString().Equals("H") || !text[3].ToString().Equals("-"))
+                {
+                    txtInput.Text = "MKH-";
+                }
+            }
+            if (cbTienAnTienSu.Visible && cbTienAnTienSu.SelectedIndex == 0)
+            {
+                if (text.Length < 5                 || text.Equals("")                  ||
+                    !text[0].ToString().Equals("T") || !text[1].ToString().Equals("A")  ||
+                    !text[2].ToString().Equals("T") || !text[3].ToString().Equals("S")  ||
+                    !text[4].ToString().Equals("-"))
+                {
+                    txtInput.Text = "TATS-";
+                }
+            }
+        }
+
+        private void txtInput_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (cbNhanKhau.Visible && cbNhanKhau.SelectedIndex == 0)
+            {
+                if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+                    e.Handled = true;
+            }
+            if (cbHoKhau.Visible && cbHoKhau.SelectedIndex == 0)
+            {
+                if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+                    e.Handled = true;
+            }
+            if (cbTamTru.Visible && cbTamTru.SelectedIndex == 0)
+            {
+                if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+                    e.Handled = true;
+            }
+            if (cbChungTu.Visible && cbChungTu.SelectedIndex == 0)
+            {
+                if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+                    e.Handled = true;
+            }
+            if (cbKetHon.Visible && cbKetHon.SelectedIndex == 0)
+            {
+                if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+                    e.Handled = true;
+            }
+            if (cbTienAnTienSu.Visible && cbTienAnTienSu.SelectedIndex == 0)
+            {
+                if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+                    e.Handled = true;
+            }
+        }
+
     }
 }

@@ -32,7 +32,6 @@
             this.materialLabel9 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel11 = new MaterialSkin.Controls.MaterialLabel();
             this.cbThang = new System.Windows.Forms.ComboBox();
-            this.txtMaTamTru = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.materialLabel13 = new MaterialSkin.Controls.MaterialLabel();
             this.cbNgay = new System.Windows.Forms.ComboBox();
             this.cbNam = new System.Windows.Forms.ComboBox();
@@ -43,7 +42,6 @@
             this.btnClear = new MaterialSkin.Controls.MaterialRaisedButton();
             this.lblMKV = new MaterialSkin.Controls.MaterialLabel();
             this.lblHoTen2 = new MaterialSkin.Controls.MaterialLabel();
-            this.lblMHK2 = new MaterialSkin.Controls.MaterialLabel();
             this.txtSoDienThoai = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.materialLabel8 = new MaterialSkin.Controls.MaterialLabel();
             this.btnMaNhanKhau = new MaterialSkin.Controls.MaterialRaisedButton();
@@ -58,7 +56,7 @@
             this.materialLabel10.Depth = 0;
             this.materialLabel10.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel10.Location = new System.Drawing.Point(165, 291);
+            this.materialLabel10.Location = new System.Drawing.Point(162, 252);
             this.materialLabel10.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel10.Name = "materialLabel10";
             this.materialLabel10.Size = new System.Drawing.Size(54, 24);
@@ -72,7 +70,7 @@
             this.materialLabel9.Depth = 0;
             this.materialLabel9.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel9.Location = new System.Drawing.Point(69, 291);
+            this.materialLabel9.Location = new System.Drawing.Point(66, 252);
             this.materialLabel9.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel9.Name = "materialLabel9";
             this.materialLabel9.Size = new System.Drawing.Size(82, 24);
@@ -86,7 +84,7 @@
             this.materialLabel11.Depth = 0;
             this.materialLabel11.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel11.Location = new System.Drawing.Point(292, 291);
+            this.materialLabel11.Location = new System.Drawing.Point(289, 252);
             this.materialLabel11.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel11.Name = "materialLabel11";
             this.materialLabel11.Size = new System.Drawing.Size(62, 24);
@@ -100,40 +98,22 @@
             this.cbThang.FormattingEnabled = true;
             this.cbThang.IntegralHeight = false;
             this.cbThang.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
+            "01",
+            "02",
+            "03",
+            "04",
+            "05",
+            "06",
+            "07",
+            "08",
+            "09",
             "10",
             "11",
             "12"});
-            this.cbThang.Location = new System.Drawing.Point(360, 291);
+            this.cbThang.Location = new System.Drawing.Point(357, 252);
             this.cbThang.Name = "cbThang";
             this.cbThang.Size = new System.Drawing.Size(56, 24);
             this.cbThang.TabIndex = 256;
-            // 
-            // txtMaTamTru
-            // 
-            this.txtMaTamTru.Depth = 0;
-            this.txtMaTamTru.Hint = "";
-            this.txtMaTamTru.Location = new System.Drawing.Point(169, 79);
-            this.txtMaTamTru.MaxLength = 10;
-            this.txtMaTamTru.MouseState = MaterialSkin.MouseState.HOVER;
-            this.txtMaTamTru.Name = "txtMaTamTru";
-            this.txtMaTamTru.PasswordChar = '\0';
-            this.txtMaTamTru.SelectedText = "";
-            this.txtMaTamTru.SelectionLength = 0;
-            this.txtMaTamTru.SelectionStart = 0;
-            this.txtMaTamTru.Size = new System.Drawing.Size(393, 28);
-            this.txtMaTamTru.TabIndex = 243;
-            this.txtMaTamTru.TabStop = false;
-            this.txtMaTamTru.UseSystemPasswordChar = false;
-            this.txtMaTamTru.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtMaTamTru_KeyPress);
             // 
             // materialLabel13
             // 
@@ -142,7 +122,7 @@
             this.materialLabel13.Depth = 0;
             this.materialLabel13.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel13.Location = new System.Drawing.Point(437, 291);
+            this.materialLabel13.Location = new System.Drawing.Point(434, 252);
             this.materialLabel13.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel13.Name = "materialLabel13";
             this.materialLabel13.Size = new System.Drawing.Size(51, 24);
@@ -156,15 +136,15 @@
             this.cbNgay.FormattingEnabled = true;
             this.cbNgay.IntegralHeight = false;
             this.cbNgay.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
+            "01",
+            "02",
+            "03",
+            "04",
+            "05",
+            "06",
+            "07",
+            "08",
+            "09",
             "10",
             "11",
             "12",
@@ -187,7 +167,7 @@
             "29",
             "30",
             "31"});
-            this.cbNgay.Location = new System.Drawing.Point(222, 291);
+            this.cbNgay.Location = new System.Drawing.Point(219, 252);
             this.cbNgay.Name = "cbNgay";
             this.cbNgay.Size = new System.Drawing.Size(55, 24);
             this.cbNgay.TabIndex = 255;
@@ -239,8 +219,23 @@
             "1997",
             "1998",
             "1999",
-            "2000"});
-            this.cbNam.Location = new System.Drawing.Point(494, 291);
+            "2000",
+            "2001",
+            "2002",
+            "2003",
+            "2004",
+            "2005",
+            "2006",
+            "2007",
+            "2008",
+            "2009",
+            "2010",
+            "2011",
+            "2012",
+            "2013",
+            "2014",
+            "2015"});
+            this.cbNam.Location = new System.Drawing.Point(491, 252);
             this.cbNam.Name = "cbNam";
             this.cbNam.Size = new System.Drawing.Size(68, 24);
             this.cbNam.TabIndex = 257;
@@ -248,7 +243,7 @@
             // btnThemTamTru
             // 
             this.btnThemTamTru.Depth = 0;
-            this.btnThemTamTru.Location = new System.Drawing.Point(487, 335);
+            this.btnThemTamTru.Location = new System.Drawing.Point(484, 296);
             this.btnThemTamTru.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnThemTamTru.Name = "btnThemTamTru";
             this.btnThemTamTru.Primary = true;
@@ -263,7 +258,7 @@
             this.txtTenNoiTamTru.BackColor = System.Drawing.Color.White;
             this.txtTenNoiTamTru.Depth = 0;
             this.txtTenNoiTamTru.Hint = "";
-            this.txtTenNoiTamTru.Location = new System.Drawing.Point(347, 167);
+            this.txtTenNoiTamTru.Location = new System.Drawing.Point(344, 128);
             this.txtTenNoiTamTru.MaxLength = 50;
             this.txtTenNoiTamTru.MouseState = MaterialSkin.MouseState.HOVER;
             this.txtTenNoiTamTru.Name = "txtTenNoiTamTru";
@@ -282,7 +277,7 @@
             this.txtDiaChi.BackColor = System.Drawing.Color.White;
             this.txtDiaChi.Depth = 0;
             this.txtDiaChi.Hint = "";
-            this.txtDiaChi.Location = new System.Drawing.Point(169, 207);
+            this.txtDiaChi.Location = new System.Drawing.Point(166, 168);
             this.txtDiaChi.MaxLength = 100;
             this.txtDiaChi.MouseState = MaterialSkin.MouseState.HOVER;
             this.txtDiaChi.Name = "txtDiaChi";
@@ -302,7 +297,7 @@
             this.materialLabel1.Depth = 0;
             this.materialLabel1.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel1.Location = new System.Drawing.Point(14, 167);
+            this.materialLabel1.Location = new System.Drawing.Point(11, 128);
             this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel1.Name = "materialLabel1";
             this.materialLabel1.Size = new System.Drawing.Size(137, 24);
@@ -312,7 +307,7 @@
             // btnClear
             // 
             this.btnClear.Depth = 0;
-            this.btnClear.Location = new System.Drawing.Point(388, 335);
+            this.btnClear.Location = new System.Drawing.Point(385, 296);
             this.btnClear.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnClear.Name = "btnClear";
             this.btnClear.Primary = true;
@@ -329,7 +324,7 @@
             this.lblMKV.Depth = 0;
             this.lblMKV.Font = new System.Drawing.Font("Roboto", 11F);
             this.lblMKV.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblMKV.Location = new System.Drawing.Point(83, 211);
+            this.lblMKV.Location = new System.Drawing.Point(80, 172);
             this.lblMKV.MouseState = MaterialSkin.MouseState.HOVER;
             this.lblMKV.Name = "lblMKV";
             this.lblMKV.Size = new System.Drawing.Size(68, 24);
@@ -343,34 +338,19 @@
             this.lblHoTen2.Depth = 0;
             this.lblHoTen2.Font = new System.Drawing.Font("Roboto", 11F);
             this.lblHoTen2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblHoTen2.Location = new System.Drawing.Point(24, 125);
+            this.lblHoTen2.Location = new System.Drawing.Point(21, 86);
             this.lblHoTen2.MouseState = MaterialSkin.MouseState.HOVER;
             this.lblHoTen2.Name = "lblHoTen2";
             this.lblHoTen2.Size = new System.Drawing.Size(127, 24);
             this.lblHoTen2.TabIndex = 245;
             this.lblHoTen2.Text = "Mã nhân khẩu";
             // 
-            // lblMHK2
-            // 
-            this.lblMHK2.AutoSize = true;
-            this.lblMHK2.BackColor = System.Drawing.Color.White;
-            this.lblMHK2.Depth = 0;
-            this.lblMHK2.Font = new System.Drawing.Font("Roboto", 11F);
-            this.lblMHK2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblMHK2.Location = new System.Drawing.Point(49, 83);
-            this.lblMHK2.MouseState = MaterialSkin.MouseState.HOVER;
-            this.lblMHK2.Name = "lblMHK2";
-            this.lblMHK2.Size = new System.Drawing.Size(102, 24);
-            this.lblMHK2.TabIndex = 244;
-            this.lblMHK2.Text = "Mã tạm trú";
-            this.lblMHK2.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
             // txtSoDienThoai
             // 
             this.txtSoDienThoai.BackColor = System.Drawing.Color.White;
             this.txtSoDienThoai.Depth = 0;
             this.txtSoDienThoai.Hint = "";
-            this.txtSoDienThoai.Location = new System.Drawing.Point(169, 248);
+            this.txtSoDienThoai.Location = new System.Drawing.Point(166, 209);
             this.txtSoDienThoai.MaxLength = 11;
             this.txtSoDienThoai.MouseState = MaterialSkin.MouseState.HOVER;
             this.txtSoDienThoai.Name = "txtSoDienThoai";
@@ -391,7 +371,7 @@
             this.materialLabel8.Depth = 0;
             this.materialLabel8.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel8.Location = new System.Drawing.Point(31, 252);
+            this.materialLabel8.Location = new System.Drawing.Point(28, 213);
             this.materialLabel8.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel8.Name = "materialLabel8";
             this.materialLabel8.Size = new System.Drawing.Size(120, 24);
@@ -401,7 +381,7 @@
             // btnMaNhanKhau
             // 
             this.btnMaNhanKhau.Depth = 0;
-            this.btnMaNhanKhau.Location = new System.Drawing.Point(406, 115);
+            this.btnMaNhanKhau.Location = new System.Drawing.Point(403, 76);
             this.btnMaNhanKhau.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnMaNhanKhau.Name = "btnMaNhanKhau";
             this.btnMaNhanKhau.Primary = true;
@@ -415,7 +395,7 @@
             this.txtMaNhanKhau.BackColor = System.Drawing.Color.White;
             this.txtMaNhanKhau.Depth = 0;
             this.txtMaNhanKhau.Hint = "";
-            this.txtMaNhanKhau.Location = new System.Drawing.Point(169, 122);
+            this.txtMaNhanKhau.Location = new System.Drawing.Point(166, 83);
             this.txtMaNhanKhau.MaxLength = 10;
             this.txtMaNhanKhau.MouseState = MaterialSkin.MouseState.HOVER;
             this.txtMaNhanKhau.Name = "txtMaNhanKhau";
@@ -441,7 +421,7 @@
             "Nhà riêng",
             "Khách sạn",
             "Nhà người quen"});
-            this.cbTamTru.Location = new System.Drawing.Point(169, 167);
+            this.cbTamTru.Location = new System.Drawing.Point(166, 128);
             this.cbTamTru.Name = "cbTamTru";
             this.cbTamTru.Size = new System.Drawing.Size(157, 24);
             this.cbTamTru.TabIndex = 287;
@@ -451,7 +431,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(587, 418);
+            this.ClientSize = new System.Drawing.Size(580, 372);
             this.Controls.Add(this.cbTamTru);
             this.Controls.Add(this.btnMaNhanKhau);
             this.Controls.Add(this.txtMaNhanKhau);
@@ -461,7 +441,6 @@
             this.Controls.Add(this.materialLabel9);
             this.Controls.Add(this.materialLabel11);
             this.Controls.Add(this.cbThang);
-            this.Controls.Add(this.txtMaTamTru);
             this.Controls.Add(this.materialLabel13);
             this.Controls.Add(this.cbNgay);
             this.Controls.Add(this.cbNam);
@@ -472,7 +451,7 @@
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.lblMKV);
             this.Controls.Add(this.lblHoTen2);
-            this.Controls.Add(this.lblMHK2);
+            this.MaximizeBox = false;
             this.Name = "ThemTamTru";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "THÊM TẠM TRÚ";
@@ -486,7 +465,6 @@
         private MaterialSkin.Controls.MaterialLabel materialLabel9;
         private MaterialSkin.Controls.MaterialLabel materialLabel11;
         private System.Windows.Forms.ComboBox cbThang;
-        private MaterialSkin.Controls.MaterialSingleLineTextField txtMaTamTru;
         private MaterialSkin.Controls.MaterialLabel materialLabel13;
         private System.Windows.Forms.ComboBox cbNgay;
         private System.Windows.Forms.ComboBox cbNam;
@@ -497,7 +475,6 @@
         private MaterialSkin.Controls.MaterialRaisedButton btnClear;
         private MaterialSkin.Controls.MaterialLabel lblMKV;
         private MaterialSkin.Controls.MaterialLabel lblHoTen2;
-        private MaterialSkin.Controls.MaterialLabel lblMHK2;
         private MaterialSkin.Controls.MaterialSingleLineTextField txtSoDienThoai;
         private MaterialSkin.Controls.MaterialLabel materialLabel8;
         private MaterialSkin.Controls.MaterialRaisedButton btnMaNhanKhau;

@@ -14,7 +14,6 @@ namespace QLNK
 
         private void btnClear_Click(object sender, EventArgs e)
         {
-            txtMaTamTru.Text = "";
             txtMaNhanKhau.Text = "";
             cbTamTru.SelectedIndex = -1;
             txtDiaChi.Text = "";
@@ -31,7 +30,8 @@ namespace QLNK
             string ngay = cbNgay.Text;
             string thang = cbThang.Text;
             string nam = cbNam.Text;
-            string maTamTru = txtMaTamTru.Text;
+
+            string maTamTru = sc.setPrimaryKey("TAMTRU", "MTT"); ;
             string maNhanKhau = txtMaNhanKhau.Text;
             string tenNoiTamTru = "";
             if (viTriTamTru == 1 || viTriTamTru == 3)
@@ -111,12 +111,6 @@ namespace QLNK
             }
 
             base.WndProc(ref message);
-        }
-
-        private void txtMaTamTru_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
-                e.Handled = true;
         }
 
         private void txtMaNhanKhau_KeyPress(object sender, KeyPressEventArgs e)

@@ -26,23 +26,25 @@ namespace QLNK
                 case "Nhà nghỉ": cbTamTru.SelectedIndex = 1; txtTenNoiTamTru.Visible = true; break;
                 case "Nhà riêng": cbTamTru.SelectedIndex = 2; break;
                 case "Khách sạn": cbTamTru.SelectedIndex = 3; txtTenNoiTamTru.Visible = true; break;
-                case "Nhà người quen": cbTamTru.SelectedIndex = 4; break;
+                case "Nhà người": cbTamTru.SelectedIndex = 4; break;
             }
-            txtTenNoiTamTru.Text = "";
-            int strLength = str.Length;
-            for (int i = 2; i < strLength; i++)
+            if (noiTamTru != "Nhà người")
             {
-                txtTenNoiTamTru.Text += str[i];
-                if (strLength - i > 1)
+                txtTenNoiTamTru.Text = "";
+                int strLength = str.Length;
+                for (int i = 2; i < strLength; i++)
                 {
-                    txtTenNoiTamTru.Text += " ";
+                    txtTenNoiTamTru.Text += str[i];
+                    if (strLength - i > 1)
+                    {
+                        txtTenNoiTamTru.Text += " ";
+                    }
                 }
             }
         }
 
         private void setNormal(string[] items)
         {
-            txtMaTamTru.Text = items[0];
             txtMaNhanKhau.Text = items[1];
             setNormalNoiTamTru(items[2]);
             txtDiaChi.Text = items[3];
@@ -50,15 +52,15 @@ namespace QLNK
             string[] arr = items[5].Split('/');
             switch (arr[0])
             {
-                case "1": cbNgay.SelectedIndex = 0; break;
-                case "2": cbNgay.SelectedIndex = 1; break;
-                case "3": cbNgay.SelectedIndex = 2; break;
-                case "4": cbNgay.SelectedIndex = 3; break;
-                case "5": cbNgay.SelectedIndex = 4; break;
-                case "6": cbNgay.SelectedIndex = 5; break;
-                case "7": cbNgay.SelectedIndex = 6; break;
-                case "8": cbNgay.SelectedIndex = 7; break;
-                case "9": cbNgay.SelectedIndex = 8; break;
+                case "01": cbNgay.SelectedIndex = 0; break;
+                case "02": cbNgay.SelectedIndex = 1; break;
+                case "03": cbNgay.SelectedIndex = 2; break;
+                case "04": cbNgay.SelectedIndex = 3; break;
+                case "05": cbNgay.SelectedIndex = 4; break;
+                case "06": cbNgay.SelectedIndex = 5; break;
+                case "07": cbNgay.SelectedIndex = 6; break;
+                case "08": cbNgay.SelectedIndex = 7; break;
+                case "09": cbNgay.SelectedIndex = 8; break;
                 case "10": cbNgay.SelectedIndex = 9; break;
                 case "11": cbNgay.SelectedIndex = 10; break;
                 case "12": cbNgay.SelectedIndex = 11; break;
@@ -84,15 +86,15 @@ namespace QLNK
             }
             switch (arr[1])
             {
-                case "1": cbThang.SelectedIndex = 0; break;
-                case "2": cbThang.SelectedIndex = 1; break;
-                case "3": cbThang.SelectedIndex = 2; break;
-                case "4": cbThang.SelectedIndex = 3; break;
-                case "5": cbThang.SelectedIndex = 4; break;
-                case "6": cbThang.SelectedIndex = 5; break;
-                case "7": cbThang.SelectedIndex = 6; break;
-                case "8": cbThang.SelectedIndex = 7; break;
-                case "9": cbThang.SelectedIndex = 8; break;
+                case "01": cbThang.SelectedIndex = 0; break;
+                case "02": cbThang.SelectedIndex = 1; break;
+                case "03": cbThang.SelectedIndex = 2; break;
+                case "04": cbThang.SelectedIndex = 3; break;
+                case "05": cbThang.SelectedIndex = 4; break;
+                case "06": cbThang.SelectedIndex = 5; break;
+                case "07": cbThang.SelectedIndex = 6; break;
+                case "08": cbThang.SelectedIndex = 7; break;
+                case "09": cbThang.SelectedIndex = 8; break;
                 case "10": cbThang.SelectedIndex = 9; break;
                 case "11": cbThang.SelectedIndex = 10; break;
                 case "12": cbThang.SelectedIndex = 11; break;
@@ -140,6 +142,21 @@ namespace QLNK
                 case "1998": cbNam.SelectedIndex = 38; break;
                 case "1999": cbNam.SelectedIndex = 39; break;
                 case "2000": cbNam.SelectedIndex = 40; break;
+                case "2001": cbNam.SelectedIndex = 41; break;
+                case "2002": cbNam.SelectedIndex = 42; break;
+                case "2003": cbNam.SelectedIndex = 43; break;
+                case "2004": cbNam.SelectedIndex = 44; break;
+                case "2005": cbNam.SelectedIndex = 45; break;
+                case "2006": cbNam.SelectedIndex = 46; break;
+                case "2007": cbNam.SelectedIndex = 47; break;
+                case "2008": cbNam.SelectedIndex = 48; break;
+                case "2009": cbNam.SelectedIndex = 49; break;
+                case "2010": cbNam.SelectedIndex = 50; break;
+                case "2011": cbNam.SelectedIndex = 51; break;
+                case "2012": cbNam.SelectedIndex = 52; break;
+                case "2013": cbNam.SelectedIndex = 53; break;
+                case "2014": cbNam.SelectedIndex = 54; break;
+                case "2015": cbNam.SelectedIndex = 55; break;
             }
         }
 
@@ -150,7 +167,7 @@ namespace QLNK
             string ngay = cbNgay.Text;
             string thang = cbThang.Text;
             string nam = cbNam.Text;
-            string maTamTru = txtMaTamTru.Text;
+            string maTamTru = itemTamTru[0];
             string maNhanKhau = txtMaNhanKhau.Text;
             string tenNoiTamTru = "";
             if (viTriTamTru == 1 || viTriTamTru == 3)
@@ -215,18 +232,6 @@ namespace QLNK
             }
         }
 
-        private void cbTamTru_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            int index = cbTamTru.SelectedIndex;
-            if (index == 1 || index == 3)
-            {
-                txtTenNoiTamTru.Visible = true;
-            }
-            else
-            {
-                txtTenNoiTamTru.Visible = false;
-            }
-        }
 
         private void SuaTamTru_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -237,7 +242,7 @@ namespace QLNK
                 string ngay = cbNgay.Text;
                 string thang = cbThang.Text;
                 string nam = cbNam.Text;
-                string maTamTru = txtMaTamTru.Text;
+                string maTamTru = itemTamTru[0];
                 string maNhanKhau = txtMaNhanKhau.Text;
                 string tenNoiTamTru = "";
                 if (viTriTamTru == 1 || viTriTamTru == 3)
@@ -314,6 +319,141 @@ namespace QLNK
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
                 e.Handled = true;
+        }
+
+        private void txtMaNhanKhau_TextChanged(object sender, EventArgs e)
+        {
+            if (txtMaNhanKhau.Text != itemTamTru[1])
+            {
+                label1.Visible = true;
+            }
+            else
+            {
+                label1.Visible = false;
+            }
+        }
+
+        private void txtTenNoiTamTru_TextChanged(object sender, EventArgs e)
+        {
+            string[] str = itemTamTru[2].Split(' ');
+            string temp = "";
+            int strLength = str.Length;
+            for (int i = 2; i < strLength; i++)
+            {
+                temp += str[i];
+                if (strLength - i > 1)
+                {
+                    temp += " ";
+                }
+            }
+            if (txtTenNoiTamTru.Text != temp)
+            {
+                label2.Visible = true;
+            }
+            else
+            {
+                label2.Visible = false;
+            }
+        }
+
+        private void cbTamTru_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string[] str = itemTamTru[2].Split(' ');
+            string noiTamTru = str[0] + " " + str[1];
+            if (noiTamTru == "Nhà người")
+            {
+                if (cbTamTru.SelectedIndex != 4)
+                {
+                    label2.Visible = true;
+                }
+                else
+                {
+                    label2.Visible = false;
+                }
+            }
+            else
+            {
+                if (cbTamTru.Text != noiTamTru)
+                {
+                    label2.Visible = true;
+                }
+                else
+                {
+                    label2.Visible = false;
+                }
+            }
+            int index = cbTamTru.SelectedIndex;
+            if (index == 1 || index == 3)
+            {
+                txtTenNoiTamTru.Visible = true;
+            }
+            else
+            {
+                txtTenNoiTamTru.Visible = false;
+            }
+        }
+
+        private void txtDiaChi_TextChanged(object sender, EventArgs e)
+        {
+            if (txtDiaChi.Text != itemTamTru[3])
+            {
+                label3.Visible = true;
+            }
+            else
+            {
+                label3.Visible = false;
+            }
+        }
+
+        private void txtSoDienThoai_TextChanged(object sender, EventArgs e)
+        {
+            if (txtSoDienThoai.Text != itemTamTru[4])
+            {
+                label4.Visible = true;
+            }
+            else
+            {
+                label4.Visible = false;
+            }
+        }
+
+        private void cbNgay_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string[] str = itemTamTru[5].Split('/');
+            if (cbNgay.Text != str[0])
+            {
+                label5.Visible = true;
+            }
+            else
+            {
+                label5.Visible = false;
+            }
+        }
+
+        private void cbThang_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string[] str = itemTamTru[5].Split('/');
+            if (cbThang.Text != str[1])
+            {
+                label5.Visible = true;
+            }
+            else
+            {
+                label5.Visible = false;
+            }
+        }
+
+        private void cbNam_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string[] str = itemTamTru[5].Split('/');
+            if (cbNam.Text != str[2])
+            {
+                label5.Visible = true;
+            }
+            else
+            {
+                label5.Visible = false;
+            }
         }
     }
 }

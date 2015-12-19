@@ -104,6 +104,9 @@
             this.columnHeader106 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader107 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tabPage7 = new System.Windows.Forms.TabPage();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.rdTimNam = new System.Windows.Forms.RadioButton();
+            this.rdTimNu = new System.Windows.Forms.RadioButton();
             this.lblDauHaiCham = new System.Windows.Forms.Label();
             this.cbPhut = new System.Windows.Forms.ComboBox();
             this.cbGio = new System.Windows.Forms.ComboBox();
@@ -183,8 +186,6 @@
             this.lblDauGach1 = new MaterialSkin.Controls.MaterialLabel();
             this.txtInput = new System.Windows.Forms.TextBox();
             this.btnTim = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.rdTimNu = new System.Windows.Forms.RadioButton();
-            this.rdTimNam = new System.Windows.Forms.RadioButton();
             this.cbNhanKhau = new System.Windows.Forms.ComboBox();
             this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
             this.lblTimNhanKhau = new System.Windows.Forms.Label();
@@ -223,6 +224,7 @@
             this.tabPage5.SuspendLayout();
             this.tabPage6.SuspendLayout();
             this.tabPage7.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tabPage8.SuspendLayout();
             this.SuspendLayout();
@@ -690,6 +692,7 @@
             // 
             // tabPage7
             // 
+            this.tabPage7.Controls.Add(this.panel1);
             this.tabPage7.Controls.Add(this.lblDauHaiCham);
             this.tabPage7.Controls.Add(this.cbPhut);
             this.tabPage7.Controls.Add(this.cbGio);
@@ -711,8 +714,6 @@
             this.tabPage7.Controls.Add(this.lblDauGach1);
             this.tabPage7.Controls.Add(this.txtInput);
             this.tabPage7.Controls.Add(this.btnTim);
-            this.tabPage7.Controls.Add(this.rdTimNu);
-            this.tabPage7.Controls.Add(this.rdTimNam);
             this.tabPage7.Controls.Add(this.cbNhanKhau);
             this.tabPage7.Controls.Add(this.materialLabel1);
             this.tabPage7.Controls.Add(this.lblTimNhanKhau);
@@ -730,6 +731,28 @@
             resources.ApplyResources(this.tabPage7, "tabPage7");
             this.tabPage7.Name = "tabPage7";
             this.tabPage7.UseVisualStyleBackColor = true;
+            // 
+            // panel1
+            // 
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.rdTimNam);
+            this.panel1.Controls.Add(this.rdTimNu);
+            resources.ApplyResources(this.panel1, "panel1");
+            this.panel1.Name = "panel1";
+            // 
+            // rdTimNam
+            // 
+            resources.ApplyResources(this.rdTimNam, "rdTimNam");
+            this.rdTimNam.Name = "rdTimNam";
+            this.rdTimNam.TabStop = true;
+            this.rdTimNam.UseVisualStyleBackColor = true;
+            // 
+            // rdTimNu
+            // 
+            resources.ApplyResources(this.rdTimNu, "rdTimNu");
+            this.rdTimNu.Name = "rdTimNu";
+            this.rdTimNu.TabStop = true;
+            this.rdTimNu.UseVisualStyleBackColor = true;
             // 
             // lblDauHaiCham
             // 
@@ -1119,7 +1142,22 @@
             resources.GetString("cbNam.Items37"),
             resources.GetString("cbNam.Items38"),
             resources.GetString("cbNam.Items39"),
-            resources.GetString("cbNam.Items40")});
+            resources.GetString("cbNam.Items40"),
+            resources.GetString("cbNam.Items41"),
+            resources.GetString("cbNam.Items42"),
+            resources.GetString("cbNam.Items43"),
+            resources.GetString("cbNam.Items44"),
+            resources.GetString("cbNam.Items45"),
+            resources.GetString("cbNam.Items46"),
+            resources.GetString("cbNam.Items47"),
+            resources.GetString("cbNam.Items48"),
+            resources.GetString("cbNam.Items49"),
+            resources.GetString("cbNam.Items50"),
+            resources.GetString("cbNam.Items51"),
+            resources.GetString("cbNam.Items52"),
+            resources.GetString("cbNam.Items53"),
+            resources.GetString("cbNam.Items54"),
+            resources.GetString("cbNam.Items55")});
             this.cbNam.Name = "cbNam";
             // 
             // cbThang
@@ -1175,9 +1213,7 @@
             resources.GetString("cbKetHon.Items9"),
             resources.GetString("cbKetHon.Items10"),
             resources.GetString("cbKetHon.Items11"),
-            resources.GetString("cbKetHon.Items12"),
-            resources.GetString("cbKetHon.Items13"),
-            resources.GetString("cbKetHon.Items14")});
+            resources.GetString("cbKetHon.Items12")});
             this.cbKetHon.Name = "cbKetHon";
             this.cbKetHon.SelectedIndexChanged += new System.EventHandler(this.cbKetHon_SelectedIndexChanged);
             // 
@@ -1303,8 +1339,6 @@
             resources.ApplyResources(this.listViewTienAnTienSu, "listViewTienAnTienSu");
             this.listViewTienAnTienSu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.listViewTienAnTienSu.FullRowSelect = true;
-            this.listViewTienAnTienSu.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            ((System.Windows.Forms.ListViewItem)(resources.GetObject("listViewTienAnTienSu.Items")))});
             this.listViewTienAnTienSu.Name = "listViewTienAnTienSu";
             this.listViewTienAnTienSu.TileSize = new System.Drawing.Size(1, 1);
             this.listViewTienAnTienSu.UseCompatibleStateImageBehavior = false;
@@ -1352,8 +1386,6 @@
             resources.ApplyResources(this.listViewKetHon, "listViewKetHon");
             this.listViewKetHon.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.listViewKetHon.FullRowSelect = true;
-            this.listViewKetHon.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            ((System.Windows.Forms.ListViewItem)(resources.GetObject("listViewKetHon.Items")))});
             this.listViewKetHon.Name = "listViewKetHon";
             this.listViewKetHon.TileSize = new System.Drawing.Size(1, 1);
             this.listViewKetHon.UseCompatibleStateImageBehavior = false;
@@ -1436,8 +1468,6 @@
             resources.ApplyResources(this.listViewChungTu, "listViewChungTu");
             this.listViewChungTu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.listViewChungTu.FullRowSelect = true;
-            this.listViewChungTu.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            ((System.Windows.Forms.ListViewItem)(resources.GetObject("listViewChungTu.Items")))});
             this.listViewChungTu.Name = "listViewChungTu";
             this.listViewChungTu.TileSize = new System.Drawing.Size(1, 1);
             this.listViewChungTu.UseCompatibleStateImageBehavior = false;
@@ -1496,8 +1526,6 @@
             resources.ApplyResources(this.listViewTamTru, "listViewTamTru");
             this.listViewTamTru.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.listViewTamTru.FullRowSelect = true;
-            this.listViewTamTru.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            ((System.Windows.Forms.ListViewItem)(resources.GetObject("listViewTamTru.Items")))});
             this.listViewTamTru.Name = "listViewTamTru";
             this.listViewTamTru.TileSize = new System.Drawing.Size(1, 1);
             this.listViewTamTru.UseCompatibleStateImageBehavior = false;
@@ -1540,8 +1568,6 @@
             resources.ApplyResources(this.listViewHoKhau, "listViewHoKhau");
             this.listViewHoKhau.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.listViewHoKhau.FullRowSelect = true;
-            this.listViewHoKhau.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            ((System.Windows.Forms.ListViewItem)(resources.GetObject("listViewHoKhau.Items")))});
             this.listViewHoKhau.Name = "listViewHoKhau";
             this.listViewHoKhau.TileSize = new System.Drawing.Size(1, 1);
             this.listViewHoKhau.UseCompatibleStateImageBehavior = false;
@@ -1588,8 +1614,6 @@
             resources.ApplyResources(this.listViewNhanKhau, "listViewNhanKhau");
             this.listViewNhanKhau.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.listViewNhanKhau.FullRowSelect = true;
-            this.listViewNhanKhau.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            ((System.Windows.Forms.ListViewItem)(resources.GetObject("listViewNhanKhau.Items")))});
             this.listViewNhanKhau.Name = "listViewNhanKhau";
             this.listViewNhanKhau.TileSize = new System.Drawing.Size(1, 1);
             this.listViewNhanKhau.UseCompatibleStateImageBehavior = false;
@@ -1648,6 +1672,8 @@
             // 
             resources.ApplyResources(this.txtInput, "txtInput");
             this.txtInput.Name = "txtInput";
+            this.txtInput.TextChanged += new System.EventHandler(this.txtInput_TextChanged);
+            this.txtInput.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtInput_KeyPress);
             // 
             // btnTim
             // 
@@ -1658,20 +1684,6 @@
             this.btnTim.Primary = true;
             this.btnTim.UseVisualStyleBackColor = true;
             this.btnTim.Click += new System.EventHandler(this.btnTim_Click);
-            // 
-            // rdTimNu
-            // 
-            resources.ApplyResources(this.rdTimNu, "rdTimNu");
-            this.rdTimNu.Name = "rdTimNu";
-            this.rdTimNu.TabStop = true;
-            this.rdTimNu.UseVisualStyleBackColor = true;
-            // 
-            // rdTimNam
-            // 
-            resources.ApplyResources(this.rdTimNam, "rdTimNam");
-            this.rdTimNam.Name = "rdTimNam";
-            this.rdTimNam.TabStop = true;
-            this.rdTimNam.UseVisualStyleBackColor = true;
             // 
             // cbNhanKhau
             // 
@@ -1932,7 +1944,6 @@
             this.Controls.Add(this.btnLogOut);
             this.Controls.Add(this.btnXoa);
             this.MaximizeBox = false;
-            this.MinimizeBox = false;
             this.Name = "TrangChu";
             this.Sizable = false;
             this.materialTabControl1.ResumeLayout(false);
@@ -1944,6 +1955,8 @@
             this.tabPage6.ResumeLayout(false);
             this.tabPage7.ResumeLayout(false);
             this.tabPage7.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.tabPage8.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -2137,6 +2150,7 @@
         private System.Windows.Forms.Label lblUserName;
         private System.Windows.Forms.ColumnHeader columnHeader112;
         private MaterialSkin.Controls.MaterialFlatButton btnChangeTextColor;
+        private System.Windows.Forms.Panel panel1;
     }
 }
 
