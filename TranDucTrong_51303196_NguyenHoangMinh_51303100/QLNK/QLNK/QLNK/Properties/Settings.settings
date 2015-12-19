@@ -1,0 +1,15 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="QLNK.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="Tab1" Type="System.String" Scope="User">
+      <Value Profile="(Default)">materialTabSelector1</Value>
+    </Setting>
+    <Setting Name="next" Type="System.Drawing.Point" Scope="User">
+      <Value Profile="(Default)">768, 171</Value>
+    </Setting>
+    <Setting Name="hokhau" Type="System.Drawing.Point" Scope="User">
+      <Value Profile="(Default)">756, 121</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

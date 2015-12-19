@@ -1,0 +1,11 @@
+C:\Users\wind4_000\Desktop\Demo Space\C#\QLNK\Test\bin\Debug\Test.dll
+C:\Users\wind4_000\Desktop\Demo Space\C#\QLNK\Test\bin\Debug\Test.pdb
+C:\Users\wind4_000\Desktop\Demo Space\C#\QLNK\Test\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\wind4_000\Desktop\Demo Space\C#\QLNK\Test\bin\Debug\QLNK.exe
+C:\Users\wind4_000\Desktop\Demo Space\C#\QLNK\Test\bin\Debug\MaterialSkin.dll
+C:\Users\wind4_000\Desktop\Demo Space\C#\QLNK\Test\bin\Debug\MySql.Data.dll
+C:\Users\wind4_000\Desktop\Demo Space\C#\QLNK\Test\bin\Debug\QLNK.pdb
+C:\Users\wind4_000\Desktop\Demo Space\C#\QLNK\Test\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.xml
+C:\Users\wind4_000\Desktop\Demo Space\C#\QLNK\Test\obj\Debug\Test.csprojResolveAssemblyReference.cache
+C:\Users\wind4_000\Desktop\Demo Space\C#\QLNK\Test\obj\Debug\Test.dll
+C:\Users\wind4_000\Desktop\Demo Space\C#\QLNK\Test\obj\Debug\Test.pdb
